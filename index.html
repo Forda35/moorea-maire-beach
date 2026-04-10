@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="description" content="Moorea Maire Beach — Organisatrice d'événements sur mesure à Moorea, Polynésie française. Excursions lagunaires, mariage traditionnel, prestations romantiques et privées.">
+<meta name="keywords" content="Moorea, Polynésie française, excursion, mariage traditionnel, motu, lagon, wedding planner, tour lagunaire">
+<meta property="og:title" content="Moorea Maire Beach — Expérience polynésienne inoubliable">
+<meta property="og:description" content="Excursions lagunaires, mariages traditionnels, prestations romantiques et privées sur l'île de Moorea.">
+<meta property="og:type" content="website">
+<title>Moorea Maire Beach — Polynésie Française</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --teal-deep: #0a3d35;
+  --teal-mid: #1a6b5a;
+  --teal-light: #2d9e82;
+  --teal-pale: #a8d8cc;
+  --teal-mist: #e8f5f2;
+  --gold: #c4a265;
+  --gold-light: #e2c998;
+  --gold-pale: #f7f0e4;
+  --sand: #f9f6f0;
+  --white: #ffffff;
+  --dark: #0d1f1c;
+  --text-body: #2e4a44;
+  --text-muted: #7a9e98;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ─── BREAKING NEWS ─── */
+.breaking-bar {
+  background: var(--teal-deep);
+  color: var(--white);
+  font-size: 13px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  padding: 0;
+  overflow: hidden;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 200;
+}
+.breaking-label {
+  background: var(--gold);
+  color: var(--teal-deep);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.breaking-ticker-wrap {
+  overflow: hidden;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+.breaking-ticker {
+  display: flex;
+  gap: 80px;
+  animation: ticker 30s linear infinite;
+  white-space: nowrap;
+  color: var(--teal-pale);
+}
+.breaking-ticker span { display: inline-flex; align-items: center; gap: 10px; }
+.breaking-ticker span::before {
+  content: '◆';
+  color: var(--gold);
+  font-size: 8px;
+}
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ─── NAVBAR ─── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(196,162,101,0.15);
+  padding: 0 40px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+.navbar.scrolled {
+  box-shadow: 0 2px 24px rgba(10,61,53,0.08);
+}
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-decoration: none;
+}
+.nav-logo-main {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  letter-spacing: 0.02em;
+}
+.nav-logo-sub {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-body);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  padding: 8px 14px;
+  border-radius: 100px;
+  transition: var(--transition);
+  position: relative;
+}
+.nav-links a:hover {
+  color: var(--teal-mid);
+  background: var(--teal-mist);
+}
+.nav-dropdown { position: relative; }
+.nav-dropdown:hover .dropdown-menu { opacity: 1; pointer-events: all; transform: translateY(0); }
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--white);
+  border: 1px solid rgba(196,162,101,0.2);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 40px rgba(10,61,53,0.12);
+  min-width: 220px;
+  padding: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: var(--transition);
+  list-style: none;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text-body);
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.lang-btn {
+  background: none;
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+.lang-btn:hover, .lang-btn.active {
+  color: var(--teal-mid);
+  border-color: var(--teal-pale);
+  background: var(--teal-mist);
+}
+.nav-tel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--teal-deep);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.btn-reserve-nav {
+  background: var(--teal-deep);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+.btn-reserve-nav:hover {
+  background: var(--teal-mid);
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  height: 94vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(160deg, rgba(10,61,53,0.82) 0%, rgba(10,61,53,0.3) 50%, rgba(10,61,53,0.55) 100%),
+    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=85') center/cover no-repeat;
+  transform-origin: center;
+  animation: slowZoom 18s ease-in-out infinite alternate;
+}
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 80px;
+  animation: fadeUp 1.2s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(196,162,101,0.15);
+  border: 1px solid rgba(196,162,101,0.4);
+  border-radius: 100px;
+  padding: 6px 18px;
+  margin-bottom: 28px;
+  backdrop-filter: blur(8px);
+}
+.hero-badge span {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: pulse 2s ease infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 7vw, 88px);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.hero-sub {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.8);
+  font-style: italic;
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+.hero-desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  max-width: 520px;
+  line-height: 1.8;
+  margin-bottom: 44px;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--teal-deep);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border-radius: 100px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-ghost:hover {
+  border-color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+}
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeUp 1.5s ease 0.5s both;
+}
+.hero-scroll span {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+.scroll-line {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+  animation: scrollLine 1.8s ease-in-out infinite;
+}
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ─── SERVICES STRIP ─── */
+.services-strip {
+  background: var(--teal-deep);
+  padding: 28px 80px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+}
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 180px;
+  padding: 0 24px;
+  border-right: 1px solid rgba(196,162,101,0.2);
+}
+.service-item:last-child { border-right: none; }
+.service-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(196,162,101,0.15);
+  border: 1px solid rgba(196,162,101,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+.service-item-text { line-height: 1.3; }
+.service-item-name {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 0.04em;
+}
+.service-item-sub {
+  font-size: 10px;
+  color: var(--teal-pale);
+  letter-spacing: 0.02em;
+}
+
+/* ─── SECTIONS COMMUNES ─── */
+section { padding: 100px 80px; }
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.section-label span {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.section-label::before, .section-label::after {
+  content: '';
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.4;
+}
+.section-label::before { width: 30px; }
+.section-label::after { flex: 1; max-width: 60px; }
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 300;
+  color: var(--teal-deep);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.section-title em { font-style: italic; color: var(--gold); }
+
+/* ─── INTRO ─── */
+.intro-section {
+  background: var(--sand);
+  padding: 80px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.intro-text .section-label { margin-bottom: 24px; }
+.intro-title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 4vw, 56px);
+  font-weight: 300;
+  color: var(--teal-deep);
+  line-height: 1.1;
+  margin-bottom: 28px;
+}
+.intro-title em { font-style: italic; color: var(--gold); }
+.intro-body {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-body);
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+.intro-signature {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--teal-mid);
+  margin-top: 32px;
+}
+.intro-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 220px 220px;
+  gap: 16px;
+}
+.intro-img {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+.intro-img:first-child {
+  grid-row: span 2;
+  border-radius: var(--radius-lg);
+}
+.intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.intro-img:hover img { transform: scale(1.05); }
+.intro-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--teal-mist), var(--teal-pale));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--teal-mid);
+  text-align: center;
+  padding: 16px;
+}
+
+/* ─── PRESTATIONS ─── */
+.prestations-section {
+  background: var(--white);
+  padding: 100px 80px;
+}
+.prestations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+.prestations-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.tab-btn {
+  background: transparent;
+  border: 1px solid var(--teal-pale);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.tab-btn.active, .tab-btn:hover {
+  background: var(--teal-deep);
+  border-color: var(--teal-deep);
+  color: var(--white);
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+.prestation-card {
+  background: var(--white);
+  border: 1px solid rgba(168,216,204,0.35);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.prestation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(10,61,53,0.12);
+  border-color: var(--teal-pale);
+}
+.card-img {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+.card-img-ph {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--teal-mist) 0%, var(--teal-pale) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+.card-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--teal-deep);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+.card-tag.gold { background: var(--gold); color: var(--teal-deep); }
+.card-body {
+  padding: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--teal-deep);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.card-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 20px;
+}
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-capacity {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.card-capacity::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a9e98' stroke-width='1.5'%3E%3Cpath d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.card-cta {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal-mid);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+.card-cta::after { content: '→'; transition: var(--transition); }
+.prestation-card:hover .card-cta::after { transform: translateX(4px); }
+
+/* ─── WEDDING HIGHLIGHT ─── */
+.wedding-section {
+  background: var(--teal-deep);
+  padding: 100px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.wedding-section::before {
+  content: 'MARIAGE';
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-family: var(--font-display);
+  font-size: 120px;
+  font-weight: 300;
+  color: rgba(196,162,101,0.06);
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: 0.2em;
+}
+.wedding-text .section-label span { color: var(--gold-light); }
+.wedding-text .section-label::before, .wedding-text .section-label::after { background: var(--gold); }
+.wedding-title {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 5vw, 62px);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 28px;
+}
+.wedding-title em { font-style: italic; color: var(--gold-light); }
+.wedding-body {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+.wedding-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.wedding-feature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+}
+.wedding-feature::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.wedding-visual {
+  position: relative;
+  height: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.wedding-visual-ph {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, var(--teal-mid) 0%, rgba(45,158,130,0.2) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wedding-visual-label {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 20px;
+}
+.wedding-badge {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  background: var(--gold);
+  color: var(--teal-deep);
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+}
+.wedding-badge-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.wedding-badge-sub {
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 2px;
+  letter-spacing: 0.04em;
+}
+
+/* ─── RESERVATION CTA ─── */
+.reservation-section {
+  background: var(--sand);
+  padding: 80px 80px;
+  text-align: center;
+}
+.reservation-section .section-title {
+  margin-bottom: 16px;
+}
+.reservation-desc {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto 48px;
+  line-height: 1.8;
+}
+.reservation-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto 48px;
+}
+.res-card {
+  background: var(--white);
+  border: 1px solid rgba(168,216,204,0.4);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.res-card:hover {
+  border-color: var(--teal-mid);
+  background: var(--teal-mist);
+  transform: translateY(-3px);
+}
+.res-icon { font-size: 28px; margin-bottom: 10px; }
+.res-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--teal-deep);
+  margin-bottom: 4px;
+}
+.res-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* ─── CONTACT BAND ─── */
+.contact-band {
+  background: var(--gold-pale);
+  border-top: 1px solid rgba(196,162,101,0.2);
+  border-bottom: 1px solid rgba(196,162,101,0.2);
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contact-item-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--teal-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.contact-item-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.contact-item-value {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--teal-deep);
+}
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 14px 28px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.whatsapp-btn:hover { background: #1fb55a; transform: translateY(-2px); }
+.whatsapp-btn svg { width: 18px; height: 18px; }
+
+/* ─── FAQ PREVIEW ─── */
+.faq-section {
+  background: var(--white);
+  padding: 100px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(168,216,204,0.35);
+  padding: 24px 0;
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 20px;
+}
+.faq-q-text {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--teal-deep);
+  line-height: 1.3;
+}
+.faq-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--teal-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--teal-mid);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.faq-item.open .faq-toggle {
+  background: var(--teal-deep);
+  color: var(--white);
+  border-color: var(--teal-deep);
+  transform: rotate(45deg);
+}
+.faq-answer {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  padding-top: 14px;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--dark);
+  color: rgba(255,255,255,0.7);
+  padding: 70px 80px 40px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+.footer-brand {}
+.footer-logo-main {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.footer-logo-sub {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.footer-brand-desc {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 300px;
+  color: rgba(255,255,255,0.5);
+}
+.footer-col-title {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 300;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--gold-light); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-bottom a {
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-bottom a:hover { color: rgba(255,255,255,0.6); }
+
+/* ─── ANIMATIONS ON SCROLL ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  section, .intro-section, .wedding-section, .contact-band, footer { padding-left: 40px; padding-right: 40px; }
+  .hero-content { padding: 0 40px; }
+  .services-strip { padding: 20px 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .intro-section, .wedding-section { grid-template-columns: 1fr; }
+  .wedding-visual { height: 300px; }
+}
+@media (max-width: 640px) {
+  section, .intro-section, .wedding-section, .contact-band, footer { padding-left: 20px; padding-right: 20px; }
+  .hero-content { padding: 0 20px; }
+  .navbar { padding: 0 20px; }
+  .nav-links, .nav-tel { display: none; }
+  .intro-images { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .intro-img:first-child { grid-row: auto; height: 260px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .prestations-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .services-strip { padding: 16px 20px; gap: 0; }
+  .contact-band { flex-direction: column; align-items: flex-start; }
+}
+
+/* ─── I18N ─── */
+[data-lang]:not([data-lang="fr"]) { display: none; }
+</style>
+</head>
+<body>
+
+<!-- BREAKING NEWS BAR -->
+<div class="breaking-bar" role="marquee" aria-live="polite">
+  <div class="breaking-label">Actualités</div>
+  <div class="breaking-ticker-wrap">
+    <div class="breaking-ticker" id="ticker">
+      <span data-lang="fr">🌺 Nouvelle saison 2026 — Réservez votre excursion lagunaire dès maintenant</span>
+      <span data-lang="fr">🐋 Whale seating watching disponible — Découverte des baleines en saison</span>
+      <span data-lang="fr">💍 Wedding Planner — Vivez un mariage traditionnel inoubliable sur le Motu Moea</span>
+      <span data-lang="fr">🌿 Tour Bout éco-citoyen — Participez au bouturage de corail avec nous</span>
+      <span data-lang="en">🌺 New 2026 Season — Book your lagoon excursion now</span>
+      <span data-lang="en">🐋 Whale watching available — Discover humpback whales in season</span>
+      <span data-lang="en">💍 Wedding Planner — Live a traditional Polynesian wedding on Motu Moea</span>
+      <span data-lang="en">🌿 Eco Tour — Join us for coral reef restoration on the motu</span>
+      <span data-lang="de">🌺 Neue Saison 2026 — Jetzt Lagunenausflug buchen</span>
+      <span data-lang="de">🐋 Walbeobachtung verfügbar — Erleben Sie Buckelwale in der Saison</span>
+      <span data-lang="de">💍 Hochzeitsplaner — Traditionelle polynesische Hochzeit auf Motu Moea</span>
+      <span data-lang="es">🌺 Nueva temporada 2026 — Reserve su excursión a la laguna ahora</span>
+      <span data-lang="es">🐋 Avistamiento de ballenas disponible — Descubra las jorobadas en temporada</span>
+      <span data-lang="es">💍 Wedding Planner — Viva una boda tradicional polinesica en Motu Moea</span>
+      <!-- duplicate for seamless loop -->
+      <span data-lang="fr">🌺 Nouvelle saison 2026 — Réservez votre excursion lagunaire dès maintenant</span>
+      <span data-lang="fr">🐋 Whale seating watching disponible — Découverte des baleines en saison</span>
+      <span data-lang="fr">💍 Wedding Planner — Vivez un mariage traditionnel inoubliable sur le Motu Moea</span>
+      <span data-lang="fr">🌿 Tour Bout éco-citoyen — Participez au bouturage de corail avec nous</span>
+      <span data-lang="en">🌺 New 2026 Season — Book your lagoon excursion now</span>
+      <span data-lang="en">🐋 Whale watching available — Discover humpback whales in season</span>
+      <span data-lang="en">💍 Wedding Planner — Live a traditional Polynesian wedding on Motu Moea</span>
+      <span data-lang="en">🌿 Eco Tour — Join us for coral reef restoration on the motu</span>
+      <span data-lang="de">🌺 Neue Saison 2026 — Jetzt Lagunenausflug buchen</span>
+      <span data-lang="de">🐋 Walbeobachtung verfügbar — Erleben Sie Buckelwale in der Saison</span>
+      <span data-lang="de">💍 Hochzeitsplaner — Traditionelle polynesische Hochzeit auf Motu Moea</span>
+      <span data-lang="es">🌺 Nueva temporada 2026 — Reserve su excursión a la laguna ahora</span>
+      <span data-lang="es">🐋 Avistamiento de ballenas disponible — Descubra las jorobadas en temporada</span>
+      <span data-lang="es">💍 Wedding Planner — Viva una boda tradicional polinesica en Motu Moea</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar" role="navigation">
+  <a href="index.html" class="nav-logo" aria-label="Moorea Maire Beach — Accueil">
+    <span class="nav-logo-main">Moorea Maire Beach</span>
+    <span class="nav-logo-sub">Polynésie Française</span>
+  </a>
+
+  <ul class="nav-links" role="menubar">
+    <li><a href="index.html" data-lang="fr">Accueil</a><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="de">Startseite</a><a href="index.html" data-lang="es">Inicio</a></li>
+    <li class="nav-dropdown">
+      <a href="#" aria-haspopup="true" data-lang="fr">Nos Prestations ▾</a>
+      <a href="#" aria-haspopup="true" data-lang="en">Services ▾</a>
+      <a href="#" aria-haspopup="true" data-lang="de">Leistungen ▾</a>
+      <a href="#" aria-haspopup="true" data-lang="es">Servicios ▾</a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="prestations/privees.html" data-lang="fr">Prestations Privées</a><a href="prestations/privees.html" data-lang="en">Private Services</a><a href="prestations/privees.html" data-lang="de">Private Leistungen</a><a href="prestations/privees.html" data-lang="es">Servicios Privados</a></li>
+        <li><a href="prestations/eco-citoyennes.html" data-lang="fr">Éco-Citoyennes</a><a href="prestations/eco-citoyennes.html" data-lang="en">Eco-Citizen Tours</a><a href="prestations/eco-citoyennes.html" data-lang="de">Öko-Touren</a><a href="prestations/eco-citoyennes.html" data-lang="es">Tours Eco-ciudadanos</a></li>
+        <li><a href="prestations/romantiques.html" data-lang="fr">Romantiques</a><a href="prestations/romantiques.html" data-lang="en">Romantic</a><a href="prestations/romantiques.html" data-lang="de">Romantisch</a><a href="prestations/romantiques.html" data-lang="es">Románticas</a></li>
+        <li><a href="prestations/wedding-planner.html" data-lang="fr">Wedding Planner</a><a href="prestations/wedding-planner.html" data-lang="en">Wedding Planner</a><a href="prestations/wedding-planner.html" data-lang="de">Hochzeitsplanung</a><a href="prestations/wedding-planner.html" data-lang="es">Organizador de Bodas</a></li>
+      </ul>
+    </li>
+    <li><a href="hebergements.html" data-lang="fr">Hébergements</a><a href="hebergements.html" data-lang="en">Accommodations</a><a href="hebergements.html" data-lang="de">Unterkunft</a><a href="hebergements.html" data-lang="es">Alojamientos</a></li>
+    <li><a href="galerie.html" data-lang="fr">Galerie</a><a href="galerie.html" data-lang="en">Gallery</a><a href="galerie.html" data-lang="de">Galerie</a><a href="galerie.html" data-lang="es">Galería</a></li>
+    <li><a href="a-propos.html" data-lang="fr">À Propos</a><a href="a-propos.html" data-lang="en">About</a><a href="a-propos.html" data-lang="de">Über uns</a><a href="a-propos.html" data-lang="es">Nosotros</a></li>
+    <li><a href="contact.html" data-lang="fr">Contact</a><a href="contact.html" data-lang="en">Contact</a><a href="contact.html" data-lang="de">Kontakt</a><a href="contact.html" data-lang="es">Contacto</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="lang-switcher" role="group" aria-label="Sélection de langue">
+      <button class="lang-btn active" onclick="setLang('fr')" aria-label="Français">FR</button>
+      <button class="lang-btn" onclick="setLang('en')" aria-label="English">EN</button>
+      <button class="lang-btn" onclick="setLang('de')" aria-label="Deutsch">DE</button>
+      <button class="lang-btn" onclick="setLang('es')" aria-label="Español">ES</button>
+    </div>
+    <a href="tel:+68987707858" class="nav-tel">87 70 78 58</a>
+    <a href="reservation.html" class="btn-reserve-nav" data-lang="fr">Réserver</a>
+    <a href="reservation.html" class="btn-reserve-nav" data-lang="en">Book Now</a>
+    <a href="reservation.html" class="btn-reserve-nav" data-lang="de">Buchen</a>
+    <a href="reservation.html" class="btn-reserve-nav" data-lang="es">Reservar</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" role="img" aria-label="Lagon de Moorea, Polynésie française"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span data-lang="fr">Moorea · Polynésie Française</span>
+      <span data-lang="en">Moorea · French Polynesia</span>
+      <span data-lang="de">Moorea · Französisch-Polynesien</span>
+      <span data-lang="es">Moorea · Polinesia Francesa</span>
+    </div>
+    <h1 id="hero-title">
+      <span data-lang="fr">Bienvenue à<br><em>Moorea Maire Beach</em></span>
+      <span data-lang="en">Welcome to<br><em>Moorea Maire Beach</em></span>
+      <span data-lang="de">Willkommen bei<br><em>Moorea Maire Beach</em></span>
+      <span data-lang="es">Bienvenidos a<br><em>Moorea Maire Beach</em></span>
+    </h1>
+    <p class="hero-sub">
+      <span data-lang="fr">Ia Ora Na — Organisatrice d'événements sur mesure</span>
+      <span data-lang="en">Ia Ora Na — Custom event organizer</span>
+      <span data-lang="de">Ia Ora Na — Individuelle Veranstaltungsorganisation</span>
+      <span data-lang="es">Ia Ora Na — Organizadora de eventos a medida</span>
+    </p>
+    <p class="hero-desc">
+      <span data-lang="fr">Excursions lagunaires · Mariage traditionnel · Prestations romantiques · Location de bungalows · Transport maritime</span>
+      <span data-lang="en">Lagoon excursions · Traditional wedding · Romantic services · Bungalow rental · Maritime transport</span>
+      <span data-lang="de">Lagunenausflüge · Traditionelle Hochzeit · Romantische Leistungen · Bungalow-Vermietung · Seetransport</span>
+      <span data-lang="es">Excursiones a la laguna · Boda tradicional · Servicios románticos · Alquiler de bungalows · Transporte marítimo</span>
+    </p>
+    <div class="hero-actions">
+      <a href="reservation.html" class="btn-primary">
+        <span data-lang="fr">Réserver une prestation</span>
+        <span data-lang="en">Book a service</span>
+        <span data-lang="de">Eine Leistung buchen</span>
+        <span data-lang="es">Reservar un servicio</span>
+        →
+      </a>
+      <a href="#prestations" class="btn-ghost">
+        <span data-lang="fr">Découvrir</span>
+        <span data-lang="en">Discover</span>
+        <span data-lang="de">Entdecken</span>
+        <span data-lang="es">Descubrir</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- SERVICES STRIP -->
+<div class="services-strip" role="list" aria-label="Nos services">
+  <div class="service-item" role="listitem">
+    <div class="service-icon" aria-hidden="true">⛵</div>
+    <div class="service-item-text">
+      <div class="service-item-name" data-lang="fr">Excursion Lagunaire</div>
+      <div class="service-item-name" data-lang="en">Lagoon Excursion</div>
+      <div class="service-item-name" data-lang="de">Lagunenausflug</div>
+      <div class="service-item-name" data-lang="es">Excursión Laguna</div>
+      <div class="service-item-sub" data-lang="fr">Raies · Requins · Tiki</div>
+      <div class="service-item-sub" data-lang="en">Rays · Sharks · Tiki</div>
+      <div class="service-item-sub" data-lang="de">Rochen · Haie · Tiki</div>
+      <div class="service-item-sub" data-lang="es">Rayas · Tiburones · Tiki</div>
+    </div>
+  </div>
+  <div class="service-item" role="listitem">
+    <div class="service-icon" aria-hidden="true">💍</div>
+    <div class="service-item-text">
+      <div class="service-item-name" data-lang="fr">Mariage Traditionnel</div>
+      <div class="service-item-name" data-lang="en">Traditional Wedding</div>
+      <div class="service-item-name" data-lang="de">Traditionelle Hochzeit</div>
+      <div class="service-item-name" data-lang="es">Boda Tradicional</div>
+      <div class="service-item-sub" data-lang="fr">Sur le Motu Moea</div>
+      <div class="service-item-sub" data-lang="en">On Motu Moea</div>
+      <div class="service-item-sub" data-lang="de">Auf dem Motu Moea</div>
+      <div class="service-item-sub" data-lang="es">En el Motu Moea</div>
+    </div>
+  </div>
+  <div class="service-item" role="listitem">
+    <div class="service-icon" aria-hidden="true">🌺</div>
+    <div class="service-item-text">
+      <div class="service-item-name" data-lang="fr">Romantique</div>
+      <div class="service-item-name" data-lang="en">Romantic</div>
+      <div class="service-item-name" data-lang="de">Romantisch</div>
+      <div class="service-item-name" data-lang="es">Romántico</div>
+      <div class="service-item-sub" data-lang="fr">Dîner · Îlot · Coucher de soleil</div>
+      <div class="service-item-sub" data-lang="en">Dinner · Islet · Sunset</div>
+      <div class="service-item-sub" data-lang="de">Abendessen · Inselchen · Sonnenuntergang</div>
+      <div class="service-item-sub" data-lang="es">Cena · Islote · Puesta de sol</div>
+    </div>
+  </div>
+  <div class="service-item" role="listitem">
+    <div class="service-icon" aria-hidden="true">🏡</div>
+    <div class="service-item-text">
+      <div class="service-item-name" data-lang="fr">Hébergement</div>
+      <div class="service-item-name" data-lang="en">Accommodation</div>
+      <div class="service-item-name" data-lang="de">Unterkunft</div>
+      <div class="service-item-name" data-lang="es">Alojamiento</div>
+      <div class="service-item-sub" data-lang="fr">Bungalows côté mer</div>
+      <div class="service-item-sub" data-lang="en">Oceanfront bungalows</div>
+      <div class="service-item-sub" data-lang="de">Bungalows am Meer</div>
+      <div class="service-item-sub" data-lang="es">Bungalows frente al mar</div>
+    </div>
+  </div>
+  <div class="service-item" role="listitem">
+    <div class="service-icon" aria-hidden="true">🌿</div>
+    <div class="service-item-text">
+      <div class="service-item-name" data-lang="fr">Éco-Citoyen</div>
+      <div class="service-item-name" data-lang="en">Eco-Citizen</div>
+      <div class="service-item-name" data-lang="de">Öko-Bürger</div>
+      <div class="service-item-name" data-lang="es">Eco-Ciudadano</div>
+      <div class="service-item-sub" data-lang="fr">Bouturage de corail</div>
+      <div class="service-item-sub" data-lang="en">Coral reef restoration</div>
+      <div class="service-item-sub" data-lang="de">Korallenriff-Restaurierung</div>
+      <div class="service-item-sub" data-lang="es">Restauración de corales</div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro-section reveal" aria-labelledby="intro-title">
+  <div class="intro-text">
+    <div class="section-label"><span data-lang="fr">Notre histoire</span><span data-lang="en">Our story</span><span data-lang="de">Unsere Geschichte</span><span data-lang="es">Nuestra historia</span></div>
+    <h2 class="intro-title" id="intro-title">
+      <span data-lang="fr">Une expérience polynésienne <em>inoubliable</em></span>
+      <span data-lang="en">An <em>unforgettable</em> Polynesian experience</span>
+      <span data-lang="de">Ein <em>unvergessliches</em> polynesisches Erlebnis</span>
+      <span data-lang="es">Una experiencia polinesia <em>inolvidable</em></span>
+    </h2>
+    <p class="intro-body" data-lang="fr">Nous sommes ravis de vous accueillir sur notre site web dédié à Moorea Maire Beach. Nous vous proposons des prestations magiques offrant une expérience polynésienne inoubliable sur l'île de Moorea. Des moments où la sérénité vous surprend, vous envahit, vous enivre et nous envoûte.</p>
+    <p class="intro-body" data-lang="en">We are delighted to welcome you to Moorea Maire Beach. We offer magical services providing an unforgettable Polynesian experience on the island of Moorea. Moments where serenity surprises you, overwhelms you, and enchants us all.</p>
+    <p class="intro-body" data-lang="de">Wir freuen uns, Sie auf Moorea Maire Beach begrüßen zu dürfen. Wir bieten magische Erlebnisse für ein unvergessliches polynesisches Abenteuer auf der Insel Moorea. Momente, in denen Stille Sie überrascht, erfüllt und verzaubert.</p>
+    <p class="intro-body" data-lang="es">Nos complace darle la bienvenida a Moorea Maire Beach. Ofrecemos servicios mágicos que brindan una experiencia polinesia inolvidable en la isla de Moorea. Momentos donde la serenidad te sorprende, te invade y nos hechiza a todos.</p>
+    <p class="intro-body" data-lang="fr">Nous vous invitons à cueillir et à graver ces minutes fugitives avant qu'elles ne s'envolent. <strong>Moorea Maire Beach</strong> vous offre des moments uniques, privilégiés, privés et sur mesure.</p>
+    <p class="intro-body" data-lang="en">We invite you to capture and cherish these fleeting moments before they fade away. <strong>Moorea Maire Beach</strong> offers you unique, privileged, private and tailor-made moments.</p>
+    <p class="intro-body" data-lang="de">Wir laden Sie ein, diese flüchtigen Augenblicke einzufangen und zu bewahren. <strong>Moorea Maire Beach</strong> bietet Ihnen einzigartige, exklusive, private und maßgeschneiderte Momente.</p>
+    <p class="intro-body" data-lang="es">Le invitamos a capturar y atesorar estos momentos fugaces antes de que se desvanezcan. <strong>Moorea Maire Beach</strong> le ofrece momentos únicos, privilegiados, privados y a medida.</p>
+    <p class="intro-signature" data-lang="fr">— Moorea Maire Beach, Polynésie française</p>
+    <p class="intro-signature" data-lang="en">— Moorea Maire Beach, French Polynesia</p>
+    <p class="intro-signature" data-lang="de">— Moorea Maire Beach, Französisch-Polynesien</p>
+    <p class="intro-signature" data-lang="es">— Moorea Maire Beach, Polinesia Francesa</p>
+  </div>
+  <div class="intro-images" aria-hidden="true">
+    <div class="intro-img">
+      <div class="intro-img-placeholder">Photo du lagon<br>de Moorea</div>
+    </div>
+    <div class="intro-img">
+      <div class="intro-img-placeholder" style="height:200px;">Motu Moea</div>
+    </div>
+    <div class="intro-img">
+      <div class="intro-img-placeholder" style="height:200px;">Excursion</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESTATIONS -->
+<section class="prestations-section reveal" id="prestations" aria-labelledby="prestations-title">
+  <div class="prestations-header">
+    <div>
+      <div class="section-label"><span data-lang="fr">Ce que nous proposons</span><span data-lang="en">What we offer</span><span data-lang="de">Was wir anbieten</span><span data-lang="es">Lo que ofrecemos</span></div>
+      <h2 class="section-title" id="prestations-title">
+        <span data-lang="fr">Nos <em>Prestations</em></span>
+        <span data-lang="en">Our <em>Services</em></span>
+        <span data-lang="de">Unsere <em>Leistungen</em></span>
+        <span data-lang="es">Nuestros <em>Servicios</em></span>
+      </h2>
+    </div>
+    <a href="prestations/privees.html" class="btn-primary" style="font-size:12px; padding:12px 28px;">
+      <span data-lang="fr">Voir tout</span><span data-lang="en">View all</span><span data-lang="de">Alle sehen</span><span data-lang="es">Ver todo</span> →
+    </a>
+  </div>
+
+  <div class="prestations-tabs" role="tablist" aria-label="Filtrer les prestations">
+    <button class="tab-btn active" onclick="filterCards('all')" role="tab" aria-selected="true">
+      <span data-lang="fr">Toutes</span><span data-lang="en">All</span><span data-lang="de">Alle</span><span data-lang="es">Todas</span>
+    </button>
+    <button class="tab-btn" onclick="filterCards('lagunaire')" role="tab">
+      <span data-lang="fr">Lagunaires</span><span data-lang="en">Lagoon</span><span data-lang="de">Lagune</span><span data-lang="es">Lagunar</span>
+    </button>
+    <button class="tab-btn" onclick="filterCards('romantique')" role="tab">
+      <span data-lang="fr">Romantiques</span><span data-lang="en">Romantic</span><span data-lang="de">Romantisch</span><span data-lang="es">Romántico</span>
+    </button>
+    <button class="tab-btn" onclick="filterCards('eco')" role="tab">
+      <span data-lang="fr">Éco-Citoyennes</span><span data-lang="en">Eco</span><span data-lang="de">Öko</span><span data-lang="es">Eco</span>
+    </button>
+    <button class="tab-btn" onclick="filterCards('prive')" role="tab">
+      <span data-lang="fr">Privées</span><span data-lang="en">Private</span><span data-lang="de">Privat</span><span data-lang="es">Privadas</span>
+    </button>
+  </div>
+
+  <div class="cards-grid" id="cards-grid">
+
+    <!-- LAGUNAIRE -->
+    <a href="prestations/eco-citoyennes.html" class="prestation-card" data-category="lagunaire eco">
+      <div class="card-img">
+        <div class="card-img-ph" aria-hidden="true">🌿</div>
+        <span class="card-tag" style="background:var(--teal-mid);" data-lang="fr">Éco-Citoyen</span>
+        <span class="card-tag" style="background:var(--teal-mid);" data-lang="en">Eco-Citizen</span>
+        <span class="card-tag" style="background:var(--teal-mid);" data-lang="de">Öko</span>
+        <span class="card-tag" style="background:var(--teal-mid);" data-lang="es">Eco</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Le Tour Bout</h3>
+        <p class="card-desc" data-lang="fr">Participez au bouturage de corail sur le Motu Moea. Une prestation éco-citoyenne unique pour le bien-être de notre bassin de corail — un geste concret pour la nature.</p>
+        <p class="card-desc" data-lang="en">Participate in coral reef restoration on Motu Moea. A unique eco-citizen experience for the well-being of our coral basin — a concrete gesture for nature.</p>
+        <p class="card-desc" data-lang="de">Nehmen Sie an der Korallenrestaurierung auf Motu Moea teil. Ein einzigartiges Öko-Erlebnis für das Wohlergehen unseres Korallenbeckens.</p>
+        <p class="card-desc" data-lang="es">Participa en la restauración de arrecifes de coral en Motu Moea. Una experiencia eco-ciudadana única para el bienestar de nuestra cuenca de coral.</p>
+        <div class="card-meta">
+          <span class="card-capacity" data-lang="fr">Min. 25 à 50 personnes</span>
+          <span class="card-capacity" data-lang="en">Min. 25 to 50 people</span>
+          <span class="card-capacity" data-lang="de">Min. 25 bis 50 Personen</span>
+          <span class="card-capacity" data-lang="es">Mín. 25 a 50 personas</span>
+          <span class="card-cta" data-lang="fr">Réserver</span>
+          <span class="card-cta" data-lang="en">Book</span>
+          <span class="card-cta" data-lang="de">Buchen</span>
+          <span class="card-cta" data-lang="es">Reservar</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="prestations/lagunaire.html" class="prestation-card" data-category="lagunaire">
+      <div class="card-img">
+        <div class="card-img-ph" aria-hidden="true">🍽️</div>
+        <span class="card-tag gold" data-lang="fr">Lagunaire</span>
+        <span class="card-tag gold" data-lang="en">Lagoon</span>
+        <span class="card-tag gold" data-lang="de">Lagune</span>
+        <span class="card-tag gold" data-lang="es">Lagunar</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Ma'a Tahiti sur le Motu</h3>
+        <p class="card-desc" data-lang="fr">Repas traditionnel tahitien sur le Motu Moea, pour vos anniversaires, fêtes de groupe, en famille ou entre collègues. Un festin polynésien authentique face au lagon.</p>
+        <p class="card-desc" data-lang="en">Traditional Tahitian meal on Motu Moea, for birthdays, group celebrations, family or corporate events. An authentic Polynesian feast facing the lagoon.</p>
+        <p class="card-desc" data-lang="de">Traditionelles tahitianisches Mahl auf Motu Moea für Geburtstage, Gruppenfeierlichkeiten, Familien oder Unternehmen. Ein authentisches polynesisches Festmahl.</p>
+        <p class="card-desc" data-lang="es">Comida tradicional tahitiana en Motu Moea, para cumpleaños, fiestas grupales, familia o empresa. Un festín polinesio auténtico frente a la laguna.</p>
+        <div class="card-meta">
+          <span class="card-capacity" data-lang="fr">Min. 25 à 50 personnes</span>
+          <span class="card-capacity" data-lang="en">Min. 25 to 50 people</span>
+          <span class="card-capacity" data-lang="de">Min. 25 bis 50 Personen</span>
+          <span class="card-capacity" data-lang="es">Mín. 25 a 50 personas</span>
+          <span class="card-cta" data-lang="fr">Réserver</span>
+          <span class="card-cta" data-lang="en">Book</span>
+          <span class="card-cta" data-lang="de">Buchen</span>
+          <span class="card-cta" data-lang="es">Reservar</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="prestations/lagunaire.html" class="prestation-card" data-category="lagunaire">
+      <div class="card-img">
+        <div class="card-img-ph" aria-hidden="true">🌊</div>
+        <span class="card-tag gold" data-lang="fr">Tour de l'île</span>
+        <span class="card-tag gold" data-lang="en">Island Tour</span>
+        <span class="card-tag gold" data-lang="de">Inselrundfahrt</span>
+        <span class="card-tag gold" data-lang="es">Tour de la isla</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Tere Moana</h3>
+        <p class="card-desc" data-lang="fr">Tour de l'île de Moorea avec pique-nique, tous les samedis ou sur demande spéciale. Une journée complète de découverte des merveilles de Moorea en bateau.</p>
+        <p class="card-desc" data-lang="en">Tour around the island of Moorea with picnic, every Saturday or on special request. A full day discovering the wonders of Moorea by boat.</p>
+        <p class="card-desc" data-lang="de">Rundfahrt um die Insel Moorea mit Picknick, jeden Samstag oder auf Sonderanfrage. Ein ganzer Tag, um die Wunder Mooreas vom Boot aus zu entdecken.</p>
+        <p class="card-desc" data-lang="es">Recorrido alrededor de la isla de Moorea con picnic, todos los sábados o a petición especial. Un día completo descubriendo las maravillas de Moorea en barco.</p>
+        <div class="card-meta">
+          <span class="card-capacity" data-lang="fr">Min. 20 personnes</span>
+          <span class="card-capacity" data-lang="en">Min. 20 people</span>
+          <span class="card-capacity" data-lang="de">Min. 20 Personen</span>
+          <span class="card-capacity" data-lang="es">Mín. 20 personas</span>
+          <span class="card-cta" data-lang="fr">Réserver</span>
+          <span class="card-cta" data-lang="en">Book</span>
+          <span class="card-cta" data-lang="de">Buchen</span>
+          <span class="card-cta" data-lang="es">Reservar</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="prestations/lagunaire.html" class="prestation-card" data-category="lagunaire">
+      <div class="card-img">
+        <div class="card-img-ph" aria-hidden="true">🦈</div>
+        <span class="card-tag gold" data-lang="fr">Découverte</span>
+        <span class="card-tag gold" data-lang="en">Discovery</span>
+        <span class="card-tag gold" data-lang="de">Entdeckung</span>
+        <span class="card-tag gold" data-lang="es">Descubrimiento</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Tour Lagunaire</h3>
+        <p class="card-desc" data-lang="fr">Découverte des raies, requins et Tiki immergés à bord du Tamaeva'a. Nouvelle saison : Wales seating only watching (observation des baleines sans baignade). Max 12 personnes.</p>
+        <p class="card-desc" data-lang="en">Discovery of rays, sharks and submerged Tiki aboard the Tamaeva'a. New season: Wales seating only watching (whale observation without swimming). Max 12 people.</p>
+        <p class="card-desc" data-lang="de">Entdeckung von Rochen, Haien und versunkenen Tiki an Bord des Tamaeva'a. Neue Saison: Walbeobachtung nur sitzend (ohne Schwimmen). Max. 12 Personen.</p>
+        <p class="card-desc" data-lang="es">Descubrimiento de rayas, tiburones y Tiki sumergidos a bordo del Tamaeva'a. Nueva temporada: observación de ballenas solo sentado (sin nadar). Máx. 12 personas.</p>
+        <div class="card-meta">
+          <span class="card-capacity" data-lang="fr">Max. 12 personnes</span>
+          <span class="card-capacity" data-lang="en">Max. 12 people</span>
+          <span class="card-capacity" data-lang="de">Max. 12 Personen</span>
+          <span class="card-capacity" data-lang="es">Máx. 12 personas</span>
+          <span class="card-cta" data-lang="fr">Réserver</span>
+          <span class="card-cta" data-lang="en">Book</span>
+          <span class="card-cta" data-lang="de">Buchen</span>
+          <span class="card-cta" data-lang="es">Reservar</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- ROMANTIQUE -->
+    <a href="prestations/romantiques.html" class="prestation-card" data-category="romantique">
+      <div class="card-img">
+        <div class="card-img-ph" aria-hidden="true">🌙</div>
+        <span class="card-tag" style="background:#b06090;" data-lang="fr">Romantique</span>
+        <span class="card-tag" style="background:#b06090;" data-lang="en">Romantic</span>
+        <span class="card-tag" style="background:#b06090;" data-lang="de">Romantisch</span>
+        <span class="card-tag" style="background:#b06090;" data-lang="es">Romántico</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title" data-lang="fr">Dîner romantique sur un îlot</h3>
+        <h3 class="card-title" data-lang="en">Romantic dinner on an islet</h3>
+        <h3 class="card-title" data-lang="de">Romantisches Abendessen auf einem Inselchen</h3>
+        <h3 class="card-title" data-lang="es">Cena romántica en un islote</h3>
+        <p class="card-desc" data-lang="fr">Un dîner inoubliable en amoureux sur le Motu Moea, entouré des eaux cristallines du lagon de Moorea. Une expérience unique sous les étoiles polynésiennes.</p>
+        <p class="card-desc" data-lang="en">An unforgettable romantic dinner on Motu Moea, surrounded by the crystal clear waters of Moorea's lagoon. A unique experience under Polynesian stars.</p>
+        <p class="card-desc" data-lang="de">Ein unvergessliches romantisches Abendessen auf Motu Moea, umgeben von dem kristallklaren Wasser der Lagune von Moorea. Ein einzigartiges Erlebnis unter polynesischen Sternen.</p>
+        <p class="card-desc" data-lang="es">Una cena romántica inolvidable en Motu Moea, rodeados de las aguas cristalinas de la laguna de Moorea. Una experiencia única bajo las estrellas polinesicas.</p>
+        <div class="card-meta">
+          <span class="card-capacity" data-lang="fr">Pour 2</span>
+          <span class="card-capacity" data-lang="en">For 2</span>
+          <span class="card-capacity" data-lang="de">Für 2</span>
+          <span class="card-capacity" data-lang="es">Para 2</span>
+          <span class="card-cta" data-lang="fr">Réserver</span>
+          <span class="card-cta" data-lang="en">Book</span>
+          <span class="card-cta" data-lang="de">Buchen</span>
+          <span class="card-cta" data-lang="es">Reservar</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="prestations/romantiques.html" class="prestation-card" data-category="romantique">
+      <div class="card-img">
+        <div class="card-img-ph" aria-hidden="true">🌅</div>
+        <span class="card-tag" style="background:#b06090;" data-lang="fr">Romantique</span>
+        <span class="card-tag" style="background:#b06090;" data-lang="en">Romantic</span>
+        <span class="card-tag" style="background:#b06090;" data-lang="de">Romantisch</span>
+        <span class="card-tag" style="background:#b06090;" data-lang="es">Romántico</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Kahaia</h3>
+        <p class="card-desc" data-lang="fr">Une promenade et un repas en amoureux sur un îlot. Tour intimiste sur le Motu Moea avec Moorea Maire Beach — parfait pour une escapade à deux.</p>
+        <p class="card-desc" data-lang="en">A romantic walk and meal on an islet. Intimate tour on Motu Moea with Moorea Maire Beach — perfect for a getaway for two.</p>
+        <p class="card-desc" data-lang="de">Ein romantischer Spaziergang und ein Mahl auf einem Inselchen. Intimer Ausflug auf Motu Moea mit Moorea Maire Beach — perfekt für einen Kurzurlaub zu zweit.</p>
+        <p class="card-desc" data-lang="es">Un paseo romántico y una comida en un islote. Tour íntimo en Motu Moea con Moorea Maire Beach — perfecto para una escapada de dos.</p>
+        <div class="card-meta">
+          <span class="card-capacity" data-lang="fr">Pour 2</span>
+          <span class="card-capacity" data-lang="en">For 2</span>
+          <span class="card-capacity" data-lang="de">Für 2</span>
+          <span class="card-capacity" data-lang="es">Para 2</span>
+          <span class="card-cta" data-lang="fr">Réserver</span>
+          <span class="card-cta" data-lang="en">Book</span>
+          <span class="card-cta" data-lang="de">Buchen</span>
+          <span class="card-cta" data-lang="es">Reservar</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- PRIVÉE -->
+    <a href="prestations/privees.html" class="prestation-card" data-category="prive">
+      <div class="card-img">
+        <div class="card-img-ph" aria-hidden="true">✨</div>
+        <span class="card-tag" data-lang="fr">Sur Mesure</span>
+        <span class="card-tag" data-lang="en">Custom</span>
+        <span class="card-tag" data-lang="de">Maßgeschneidert</span>
+        <span class="card-tag" data-lang="es">A medida</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title" data-lang="fr">Événement sur mesure</h3>
+        <h3 class="card-title" data-lang="en">Custom event</h3>
+        <h3 class="card-title" data-lang="de">Maßgeschneidertes Ereignis</h3>
+        <h3 class="card-title" data-lang="es">Evento a medida</h3>
+        <p class="card-desc" data-lang="fr">Une gamme de services spécialisés adaptés à vos besoins sur le Motu Moea. Catamaran, fête privée, événement d'entreprise — juste pour votre projet unique.</p>
+        <p class="card-desc" data-lang="en">A range of specialized services tailored to your needs on Motu Moea. Catamaran, private party, corporate event — just for your unique project.</p>
+        <p class="card-desc" data-lang="de">Eine Reihe von spezialisierten Dienstleistungen, die auf Ihre Bedürfnisse auf Motu Moea zugeschnitten sind. Katamaran, Privatfete, Unternehmensevent — nur für Ihr einzigartiges Projekt.</p>
+        <p class="card-desc" data-lang="es">Una gama de servicios especializados adaptados a sus necesidades en Motu Moea. Catamarán, fiesta privada, evento corporativo — solo para su proyecto único.</p>
+        <div class="card-meta">
+          <span class="card-capacity" data-lang="fr">Sur demande</span>
+          <span class="card-capacity" data-lang="en">On request</span>
+          <span class="card-capacity" data-lang="de">Auf Anfrage</span>
+          <span class="card-capacity" data-lang="es">Bajo petición</span>
+          <span class="card-cta" data-lang="fr">Réserver</span>
+          <span class="card-cta" data-lang="en">Book</span>
+          <span class="card-cta" data-lang="de">Buchen</span>
+          <span class="card-cta" data-lang="es">Reservar</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="prestations/privees.html" class="prestation-card" data-category="prive">
+      <div class="card-img">
+        <div class="card-img-ph" aria-hidden="true">⛵</div>
+        <span class="card-tag" data-lang="fr">Location</span>
+        <span class="card-tag" data-lang="en">Rental</span>
+        <span class="card-tag" data-lang="de">Vermietung</span>
+        <span class="card-tag" data-lang="es">Alquiler</span>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title" data-lang="fr">Location de bateau</h3>
+        <h3 class="card-title" data-lang="en">Boat rental</h3>
+        <h3 class="card-title" data-lang="de">Bootvermietung</h3>
+        <h3 class="card-title" data-lang="es">Alquiler de barco</h3>
+        <p class="card-desc" data-lang="fr">Notre catamaran Vahine Etene — 60 passagers — avec capitaine et matelots à bord, pour vous mener sur les eaux cristallines de Moorea ou effectuer vos transferts maritimes.</p>
+        <p class="card-desc" data-lang="en">Our catamaran Vahine Etene — 60 passengers — with captain and crew on board, to take you through the crystal clear waters of Moorea or for your maritime transfers.</p>
+        <p class="card-desc" data-lang="de">Unser Katamaran Vahine Etene — 60 Passagiere — mit Kapitän und Mannschaft, um Sie durch das kristallklare Wasser von Moorea zu führen oder für Ihre Seetransfers.</p>
+        <p class="card-desc" data-lang="es">Nuestro catamarán Vahine Etene — 60 pasajeros — con capitán y tripulación a bordo, para llevarle por las aguas cristalinas de Moorea o para sus transferencias marítimas.</p>
+        <div class="card-meta">
+          <span class="card-capacity" data-lang="fr">Jusqu'à 60 pers.</span>
+          <span class="card-capacity" data-lang="en">Up to 60 people</span>
+          <span class="card-capacity" data-lang="de">Bis zu 60 Personen</span>
+          <span class="card-capacity" data-lang="es">Hasta 60 personas</span>
+          <span class="card-cta" data-lang="fr">Réserver</span>
+          <span class="card-cta" data-lang="en">Book</span>
+          <span class="card-cta" data-lang="de">Buchen</span>
+          <span class="card-cta" data-lang="es">Reservar</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- WEDDING HIGHLIGHT -->
+<section class="wedding-section reveal" aria-labelledby="wedding-title">
+  <div class="wedding-text">
+    <div class="section-label"><span data-lang="fr">Wedding Planner</span><span data-lang="en">Wedding Planner</span><span data-lang="de">Hochzeitsplanung</span><span data-lang="es">Organizador de Bodas</span></div>
+    <h2 class="wedding-title" id="wedding-title">
+      <span data-lang="fr">Vivez le <em>mana</em> du mariage traditionnel</span>
+      <span data-lang="en">Live the <em>mana</em> of a traditional wedding</span>
+      <span data-lang="de">Erleben Sie das <em>Mana</em> einer traditionellen Hochzeit</span>
+      <span data-lang="es">Vive el <em>mana</em> de una boda tradicional</span>
+    </h2>
+    <p class="wedding-body" data-lang="fr">Moorea Maire Beach est votre wedding planner sur Moorea. Nous organiseons pour vous un mariage traditionnel polynésien inoubliable sur le Motu Moea, entouré du lagon turquoise et de la nature luxuriante de Moorea.</p>
+    <p class="wedding-body" data-lang="en">Moorea Maire Beach is your wedding planner on Moorea. We organize for you an unforgettable traditional Polynesian wedding on Motu Moea, surrounded by the turquoise lagoon and the lush nature of Moorea.</p>
+    <p class="wedding-body" data-lang="de">Moorea Maire Beach ist Ihr Hochzeitsplaner auf Moorea. Wir organisieren für Sie eine unvergessliche traditionelle polynesische Hochzeit auf Motu Moea, umgeben von der türkisfarbenen Lagune und der üppigen Natur Mooreas.</p>
+    <p class="wedding-body" data-lang="es">Moorea Maire Beach es su organizador de bodas en Moorea. Organizamos para usted una boda tradicional polinesia inolvidable en Motu Moea, rodeada de la laguna turquesa y la exuberante naturaleza de Moorea.</p>
+    <div class="wedding-features">
+      <div class="wedding-feature" data-lang="fr">Cérémonie traditionnelle polynésienne</div>
+      <div class="wedding-feature" data-lang="fr">Décoration florale et végétale sur mesure</div>
+      <div class="wedding-feature" data-lang="fr">Repas et animations traditionnelles</div>
+      <div class="wedding-feature" data-lang="fr">Transport maritime inclus</div>
+      <div class="wedding-feature" data-lang="en">Traditional Polynesian ceremony</div>
+      <div class="wedding-feature" data-lang="en">Custom floral and botanical decoration</div>
+      <div class="wedding-feature" data-lang="en">Traditional food and entertainment</div>
+      <div class="wedding-feature" data-lang="en">Maritime transport included</div>
+      <div class="wedding-feature" data-lang="de">Traditionelle polynesische Zeremonie</div>
+      <div class="wedding-feature" data-lang="de">Individuelle Blumen- und Pflanzendekoration</div>
+      <div class="wedding-feature" data-lang="de">Traditionelles Essen und Unterhaltung</div>
+      <div class="wedding-feature" data-lang="de">Seetransport inklusive</div>
+      <div class="wedding-feature" data-lang="es">Ceremonia tradicional polinesia</div>
+      <div class="wedding-feature" data-lang="es">Decoración floral y botánica a medida</div>
+      <div class="wedding-feature" data-lang="es">Comida y entretenimiento tradicionales</div>
+      <div class="wedding-feature" data-lang="es">Transporte marítimo incluido</div>
+    </div>
+    <a href="prestations/wedding-planner.html" class="btn-primary" style="background:var(--gold); color:var(--teal-deep);">
+      <span data-lang="fr">Découvrir le Wedding Planner</span>
+      <span data-lang="en">Discover Wedding Planner</span>
+      <span data-lang="de">Hochzeitsplanung entdecken</span>
+      <span data-lang="es">Descubrir Wedding Planner</span>
+      →
+    </a>
+  </div>
+  <div class="wedding-visual">
+    <div class="wedding-visual-ph" aria-label="Mariage traditionnel sur Motu Moea">
+      <div class="wedding-visual-label" data-lang="fr">Photo du mariage<br>traditionnel polynésien<br>sur le Motu Moea</div>
+      <div class="wedding-visual-label" data-lang="en">Traditional Polynesian<br>wedding photo<br>on Motu Moea</div>
+      <div class="wedding-visual-label" data-lang="de">Foto der traditionellen<br>polynesischen Hochzeit<br>auf Motu Moea</div>
+      <div class="wedding-visual-label" data-lang="es">Foto de la boda<br>tradicional polinesia<br>en Motu Moea</div>
+    </div>
+    <div class="wedding-badge" aria-label="Votre wedding planner sur Moorea">
+      <div class="wedding-badge-title" data-lang="fr">Votre Wedding Planner</div>
+      <div class="wedding-badge-title" data-lang="en">Your Wedding Planner</div>
+      <div class="wedding-badge-title" data-lang="de">Ihr Hochzeitsplaner</div>
+      <div class="wedding-badge-title" data-lang="es">Su Wedding Planner</div>
+      <div class="wedding-badge-sub">Moorea · Polynésie française</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION CTA -->
+<section class="reservation-section reveal" aria-labelledby="resa-title">
+  <div class="section-label" style="justify-content:center;">
+    <span data-lang="fr">Réservation facile</span>
+    <span data-lang="en">Easy booking</span>
+    <span data-lang="de">Einfache Buchung</span>
+    <span data-lang="es">Reserva fácil</span>
+  </div>
+  <h2 class="section-title" id="resa-title">
+    <span data-lang="fr">Réservez votre <em>prestation</em></span>
+    <span data-lang="en">Book your <em>experience</em></span>
+    <span data-lang="de">Buchen Sie Ihr <em>Erlebnis</em></span>
+    <span data-lang="es">Reserve su <em>experiencia</em></span>
+  </h2>
+  <p class="reservation-desc" data-lang="fr">Choisissez votre prestation et remplissez le formulaire de réservation en ligne — simple, rapide et sans engagement. Nous vous répondons dans les 24h.</p>
+  <p class="reservation-desc" data-lang="en">Choose your service and fill in the online booking form — simple, quick and non-binding. We'll get back to you within 24 hours.</p>
+  <p class="reservation-desc" data-lang="de">Wählen Sie Ihre Leistung und füllen Sie das Online-Buchungsformular aus — einfach, schnell und unverbindlich. Wir antworten Ihnen innerhalb von 24 Stunden.</p>
+  <p class="reservation-desc" data-lang="es">Elija su servicio y rellene el formulario de reserva en línea — sencillo, rápido y sin compromiso. Le respondemos en 24 horas.</p>
+
+  <div class="reservation-cards">
+    <a href="reservation.html?type=lagunaire" class="res-card">
+      <div class="res-icon" aria-hidden="true">🌊</div>
+      <div class="res-title" data-lang="fr">Tour Lagunaire</div>
+      <div class="res-title" data-lang="en">Lagoon Tour</div>
+      <div class="res-title" data-lang="de">Lagunenrundfahrt</div>
+      <div class="res-title" data-lang="es">Tour Lagunar</div>
+      <div class="res-sub" data-lang="fr">Excursion en mer</div>
+      <div class="res-sub" data-lang="en">Sea excursion</div>
+      <div class="res-sub" data-lang="de">Meeresausflug</div>
+      <div class="res-sub" data-lang="es">Excursión marina</div>
+    </a>
+    <a href="reservation.html?type=mariage" class="res-card">
+      <div class="res-icon" aria-hidden="true">💍</div>
+      <div class="res-title" data-lang="fr">Mariage</div>
+      <div class="res-title" data-lang="en">Wedding</div>
+      <div class="res-title" data-lang="de">Hochzeit</div>
+      <div class="res-title" data-lang="es">Boda</div>
+      <div class="res-sub" data-lang="fr">Wedding planner</div>
+      <div class="res-sub" data-lang="en">Wedding planner</div>
+      <div class="res-sub" data-lang="de">Hochzeitsplanung</div>
+      <div class="res-sub" data-lang="es">Organizador de bodas</div>
+    </a>
+    <a href="reservation.html?type=romantique" class="res-card">
+      <div class="res-icon" aria-hidden="true">🌺</div>
+      <div class="res-title" data-lang="fr">Romantique</div>
+      <div class="res-title" data-lang="en">Romantic</div>
+      <div class="res-title" data-lang="de">Romantisch</div>
+      <div class="res-title" data-lang="es">Romántico</div>
+      <div class="res-sub" data-lang="fr">Dîner · Escapade</div>
+      <div class="res-sub" data-lang="en">Dinner · Getaway</div>
+      <div class="res-sub" data-lang="de">Abendessen · Ausflug</div>
+      <div class="res-sub" data-lang="es">Cena · Escapada</div>
+    </a>
+    <a href="reservation.html?type=prive" class="res-card">
+      <div class="res-icon" aria-hidden="true">✨</div>
+      <div class="res-title" data-lang="fr">Privé</div>
+      <div class="res-title" data-lang="en">Private</div>
+      <div class="res-title" data-lang="de">Privat</div>
+      <div class="res-title" data-lang="es">Privado</div>
+      <div class="res-sub" data-lang="fr">Sur mesure</div>
+      <div class="res-sub" data-lang="en">Custom</div>
+      <div class="res-sub" data-lang="de">Maßgeschneidert</div>
+      <div class="res-sub" data-lang="es">A medida</div>
+    </a>
+    <a href="reservation.html?type=hebergement" class="res-card">
+      <div class="res-icon" aria-hidden="true">🏡</div>
+      <div class="res-title" data-lang="fr">Hébergement</div>
+      <div class="res-title" data-lang="en">Accommodation</div>
+      <div class="res-title" data-lang="de">Unterkunft</div>
+      <div class="res-title" data-lang="es">Alojamiento</div>
+      <div class="res-sub" data-lang="fr">Bungalows côté mer</div>
+      <div class="res-sub" data-lang="en">Oceanfront bungalows</div>
+      <div class="res-sub" data-lang="de">Bungalows am Meer</div>
+      <div class="res-sub" data-lang="es">Bungalows frente al mar</div>
+    </a>
+  </div>
+
+  <a href="reservation.html" class="btn-primary">
+    <span data-lang="fr">Accéder au formulaire de réservation</span>
+    <span data-lang="en">Go to the booking form</span>
+    <span data-lang="de">Zum Buchungsformular</span>
+    <span data-lang="es">Ir al formulario de reserva</span>
+    →
+  </a>
+</section>
+
+<!-- CONTACT BAND -->
+<div class="contact-band" role="contentinfo" aria-label="Coordonnées">
+  <div class="contact-item">
+    <div class="contact-item-icon" aria-hidden="true">📞</div>
+    <div>
+      <div class="contact-item-label" data-lang="fr">Téléphone</div>
+      <div class="contact-item-label" data-lang="en">Phone</div>
+      <div class="contact-item-label" data-lang="de">Telefon</div>
+      <div class="contact-item-label" data-lang="es">Teléfono</div>
+      <div class="contact-item-value"><a href="tel:+68987707858" style="text-decoration:none; color:inherit;">87 70 78 58</a></div>
+    </div>
+  </div>
+  <div class="contact-item">
+    <div class="contact-item-icon" aria-hidden="true">📍</div>
+    <div>
+      <div class="contact-item-label" data-lang="fr">Localisation</div>
+      <div class="contact-item-label" data-lang="en">Location</div>
+      <div class="contact-item-label" data-lang="de">Standort</div>
+      <div class="contact-item-label" data-lang="es">Ubicación</div>
+      <div class="contact-item-value">Moorea, Polynésie française</div>
+    </div>
+  </div>
+  <a href="https://wa.me/68987707858" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Nous contacter sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span data-lang="fr">Écrire sur WhatsApp</span>
+    <span data-lang="en">Message on WhatsApp</span>
+    <span data-lang="de">WhatsApp schreiben</span>
+    <span data-lang="es">Escribir por WhatsApp</span>
+  </a>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section reveal" aria-labelledby="faq-title">
+  <div class="section-label"><span data-lang="fr">Questions fréquentes</span><span data-lang="en">FAQ</span><span data-lang="de">Häufige Fragen</span><span data-lang="es">Preguntas frecuentes</span></div>
+  <h2 class="section-title" id="faq-title" style="margin-bottom:40px;">
+    <span data-lang="fr">Vos <em>questions</em></span>
+    <span data-lang="en">Your <em>questions</em></span>
+    <span data-lang="de">Ihre <em>Fragen</em></span>
+    <span data-lang="es">Sus <em>preguntas</em></span>
+  </h2>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+      <span class="faq-q-text" data-lang="fr">Comment réserver une prestation ?</span>
+      <span class="faq-q-text" data-lang="en">How do I book a service?</span>
+      <span class="faq-q-text" data-lang="de">Wie buche ich eine Leistung?</span>
+      <span class="faq-q-text" data-lang="es">¿Cómo reservar un servicio?</span>
+      <span class="faq-toggle" aria-hidden="true">+</span>
+    </div>
+    <div class="faq-answer">
+      <span data-lang="fr">Utilisez notre formulaire de réservation en ligne, choisissez votre prestation, vos dates et renseignez vos coordonnées. Nous vous confirmons votre réservation par email dans les 24h.</span>
+      <span data-lang="en">Use our online booking form, choose your service, your dates and enter your details. We will confirm your booking by email within 24 hours.</span>
+      <span data-lang="de">Verwenden Sie unser Online-Buchungsformular, wählen Sie Ihre Leistung, Ihre Daten und geben Sie Ihre Kontaktdaten ein. Wir bestätigen Ihre Buchung per E-Mail innerhalb von 24 Stunden.</span>
+      <span data-lang="es">Utilice nuestro formulario de reserva en línea, elija su servicio, sus fechas e introduzca sus datos. Le confirmaremos su reserva por correo electrónico en 24 horas.</span>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+      <span class="faq-q-text" data-lang="fr">Quelles sont les conditions météo requises ?</span>
+      <span class="faq-q-text" data-lang="en">What weather conditions are required?</span>
+      <span class="faq-q-text" data-lang="de">Welche Wetterbedingungen sind erforderlich?</span>
+      <span class="faq-q-text" data-lang="es">¿Qué condiciones meteorológicas se requieren?</span>
+      <span class="faq-toggle" aria-hidden="true">+</span>
+    </div>
+    <div class="faq-answer">
+      <span data-lang="fr">Toutes nos prestations lagunaires sont soumises aux conditions météorologiques. En cas de mauvais temps, nous reportons ou remboursons votre réservation. Nous vous prévenons 24h à l'avance.</span>
+      <span data-lang="en">All our lagoon services are subject to weather conditions. In case of bad weather, we will reschedule or refund your booking. We notify you 24 hours in advance.</span>
+      <span data-lang="de">Alle unsere Lagunenleistungen unterliegen den Wetterbedingungen. Bei schlechtem Wetter verschieben oder erstatten wir Ihre Buchung. Wir benachrichtigen Sie 24 Stunden im Voraus.</span>
+      <span data-lang="es">Todos nuestros servicios lagunares están sujetos a las condiciones meteorológicas. En caso de mal tiempo, reprogramamos o reembolsamos su reserva. Le notificamos con 24 horas de antelación.</span>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+      <span class="faq-q-text" data-lang="fr">Proposez-vous des transferts depuis Tahiti ?</span>
+      <span class="faq-q-text" data-lang="en">Do you offer transfers from Tahiti?</span>
+      <span class="faq-q-text" data-lang="de">Bieten Sie Transfers von Tahiti an?</span>
+      <span class="faq-q-text" data-lang="es">¿Ofrecen traslados desde Tahití?</span>
+      <span class="faq-toggle" aria-hidden="true">+</span>
+    </div>
+    <div class="faq-answer">
+      <span data-lang="fr">Nous proposons des transferts maritimes entre différents points sur Moorea avec notre catamaran Vahine Etene (60 passagers). Contactez-nous pour un devis personnalisé.</span>
+      <span data-lang="en">We offer maritime transfers between different points on Moorea with our catamaran Vahine Etene (60 passengers). Contact us for a personalized quote.</span>
+      <span data-lang="de">Wir bieten Seetransfers zwischen verschiedenen Punkten auf Moorea mit unserem Katamaran Vahine Etene (60 Passagiere) an. Kontaktieren Sie uns für ein persönliches Angebot.</span>
+      <span data-lang="es">Ofrecemos transferencias marítimas entre diferentes puntos de Moorea con nuestro catamarán Vahine Etene (60 pasajeros). Contáctenos para un presupuesto personalizado.</span>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+      <span class="faq-q-text" data-lang="fr">Quelle est la meilleure période pour visiter ?</span>
+      <span class="faq-q-text" data-lang="en">What is the best time to visit?</span>
+      <span class="faq-q-text" data-lang="de">Was ist die beste Reisezeit?</span>
+      <span class="faq-q-text" data-lang="es">¿Cuál es la mejor época para visitar?</span>
+      <span class="faq-toggle" aria-hidden="true">+</span>
+    </div>
+    <div class="faq-answer">
+      <span data-lang="fr">Moorea est belle toute l'année ! La saison sèche (mai à octobre) est idéale pour les activités nautiques. La saison des baleines (juillet à novembre) est parfaite pour notre tour lagunaire avec observation des baleines.</span>
+      <span data-lang="en">Moorea is beautiful all year round! The dry season (May to October) is ideal for water activities. The whale season (July to November) is perfect for our lagoon tour with whale watching.</span>
+      <span data-lang="de">Moorea ist das ganze Jahr über wunderschön! Die Trockenzeit (Mai bis Oktober) ist ideal für Wassersportaktivitäten. Die Walsaison (Juli bis November) ist perfekt für unsere Lagunenrundfahrt mit Walbeobachtung.</span>
+      <span data-lang="es">¡Moorea es hermosa todo el año! La estación seca (mayo a octubre) es ideal para actividades acuáticas. La temporada de ballenas (julio a noviembre) es perfecta para nuestro tour lagunar con avistamiento de ballenas.</span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo-main">Moorea Maire Beach</div>
+      <div class="footer-logo-sub">Polynésie Française</div>
+      <p class="footer-brand-desc" data-lang="fr">Organisatrice d'événements sur mesure à Moorea. Excursions lagunaires, mariages traditionnels, prestations romantiques et privées — des moments inoubliables.</p>
+      <p class="footer-brand-desc" data-lang="en">Custom event organizer in Moorea. Lagoon excursions, traditional weddings, romantic and private services — unforgettable moments.</p>
+      <p class="footer-brand-desc" data-lang="de">Individuelle Veranstaltungsorganisation auf Moorea. Lagunenausflüge, traditionelle Hochzeiten, romantische und private Leistungen — unvergessliche Momente.</p>
+      <p class="footer-brand-desc" data-lang="es">Organizadora de eventos a medida en Moorea. Excursiones a la laguna, bodas tradicionales, servicios románticos y privados — momentos inolvidables.</p>
+    </div>
+    <div>
+      <div class="footer-col-title" data-lang="fr">Prestations</div>
+      <div class="footer-col-title" data-lang="en">Services</div>
+      <div class="footer-col-title" data-lang="de">Leistungen</div>
+      <div class="footer-col-title" data-lang="es">Servicios</div>
+      <ul class="footer-links">
+        <li><a href="prestations/privees.html" data-lang="fr">Prestations Privées</a><a href="prestations/privees.html" data-lang="en">Private Services</a><a href="prestations/privees.html" data-lang="de">Private Leistungen</a><a href="prestations/privees.html" data-lang="es">Servicios Privados</a></li>
+        <li><a href="prestations/eco-citoyennes.html" data-lang="fr">Éco-Citoyennes</a><a href="prestations/eco-citoyennes.html" data-lang="en">Eco-Citizen</a><a href="prestations/eco-citoyennes.html" data-lang="de">Öko-Touren</a><a href="prestations/eco-citoyennes.html" data-lang="es">Eco-Ciudadano</a></li>
+        <li><a href="prestations/romantiques.html" data-lang="fr">Romantiques</a><a href="prestations/romantiques.html" data-lang="en">Romantic</a><a href="prestations/romantiques.html" data-lang="de">Romantisch</a><a href="prestations/romantiques.html" data-lang="es">Romántico</a></li>
+        <li><a href="prestations/wedding-planner.html" data-lang="fr">Wedding Planner</a><a href="prestations/wedding-planner.html" data-lang="en">Wedding Planner</a><a href="prestations/wedding-planner.html" data-lang="de">Hochzeitsplanung</a><a href="prestations/wedding-planner.html" data-lang="es">Organización de Bodas</a></li>
+        <li><a href="hebergements.html" data-lang="fr">Hébergements</a><a href="hebergements.html" data-lang="en">Accommodations</a><a href="hebergements.html" data-lang="de">Unterkunft</a><a href="hebergements.html" data-lang="es">Alojamientos</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-lang="fr">Navigation</div>
+      <div class="footer-col-title" data-lang="en">Navigation</div>
+      <div class="footer-col-title" data-lang="de">Navigation</div>
+      <div class="footer-col-title" data-lang="es">Navegación</div>
+      <ul class="footer-links">
+        <li><a href="galerie.html" data-lang="fr">Galerie photos</a><a href="galerie.html" data-lang="en">Photo gallery</a><a href="galerie.html" data-lang="de">Fotogalerie</a><a href="galerie.html" data-lang="es">Galería de fotos</a></li>
+        <li><a href="a-propos.html" data-lang="fr">Qui sommes-nous ?</a><a href="a-propos.html" data-lang="en">About us</a><a href="a-propos.html" data-lang="de">Über uns</a><a href="a-propos.html" data-lang="es">Nosotros</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" data-lang="fr">Contact</a><a href="contact.html" data-lang="en">Contact</a><a href="contact.html" data-lang="de">Kontakt</a><a href="contact.html" data-lang="es">Contacto</a></li>
+        <li><a href="reservation.html" data-lang="fr">Réserver</a><a href="reservation.html" data-lang="en">Book</a><a href="reservation.html" data-lang="de">Buchen</a><a href="reservation.html" data-lang="es">Reservar</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-lang="fr">Contact</div>
+      <div class="footer-col-title" data-lang="en">Contact</div>
+      <div class="footer-col-title" data-lang="de">Kontakt</div>
+      <div class="footer-col-title" data-lang="es">Contacto</div>
+      <ul class="footer-links">
+        <li><a href="tel:+68987707858">87 70 78 58</a></li>
+        <li><a href="https://wa.me/68987707858" target="_blank" rel="noopener" data-lang="fr">WhatsApp</a><a href="https://wa.me/68987707858" target="_blank" rel="noopener" data-lang="en">WhatsApp</a><a href="https://wa.me/68987707858" target="_blank" rel="noopener" data-lang="de">WhatsApp</a><a href="https://wa.me/68987707858" target="_blank" rel="noopener" data-lang="es">WhatsApp</a></li>
+        <li><a href="contact.html" data-lang="fr">Formulaire de contact</a><a href="contact.html" data-lang="en">Contact form</a><a href="contact.html" data-lang="de">Kontaktformular</a><a href="contact.html" data-lang="es">Formulario de contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Moorea Maire Beach — Polynésie française. <span data-lang="fr">Tous droits réservés.</span><span data-lang="en">All rights reserved.</span><span data-lang="de">Alle Rechte vorbehalten.</span><span data-lang="es">Todos los derechos reservados.</span></span>
+    <div style="display:flex; gap:20px; flex-wrap:wrap;">
+      <a href="mentions-legales.html" data-lang="fr">Mentions légales</a><a href="mentions-legales.html" data-lang="en">Legal notice</a><a href="mentions-legales.html" data-lang="de">Impressum</a><a href="mentions-legales.html" data-lang="es">Aviso legal</a>
+      <a href="cgv.html" data-lang="fr">CGV</a><a href="cgv.html" data-lang="en">Terms</a><a href="cgv.html" data-lang="de">AGB</a><a href="cgv.html" data-lang="es">Condiciones</a>
+      <a href="confidentialite.html" data-lang="fr">Confidentialité</a><a href="confidentialite.html" data-lang="en">Privacy</a><a href="confidentialite.html" data-lang="de">Datenschutz</a><a href="confidentialite.html" data-lang="es">Privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+let currentLang = 'fr';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+  });
+  document.documentElement.lang = lang;
+}
+
+function filterCards(cat) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.prestation-card').forEach(card => {
+    const cats = card.getAttribute('data-category') || '';
+    card.style.display = (cat === 'all' || cats.includes(cat)) ? '' : 'none';
+  });
+}
+
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
+  if (!isOpen) {
+    item.classList.add('open');
+    el.setAttribute('aria-expanded', 'true');
+  }
+}
+
+window.addEventListener('scroll', () => {
+  const nb = document.getElementById('navbar');
+  nb.classList.toggle('scrolled', window.scrollY > 40);
+  document.querySelectorAll('.reveal').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 80) el.classList.add('visible');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  setLang('fr');
+  document.querySelectorAll('.reveal').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) el.classList.add('visible');
+  });
+});
+</script>
+</body>
+</html>
