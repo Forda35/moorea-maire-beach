@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Hébergements Moorea Maire Beach — Bungalows côté mer et location saisonnière à Moorea, Polynésie française. Vue lagon, confort premium.">
+<title>Hébergements — Moorea Maire Beach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal-deep:#0a3d35;--teal-mid:#1a6b5a;--teal-light:#2d9e82;--teal-pale:#a8d8cc;--teal-mist:#e8f5f2;--gold:#c4a265;--gold-light:#e2c998;--gold-pale:#f7f0e4;--sand:#f9f6f0;--white:#ffffff;--dark:#0d1f1c;--text-body:#2e4a44;--text-muted:#7a9e98;--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Jost',sans-serif;--radius-sm:4px;--radius-md:12px;--radius-lg:24px;--transition:all 0.35s cubic-bezier(0.4,0,0.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text-body);background:var(--white);line-height:1.7;overflow-x:hidden}
+
+/* NAV */
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,162,101,.15);padding:0 40px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.nav-logo-main{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--teal-deep);letter-spacing:.02em}
+.nav-logo-sub{font-size:10px;font-weight:400;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-switcher{display:flex;gap:4px}
+.lang-btn{background:none;border:1px solid transparent;font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--text-muted);cursor:pointer;padding:4px 8px;border-radius:4px;transition:var(--transition)}
+.lang-btn:hover,.lang-btn.active{color:var(--teal-mid);border-color:var(--teal-pale);background:var(--teal-mist)}
+.btn-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:8px 16px;border-radius:100px;border:1px solid var(--teal-pale);transition:var(--transition)}
+.btn-back:hover{color:var(--teal-mid);background:var(--teal-mist)}
+
+/* HERO */
+.hero{position:relative;height:88vh;min-height:560px;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(170deg,rgba(10,61,53,.55) 0%,rgba(10,61,53,.2) 45%,rgba(10,61,53,.7) 100%),url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1800&q=85') center/cover no-repeat;animation:slowZoom 20s ease-in-out infinite alternate}
+@keyframes slowZoom{from{transform:scale(1)}to{transform:scale(1.05)}}
+.hero-content{position:relative;z-index:2;padding:0 80px 80px;max-width:860px;animation:fadeUp 1.1s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(196,162,101,.15);border:1px solid rgba(196,162,101,.4);border-radius:100px;padding:6px 18px;margin-bottom:24px;backdrop-filter:blur(8px)}
+.hero-badge span{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);font-family:var(--font-body)}
+.hero h1{font-family:var(--font-display);font-size:clamp(48px,6vw,80px);font-weight:300;color:var(--white);line-height:1.05;margin-bottom:16px}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero-sub{font-family:var(--font-display);font-size:clamp(17px,2vw,22px);font-weight:300;color:rgba(255,255,255,.78);font-style:italic;margin-bottom:36px}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--teal-deep);font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:15px 34px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:15px 34px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.35);cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.1)}
+
+/* FEATURES STRIP */
+.features-strip{background:var(--teal-deep);display:flex;padding:0 80px}
+.feature-item{flex:1;display:flex;align-items:center;gap:14px;padding:26px 20px;border-right:1px solid rgba(196,162,101,.15)}
+.feature-item:last-child{border-right:none}
+.feature-icon{font-size:20px;flex-shrink:0}
+.feature-text{}
+.feature-name{font-size:12px;font-weight:500;color:var(--white);letter-spacing:.04em}
+.feature-sub{font-size:10px;color:var(--teal-pale);margin-top:1px}
+
+/* INTRO */
+.intro{padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;background:var(--white)}
+.section-label{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.section-label span{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.section-label::before{content:'';width:30px;height:1px;background:var(--gold);opacity:.5}
+.section-title{font-family:var(--font-display);font-size:clamp(36px,4vw,54px);font-weight:300;color:var(--teal-deep);line-height:1.1;margin-bottom:24px}
+.section-title em{font-style:italic;color:var(--gold)}
+.section-body{font-size:15px;font-weight:300;color:var(--text-body);line-height:1.9;margin-bottom:16px}
+.intro-imgs{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:14px}
+.intro-img{border-radius:var(--radius-md);overflow:hidden;background:linear-gradient(135deg,var(--teal-mist),var(--teal-pale));display:flex;align-items:center;justify-content:center;font-size:32px;transition:transform .5s ease;cursor:default}
+.intro-img:first-child{grid-row:span 2;border-radius:var(--radius-lg);font-size:48px}
+.intro-img:hover{transform:scale(1.03)}
+
+/* BUNGALOWS */
+.bungalows{padding:100px 80px;background:var(--sand)}
+.bungalows-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px}
+.bungalows-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:32px}
+.bungalow-card{background:var(--white);border:1px solid rgba(168,216,204,.35);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)}
+.bungalow-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(10,61,53,.1);border-color:var(--teal-pale)}
+.bungalow-img{height:260px;background:linear-gradient(135deg,var(--teal-mist),var(--teal-pale));display:flex;align-items:center;justify-content:center;font-size:56px;position:relative}
+.bungalow-tag{position:absolute;top:16px;left:16px;font-family:var(--font-body);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px}
+.bungalow-tag.sea{background:var(--teal-deep);color:var(--white)}
+.bungalow-tag.seasonal{background:var(--gold);color:var(--teal-deep)}
+.bungalow-body{padding:30px}
+.bungalow-name{font-family:var(--font-display);font-size:26px;font-weight:500;color:var(--teal-deep);margin-bottom:10px}
+.bungalow-desc{font-size:14px;font-weight:300;color:var(--text-muted);line-height:1.75;margin-bottom:24px}
+.bungalow-amenities{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.amenity{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--text-muted);background:var(--teal-mist);padding:5px 12px;border-radius:100px;letter-spacing:.02em}
+.bungalow-footer{display:flex;align-items:center;justify-content:space-between;padding-top:20px;border-top:1px solid rgba(168,216,204,.3)}
+.bungalow-price{font-family:var(--font-display);font-size:15px;color:var(--text-muted);font-style:italic}
+.bungalow-cta{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--teal-mid);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:var(--transition)}
+.bungalow-cta::after{content:'→';transition:var(--transition)}
+.bungalow-card:hover .bungalow-cta::after{transform:translateX(4px)}
+
+/* EXPERIENCE */
+.experience{background:var(--teal-deep);padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;overflow:hidden}
+.experience::before{content:'LAGON';position:absolute;right:-30px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:var(--font-display);font-size:120px;font-weight:300;color:rgba(196,162,101,.05);pointer-events:none;white-space:nowrap;letter-spacing:.2em}
+.experience .section-label span{color:var(--gold-light)}
+.experience .section-label::before{background:var(--gold)}
+.exp-title{font-family:var(--font-display);font-size:clamp(38px,4.5vw,58px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:24px}
+.exp-title em{font-style:italic;color:var(--gold-light)}
+.exp-body{font-size:15px;font-weight:300;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:16px}
+.exp-list{display:flex;flex-direction:column;gap:14px;margin:28px 0 36px}
+.exp-item{display:flex;align-items:flex-start;gap:14px;font-size:14px;color:rgba(255,255,255,.82)}
+.exp-item-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:8px}
+.exp-visual{height:480px;border-radius:var(--radius-lg);background:linear-gradient(160deg,rgba(45,158,130,.6),rgba(26,107,90,.9));display:flex;align-items:center;justify-content:center;font-size:80px;position:relative}
+.exp-badge{position:absolute;bottom:28px;left:28px;right:28px;background:rgba(196,162,101,.15);backdrop-filter:blur(12px);border:1px solid rgba(196,162,101,.3);border-radius:var(--radius-md);padding:18px 22px}
+.exp-badge-title{font-family:var(--font-display);font-size:20px;font-weight:400;color:var(--white);margin-bottom:4px}
+.exp-badge-sub{font-size:11px;color:var(--gold-light);letter-spacing:.06em}
+
+/* PRATIQUE */
+.pratique{padding:80px 80px;background:var(--white)}
+.pratique-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.pratique-card{border:1px solid rgba(168,216,204,.35);border-radius:var(--radius-md);padding:28px}
+.pratique-icon{font-size:28px;margin-bottom:16px}
+.pratique-title{font-family:var(--font-display);font-size:20px;font-weight:500;color:var(--teal-deep);margin-bottom:10px}
+.pratique-body{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.8}
+
+/* CTA */
+.cta-section{background:var(--gold-pale);border-top:1px solid rgba(196,162,101,.2);padding:80px;text-align:center}
+.cta-title{font-family:var(--font-display);font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--teal-deep);margin-bottom:14px}
+.cta-title em{font-style:italic;color:var(--gold)}
+.cta-sub{font-size:15px;font-weight:300;color:var(--text-muted);max-width:500px;margin:0 auto 40px;line-height:1.8}
+.btn-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn-outline{background:transparent;color:var(--teal-deep);font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:15px 34px;border-radius:100px;text-decoration:none;border:1.5px solid rgba(168,216,204,.6);cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-outline:hover{background:var(--teal-mist);border-color:var(--teal-mid)}
+
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:40px 80px;text-align:center;font-size:12px}
+footer a{color:var(--gold);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:1024px){.intro,.experience{grid-template-columns:1fr}.navbar,.hero-content,.features-strip,.bungalows,.pratique,.cta-section{padding-left:40px;padding-right:40px}.bungalows-header{flex-direction:column;align-items:flex-start;gap:20px}}
+@media(max-width:640px){.navbar,.hero-content,.features-strip,.bungalows,.pratique,.cta-section,.intro{padding-left:20px;padding-right:20px}.hero-content{padding-bottom:50px}.pratique-grid{grid-template-columns:1fr}.features-strip{flex-wrap:wrap;padding:16px 20px}.feature-item{border-right:none;border-bottom:1px solid rgba(196,162,101,.15);flex:0 0 48%}}
+[data-lang]:not([data-lang="fr"]){display:none}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="../index.html" class="nav-logo">
+    <span class="nav-logo-main">Moorea Maire Beach</span>
+    <span class="nav-logo-sub">Polynésie Française</span>
+  </a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="../index.html" class="btn-back">← <span data-lang="fr">Accueil</span><span data-lang="en">Home</span><span data-lang="de">Startseite</span><span data-lang="es">Inicio</span></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" role="img" aria-label="Bungalow côté mer à Moorea"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span data-lang="fr">Moorea · Polynésie Française</span><span data-lang="en">Moorea · French Polynesia</span><span data-lang="de">Moorea · Französisch-Polynesien</span><span data-lang="es">Moorea · Polinesia Francesa</span></div>
+    <h1 id="hero-title">
+      <span data-lang="fr">Dormez face au <em>lagon</em></span>
+      <span data-lang="en">Sleep facing the <em>lagoon</em></span>
+      <span data-lang="de">Schlafen mit Blick auf die <em>Lagune</em></span>
+      <span data-lang="es">Duerma frente a la <em>laguna</em></span>
+    </h1>
+    <p class="hero-sub">
+      <span data-lang="fr">Bungalows côté mer & location saisonnière à Moorea</span>
+      <span data-lang="en">Oceanfront bungalows & seasonal rental in Moorea</span>
+      <span data-lang="de">Bungalows am Meer & saisonale Vermietung auf Moorea</span>
+      <span data-lang="es">Bungalows frente al mar & alquiler estacional en Moorea</span>
+    </p>
+    <div class="hero-actions">
+      <a href="../reservation.html?type=hebergement" class="btn-primary">
+        <span data-lang="fr">Demander disponibilité</span><span data-lang="en">Check availability</span><span data-lang="de">Verfügbarkeit prüfen</span><span data-lang="es">Consultar disponibilidad</span> →
+      </a>
+      <a href="#bungalows" class="btn-ghost">
+        <span data-lang="fr">Voir les hébergements</span><span data-lang="en">View accommodations</span><span data-lang="de">Unterkunft anzeigen</span><span data-lang="es">Ver alojamientos</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<div class="features-strip" role="list">
+  <div class="feature-item" role="listitem">
+    <div class="feature-icon">🌊</div>
+    <div class="feature-text">
+      <div class="feature-name" data-lang="fr">Vue lagon directe</div><div class="feature-name" data-lang="en">Direct lagoon view</div><div class="feature-name" data-lang="de">Direkter Lagunenblick</div><div class="feature-name" data-lang="es">Vista directa a la laguna</div>
+      <div class="feature-sub" data-lang="fr">Face aux eaux turquoise</div><div class="feature-sub" data-lang="en">Facing turquoise waters</div><div class="feature-sub" data-lang="de">Mit Blick auf türkisfarbenes Wasser</div><div class="feature-sub" data-lang="es">Frente a aguas turquesas</div>
+    </div>
+  </div>
+  <div class="feature-item" role="listitem">
+    <div class="feature-icon">🌴</div>
+    <div class="feature-text">
+      <div class="feature-name" data-lang="fr">Cadre naturel exceptionnel</div><div class="feature-name" data-lang="en">Exceptional natural setting</div><div class="feature-name" data-lang="de">Außergewöhnliche Naturkulisse</div><div class="feature-name" data-lang="es">Entorno natural excepcional</div>
+      <div class="feature-sub" data-lang="fr">Jardin tropical & plage privée</div><div class="feature-sub" data-lang="en">Tropical garden & private beach</div><div class="feature-sub" data-lang="de">Tropischer Garten & Privatstrand</div><div class="feature-sub" data-lang="es">Jardín tropical & playa privada</div>
+    </div>
+  </div>
+  <div class="feature-item" role="listitem">
+    <div class="feature-icon">⛵</div>
+    <div class="feature-text">
+      <div class="feature-name" data-lang="fr">Accès direct aux prestations</div><div class="feature-name" data-lang="en">Direct access to services</div><div class="feature-name" data-lang="de">Direktzugang zu Leistungen</div><div class="feature-name" data-lang="es">Acceso directo a servicios</div>
+      <div class="feature-sub" data-lang="fr">Excursions depuis votre bungalow</div><div class="feature-sub" data-lang="en">Excursions from your bungalow</div><div class="feature-sub" data-lang="de">Ausflüge vom Bungalow aus</div><div class="feature-sub" data-lang="es">Excursiones desde su bungalow</div>
+    </div>
+  </div>
+  <div class="feature-item" role="listitem">
+    <div class="feature-icon">📅</div>
+    <div class="feature-text">
+      <div class="feature-name" data-lang="fr">Location saisonnière</div><div class="feature-name" data-lang="en">Seasonal rental</div><div class="feature-name" data-lang="de">Saisonale Vermietung</div><div class="feature-name" data-lang="es">Alquiler estacional</div>
+      <div class="feature-sub" data-lang="fr">Court & long séjour possible</div><div class="feature-sub" data-lang="en">Short & long stays available</div><div class="feature-sub" data-lang="de">Kurz- & Langzeitaufenthalte möglich</div><div class="feature-sub" data-lang="es">Estancias cortas y largas disponibles</div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro reveal">
+  <div>
+    <div class="section-label"><span data-lang="fr">Nos hébergements</span><span data-lang="en">Our accommodations</span><span data-lang="de">Unsere Unterkunft</span><span data-lang="es">Nuestros alojamientos</span></div>
+    <h2 class="section-title">
+      <span data-lang="fr">L'art de dormir<br><em>face au lagon</em></span>
+      <span data-lang="en">The art of sleeping<br><em>facing the lagoon</em></span>
+      <span data-lang="de">Die Kunst, mit Blick auf<br><em>die Lagune zu schlafen</em></span>
+      <span data-lang="es">El arte de dormir<br><em>frente a la laguna</em></span>
+    </h2>
+    <p class="section-body" data-lang="fr">Nos bungalows côté mer vous offrent une immersion totale dans la beauté sauvage et envoûtante de Moorea. Nichés en bordure du lagon, ils sont le point de départ idéal pour toutes nos prestations : excursions, mariages, dîners romantiques…</p>
+    <p class="section-body" data-lang="en">Our oceanfront bungalows offer a total immersion in the wild and enchanting beauty of Moorea. Nestled on the edge of the lagoon, they are the ideal starting point for all our services: excursions, weddings, romantic dinners…</p>
+    <p class="section-body" data-lang="de">Unsere Bungalows am Meer bieten eine vollständige Eintauchen in die wilde und bezaubernde Schönheit Mooreas. Am Rand der Lagune gelegen, sind sie der ideale Ausgangspunkt für alle unsere Leistungen: Ausflüge, Hochzeiten, romantische Abendessen…</p>
+    <p class="section-body" data-lang="es">Nuestros bungalows frente al mar ofrecen una inmersión total en la belleza salvaje y encantadora de Moorea. Anidados a orillas de la laguna, son el punto de partida ideal para todos nuestros servicios: excursiones, bodas, cenas románticas…</p>
+    <p class="section-body" data-lang="fr">Chaque hébergement est disponible à la location saisonnière — pour un séjour court ou prolongé — et peut être combiné avec nos prestations sur demande. Réservez directement via notre formulaire en ligne.</p>
+    <p class="section-body" data-lang="en">Each accommodation is available for seasonal rental — for a short or extended stay — and can be combined with our services on request. Book directly through our online form.</p>
+    <p class="section-body" data-lang="de">Jede Unterkunft ist zur saisonalen Vermietung verfügbar — für einen kurzen oder längeren Aufenthalt — und kann auf Anfrage mit unseren Leistungen kombiniert werden. Buchen Sie direkt über unser Online-Formular.</p>
+    <p class="section-body" data-lang="es">Cada alojamiento está disponible para alquiler estacional — para una estancia corta o prolongada — y puede combinarse con nuestros servicios a petición. Reserve directamente a través de nuestro formulario en línea.</p>
+  </div>
+  <div class="intro-imgs" aria-hidden="true">
+    <div class="intro-img">🌊</div>
+    <div class="intro-img">🌴</div>
+    <div class="intro-img">🌅</div>
+  </div>
+</section>
+
+<!-- BUNGALOWS -->
+<section class="bungalows reveal" id="bungalows" aria-labelledby="bungalows-title">
+  <div class="bungalows-header">
+    <div>
+      <div class="section-label"><span data-lang="fr">Nos logements</span><span data-lang="en">Our lodgings</span><span data-lang="de">Unsere Unterkünfte</span><span data-lang="es">Nuestros alojamientos</span></div>
+      <h2 class="section-title" id="bungalows-title" style="margin-bottom:0">
+        <span data-lang="fr">Bungalows &amp; <em>Locations</em></span>
+        <span data-lang="en">Bungalows &amp; <em>Rentals</em></span>
+        <span data-lang="de">Bungalows &amp; <em>Vermietungen</em></span>
+        <span data-lang="es">Bungalows &amp; <em>Alquileres</em></span>
+      </h2>
+    </div>
+    <a href="../reservation.html?type=hebergement" class="btn-primary" style="font-size:12px;padding:12px 28px;">
+      <span data-lang="fr">Vérifier disponibilité</span><span data-lang="en">Check availability</span><span data-lang="de">Verfügbarkeit prüfen</span><span data-lang="es">Consultar disponibilidad</span> →
+    </a>
+  </div>
+
+  <div class="bungalows-grid">
+
+    <!-- BUNGALOW 1 -->
+    <article class="bungalow-card">
+      <div class="bungalow-img" role="img" aria-label="Bungalow côté mer Moorea">
+        🏡
+        <span class="bungalow-tag sea" data-lang="fr">Côté mer</span>
+        <span class="bungalow-tag sea" data-lang="en">Oceanfront</span>
+        <span class="bungalow-tag sea" data-lang="de">Am Meer</span>
+        <span class="bungalow-tag sea" data-lang="es">Frente al mar</span>
+      </div>
+      <div class="bungalow-body">
+        <h3 class="bungalow-name" data-lang="fr">Bungalow Lagon</h3>
+        <h3 class="bungalow-name" data-lang="en">Lagoon Bungalow</h3>
+        <h3 class="bungalow-name" data-lang="de">Lagunen-Bungalow</h3>
+        <h3 class="bungalow-name" data-lang="es">Bungalow Laguna</h3>
+        <p class="bungalow-desc" data-lang="fr">Bungalow traditionnel en bois de cocotier, directement en bordure du lagon de Moorea. Terrasse privée avec vue panoramique sur les eaux turquoise et les montagnes de l'île.</p>
+        <p class="bungalow-desc" data-lang="en">Traditional coconut wood bungalow, directly on the edge of Moorea's lagoon. Private terrace with panoramic views of turquoise waters and the island's mountains.</p>
+        <p class="bungalow-desc" data-lang="de">Traditioneller Kokosholz-Bungalow direkt am Rand der Lagune von Moorea. Private Terrasse mit Panoramablick auf das türkisfarbene Wasser und die Berge der Insel.</p>
+        <p class="bungalow-desc" data-lang="es">Bungalow tradicional de madera de cocotero, directamente en el borde de la laguna de Moorea. Terraza privada con vistas panorámicas a las aguas turquesas y las montañas de la isla.</p>
+        <div class="bungalow-amenities">
+          <span class="amenity" data-lang="fr">🛏 1 chambre</span><span class="amenity" data-lang="en">🛏 1 bedroom</span><span class="amenity" data-lang="de">🛏 1 Schlafzimmer</span><span class="amenity" data-lang="es">🛏 1 dormitorio</span>
+          <span class="amenity" data-lang="fr">🚿 Salle de bain</span><span class="amenity" data-lang="en">🚿 Bathroom</span><span class="amenity" data-lang="de">🚿 Badezimmer</span><span class="amenity" data-lang="es">🚿 Baño</span>
+          <span class="amenity">🌊 Vue lagon</span>
+          <span class="amenity" data-lang="fr">🌿 Terrasse privée</span><span class="amenity" data-lang="en">🌿 Private terrace</span><span class="amenity" data-lang="de">🌿 Private Terrasse</span><span class="amenity" data-lang="es">🌿 Terraza privada</span>
+          <span class="amenity" data-lang="fr">❄️ Climatisation</span><span class="amenity" data-lang="en">❄️ Air conditioning</span><span class="amenity" data-lang="de">❄️ Klimaanlage</span><span class="amenity" data-lang="es">❄️ Aire acondicionado</span>
+        </div>
+        <div class="bungalow-footer">
+          <span class="bungalow-price" data-lang="fr">Sur devis · Location saisonnière</span>
+          <span class="bungalow-price" data-lang="en">On quote · Seasonal rental</span>
+          <span class="bungalow-price" data-lang="de">Auf Anfrage · Saisonale Vermietung</span>
+          <span class="bungalow-price" data-lang="es">Presupuesto · Alquiler estacional</span>
+          <a href="../reservation.html?type=hebergement" class="bungalow-cta">
+            <span data-lang="fr">Réserver</span><span data-lang="en">Book</span><span data-lang="de">Buchen</span><span data-lang="es">Reservar</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- BUNGALOW 2 -->
+    <article class="bungalow-card">
+      <div class="bungalow-img" role="img" aria-label="Bungalow Motu Moorea">
+        🌴
+        <span class="bungalow-tag sea" data-lang="fr">Côté mer</span>
+        <span class="bungalow-tag sea" data-lang="en">Oceanfront</span>
+        <span class="bungalow-tag sea" data-lang="de">Am Meer</span>
+        <span class="bungalow-tag sea" data-lang="es">Frente al mar</span>
+      </div>
+      <div class="bungalow-body">
+        <h3 class="bungalow-name">Bungalow Motu</h3>
+        <p class="bungalow-desc" data-lang="fr">Plus spacieux, ce bungalow face au lagon peut accueillir jusqu'à 4 personnes. Idéal pour les couples ou les petites familles souhaitant profiter de Moorea dans un cadre intimiste et naturel.</p>
+        <p class="bungalow-desc" data-lang="en">More spacious, this lagoon-facing bungalow can accommodate up to 4 people. Ideal for couples or small families wishing to enjoy Moorea in an intimate and natural setting.</p>
+        <p class="bungalow-desc" data-lang="de">Dieser geräumigere Bungalow mit Blick auf die Lagune bietet Platz für bis zu 4 Personen. Ideal für Paare oder kleine Familien, die Moorea in einem intimen und natürlichen Rahmen genießen möchten.</p>
+        <p class="bungalow-desc" data-lang="es">Más espacioso, este bungalow frente a la laguna puede alojar hasta 4 personas. Ideal para parejas o familias pequeñas que deseen disfrutar de Moorea en un entorno íntimo y natural.</p>
+        <div class="bungalow-amenities">
+          <span class="amenity" data-lang="fr">🛏 2 chambres</span><span class="amenity" data-lang="en">🛏 2 bedrooms</span><span class="amenity" data-lang="de">🛏 2 Schlafzimmer</span><span class="amenity" data-lang="es">🛏 2 dormitorios</span>
+          <span class="amenity" data-lang="fr">👨‍👩‍👧 4 pers. max</span><span class="amenity" data-lang="en">👨‍👩‍👧 4 people max</span><span class="amenity" data-lang="de">👨‍👩‍👧 4 Pers. max.</span><span class="amenity" data-lang="es">👨‍👩‍👧 4 pers. máx.</span>
+          <span class="amenity">🌊 Vue lagon</span>
+          <span class="amenity" data-lang="fr">🍳 Cuisine équipée</span><span class="amenity" data-lang="en">🍳 Equipped kitchen</span><span class="amenity" data-lang="de">🍳 Ausgestattete Küche</span><span class="amenity" data-lang="es">🍳 Cocina equipada</span>
+          <span class="amenity" data-lang="fr">📶 Wi-Fi inclus</span><span class="amenity" data-lang="en">📶 Wi-Fi included</span><span class="amenity" data-lang="de">📶 WLAN inklusive</span><span class="amenity" data-lang="es">📶 Wi-Fi incluido</span>
+        </div>
+        <div class="bungalow-footer">
+          <span class="bungalow-price" data-lang="fr">Sur devis · Location saisonnière</span>
+          <span class="bungalow-price" data-lang="en">On quote · Seasonal rental</span>
+          <span class="bungalow-price" data-lang="de">Auf Anfrage · Saisonale Vermietung</span>
+          <span class="bungalow-price" data-lang="es">Presupuesto · Alquiler estacional</span>
+          <a href="../reservation.html?type=hebergement" class="bungalow-cta">
+            <span data-lang="fr">Réserver</span><span data-lang="en">Book</span><span data-lang="de">Buchen</span><span data-lang="es">Reservar</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- LOCATION SAISONNIÈRE -->
+    <article class="bungalow-card">
+      <div class="bungalow-img" role="img" aria-label="Location saisonnière Moorea">
+        🌺
+        <span class="bungalow-tag seasonal" data-lang="fr">Location saisonnière</span>
+        <span class="bungalow-tag seasonal" data-lang="en">Seasonal rental</span>
+        <span class="bungalow-tag seasonal" data-lang="de">Saisonale Vermietung</span>
+        <span class="bungalow-tag seasonal" data-lang="es">Alquiler estacional</span>
+      </div>
+      <div class="bungalow-body">
+        <h3 class="bungalow-name" data-lang="fr">Maison polynésienne</h3>
+        <h3 class="bungalow-name" data-lang="en">Polynesian house</h3>
+        <h3 class="bungalow-name" data-lang="de">Polynesisches Haus</h3>
+        <h3 class="bungalow-name" data-lang="es">Casa polinesia</h3>
+        <p class="bungalow-desc" data-lang="fr">Une maison polynésienne authentique en location saisonnière sur l'île de Moorea. Idéale pour des séjours prolongés, des familles ou des groupes souhaitant vivre comme les habitants de Moorea.</p>
+        <p class="bungalow-desc" data-lang="en">An authentic Polynesian house for seasonal rental on the island of Moorea. Ideal for extended stays, families or groups wishing to live like the inhabitants of Moorea.</p>
+        <p class="bungalow-desc" data-lang="de">Ein authentisches polynesisches Haus zur saisonalen Vermietung auf der Insel Moorea. Ideal für längere Aufenthalte, Familien oder Gruppen, die wie die Einwohner von Moorea leben möchten.</p>
+        <p class="bungalow-desc" data-lang="es">Una auténtica casa polinesia en alquiler estacional en la isla de Moorea. Ideal para estancias prolongadas, familias o grupos que deseen vivir como los habitantes de Moorea.</p>
+        <div class="bungalow-amenities">
+          <span class="amenity" data-lang="fr">🛏 3 chambres</span><span class="amenity" data-lang="en">🛏 3 bedrooms</span><span class="amenity" data-lang="de">🛏 3 Schlafzimmer</span><span class="amenity" data-lang="es">🛏 3 dormitorios</span>
+          <span class="amenity" data-lang="fr">👨‍👩‍👧 6 pers. max</span><span class="amenity" data-lang="en">👨‍👩‍👧 6 people max</span><span class="amenity" data-lang="de">👨‍👩‍👧 6 Pers. max.</span><span class="amenity" data-lang="es">👨‍👩‍👧 6 pers. máx.</span>
+          <span class="amenity" data-lang="fr">🌿 Jardin tropical</span><span class="amenity" data-lang="en">🌿 Tropical garden</span><span class="amenity" data-lang="de">🌿 Tropischer Garten</span><span class="amenity" data-lang="es">🌿 Jardín tropical</span>
+          <span class="amenity" data-lang="fr">🍳 Cuisine équipée</span><span class="amenity" data-lang="en">🍳 Equipped kitchen</span><span class="amenity" data-lang="de">🍳 Ausgestattete Küche</span><span class="amenity" data-lang="es">🍳 Cocina equipada</span>
+          <span class="amenity" data-lang="fr">📅 Séjour long</span><span class="amenity" data-lang="en">📅 Long stay</span><span class="amenity" data-lang="de">📅 Langer Aufenthalt</span><span class="amenity" data-lang="es">📅 Estancia larga</span>
+        </div>
+        <div class="bungalow-footer">
+          <span class="bungalow-price" data-lang="fr">Sur devis · Long séjour</span>
+          <span class="bungalow-price" data-lang="en">On quote · Long stay</span>
+          <span class="bungalow-price" data-lang="de">Auf Anfrage · Langer Aufenthalt</span>
+          <span class="bungalow-price" data-lang="es">Presupuesto · Estancia larga</span>
+          <a href="../reservation.html?type=hebergement" class="bungalow-cta">
+            <span data-lang="fr">Réserver</span><span data-lang="en">Book</span><span data-lang="de">Buchen</span><span data-lang="es">Reservar</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section class="experience reveal">
+  <div>
+    <div class="section-label"><span data-lang="fr">L'expérience complète</span><span data-lang="en">The complete experience</span><span data-lang="de">Das vollständige Erlebnis</span><span data-lang="es">La experiencia completa</span></div>
+    <h2 class="exp-title">
+      <span data-lang="fr">Séjournez et <em>vivez</em><br>Moorea pleinement</span>
+      <span data-lang="en">Stay and <em>live</em><br>Moorea fully</span>
+      <span data-lang="de">Bleiben Sie und <em>erleben</em><br>Sie Moorea vollständig</span>
+      <span data-lang="es">Alójese y <em>viva</em><br>Moorea plenamente</span>
+    </h2>
+    <p class="exp-body" data-lang="fr">En choisissant un hébergement chez Moorea Maire Beach, vous bénéficiez d'un accès privilégié à toutes nos prestations. Organisez votre séjour à la carte : excursion le matin, repas traditionnel sur le Motu, dîner romantique le soir…</p>
+    <p class="exp-body" data-lang="en">By choosing accommodation with Moorea Maire Beach, you benefit from privileged access to all our services. Organize your stay à la carte: morning excursion, traditional meal on the Motu, romantic dinner in the evening…</p>
+    <p class="exp-body" data-lang="de">Mit einer Unterkunft bei Moorea Maire Beach profitieren Sie von einem privilegierten Zugang zu allen unseren Leistungen. Organisieren Sie Ihren Aufenthalt à la carte: Morgenausflug, traditionelles Mahl auf dem Motu, romantisches Abendessen am Abend…</p>
+    <p class="exp-body" data-lang="es">Al elegir alojamiento en Moorea Maire Beach, se beneficia de un acceso privilegiado a todos nuestros servicios. Organice su estancia a la carta: excursión matutina, comida tradicional en el Motu, cena romántica por la noche…</p>
+    <div class="exp-list">
+      <div class="exp-item"><span class="exp-item-dot"></span><span data-lang="fr">Combinaison hébergement + prestations sur demande</span><span data-lang="en">Accommodation + services combination on request</span><span data-lang="de">Kombination Unterkunft + Leistungen auf Anfrage</span><span data-lang="es">Combinación alojamiento + servicios a petición</span></div>
+      <div class="exp-item"><span class="exp-item-dot"></span><span data-lang="fr">Départ en excursion directement depuis le bungalow</span><span data-lang="en">Excursion departure directly from the bungalow</span><span data-lang="de">Ausflugabfahrt direkt vom Bungalow</span><span data-lang="es">Salida de excursión directamente desde el bungalow</span></div>
+      <div class="exp-item"><span class="exp-item-dot"></span><span data-lang="fr">Conseils personnalisés sur les activités à Moorea</span><span data-lang="en">Personalized advice on activities in Moorea</span><span data-lang="de">Persönliche Beratung zu Aktivitäten auf Moorea</span><span data-lang="es">Asesoramiento personalizado sobre actividades en Moorea</span></div>
+      <div class="exp-item"><span class="exp-item-dot"></span><span data-lang="fr">Transfert maritime organisable sur demande</span><span data-lang="en">Maritime transfer can be arranged on request</span><span data-lang="de">Seetransfer auf Anfrage arrangierbar</span><span data-lang="es">Traslado marítimo organizable a petición</span></div>
+    </div>
+    <a href="../reservation.html?type=hebergement" class="btn-primary" style="background:var(--gold);color:var(--teal-deep);">
+      <span data-lang="fr">Demander un devis séjour</span><span data-lang="en">Request a stay quote</span><span data-lang="de">Aufenthaltsangebot anfordern</span><span data-lang="es">Solicitar presupuesto de estancia</span> →
+    </a>
+  </div>
+  <div class="exp-visual" role="img" aria-label="Coucher de soleil sur le lagon de Moorea">
+    🌅
+    <div class="exp-badge">
+      <div class="exp-badge-title" data-lang="fr">Moorea · Vue lagon directe</div>
+      <div class="exp-badge-title" data-lang="en">Moorea · Direct lagoon view</div>
+      <div class="exp-badge-title" data-lang="de">Moorea · Direkter Lagunenblick</div>
+      <div class="exp-badge-title" data-lang="es">Moorea · Vista directa laguna</div>
+      <div class="exp-badge-sub" data-lang="fr">Bungalows &amp; location saisonnière</div>
+      <div class="exp-badge-sub" data-lang="en">Bungalows &amp; seasonal rental</div>
+      <div class="exp-badge-sub" data-lang="de">Bungalows &amp; saisonale Vermietung</div>
+      <div class="exp-badge-sub" data-lang="es">Bungalows &amp; alquiler estacional</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRATIQUE -->
+<section class="pratique reveal">
+  <div class="section-label"><span data-lang="fr">Bon à savoir</span><span data-lang="en">Good to know</span><span data-lang="de">Gut zu wissen</span><span data-lang="es">Bueno saber</span></div>
+  <h2 class="section-title">
+    <span data-lang="fr">Informations <em>pratiques</em></span>
+    <span data-lang="en"><em>Practical</em> information</span>
+    <span data-lang="de"><em>Praktische</em> Informationen</span>
+    <span data-lang="es">Información <em>práctica</em></span>
+  </h2>
+  <div class="pratique-grid">
+    <div class="pratique-card">
+      <div class="pratique-icon">📅</div>
+      <h3 class="pratique-title" data-lang="fr">Durée de séjour</h3>
+      <h3 class="pratique-title" data-lang="en">Length of stay</h3>
+      <h3 class="pratique-title" data-lang="de">Aufenthaltsdauer</h3>
+      <h3 class="pratique-title" data-lang="es">Duración de la estancia</h3>
+      <p class="pratique-body" data-lang="fr">Séjours courts à partir de 2 nuits et longs séjours disponibles. Tarifs dégressifs pour les séjours prolongés. Contactez-nous pour un devis personnalisé.</p>
+      <p class="pratique-body" data-lang="en">Short stays from 2 nights and long stays available. Decreasing rates for extended stays. Contact us for a personalized quote.</p>
+      <p class="pratique-body" data-lang="de">Kurzaufenthalte ab 2 Nächten und Langzeitaufenthalte verfügbar. Degressive Preise für längere Aufenthalte. Kontaktieren Sie uns für ein persönliches Angebot.</p>
+      <p class="pratique-body" data-lang="es">Estancias cortas a partir de 2 noches y estancias largas disponibles. Tarifas decrecientes para estancias prolongadas. Contáctenos para un presupuesto personalizado.</p>
+    </div>
+    <div class="pratique-card">
+      <div class="pratique-icon">🔑</div>
+      <h3 class="pratique-title" data-lang="fr">Arrivée & départ</h3>
+      <h3 class="pratique-title" data-lang="en">Check-in & check-out</h3>
+      <h3 class="pratique-title" data-lang="de">An- & Abreise</h3>
+      <h3 class="pratique-title" data-lang="es">Llegada & salida</h3>
+      <p class="pratique-body" data-lang="fr">Arrivée à partir de 14h, départ avant 11h. Possibilité de dépose des bagages en dehors de ces horaires sur demande. Accueil personnalisé à votre arrivée.</p>
+      <p class="pratique-body" data-lang="en">Check-in from 2pm, check-out before 11am. Luggage drop-off possible outside these hours on request. Personalized welcome upon arrival.</p>
+      <p class="pratique-body" data-lang="de">Check-in ab 14 Uhr, Check-out vor 11 Uhr. Gepäckabgabe außerhalb dieser Zeiten auf Anfrage möglich. Persönlicher Empfang bei der Ankunft.</p>
+      <p class="pratique-body" data-lang="es">Check-in a partir de las 14h, check-out antes de las 11h. Posibilidad de dejar el equipaje fuera de estos horarios a petición. Bienvenida personalizada a su llegada.</p>
+    </div>
+    <div class="pratique-card">
+      <div class="pratique-icon">⛵</div>
+      <h3 class="pratique-title" data-lang="fr">Comment y accéder</h3>
+      <h3 class="pratique-title" data-lang="en">How to get there</h3>
+      <h3 class="pratique-title" data-lang="de">Wie man hinkommt</h3>
+      <h3 class="pratique-title" data-lang="es">Cómo llegar</h3>
+      <p class="pratique-body" data-lang="fr">Moorea est accessible depuis Tahiti en ferry (30 min) ou en avion (7 min). Un service de transfert maritime depuis le port peut être organisé avec notre catamaran Vahine Etene.</p>
+      <p class="pratique-body" data-lang="en">Moorea is accessible from Tahiti by ferry (30 min) or by plane (7 min). A maritime transfer service from the port can be arranged with our catamaran Vahine Etene.</p>
+      <p class="pratique-body" data-lang="de">Moorea ist von Tahiti aus per Fähre (30 Min.) oder Flugzeug (7 Min.) erreichbar. Ein Seetransferservice vom Hafen kann mit unserem Katamaran Vahine Etene arrangiert werden.</p>
+      <p class="pratique-body" data-lang="es">Moorea es accesible desde Tahití en ferry (30 min) o en avión (7 min). Un servicio de traslado marítimo desde el puerto puede organizarse con nuestro catamarán Vahine Etene.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2 class="cta-title">
+    <span data-lang="fr">Prêt pour votre <em>séjour de rêve</em> ?</span>
+    <span data-lang="en">Ready for your <em>dream stay</em>?</span>
+    <span data-lang="de">Bereit für Ihren <em>Traumaufenthalt</em>?</span>
+    <span data-lang="es">¿Listo para su <em>estancia soñada</em>?</span>
+  </h2>
+  <p class="cta-sub" data-lang="fr">Contactez-nous pour vérifier les disponibilités et obtenir un devis personnalisé pour votre séjour à Moorea.</p>
+  <p class="cta-sub" data-lang="en">Contact us to check availability and get a personalized quote for your stay in Moorea.</p>
+  <p class="cta-sub" data-lang="de">Kontaktieren Sie uns, um die Verfügbarkeit zu prüfen und ein persönliches Angebot für Ihren Aufenthalt auf Moorea zu erhalten.</p>
+  <p class="cta-sub" data-lang="es">Contáctenos para verificar disponibilidad y obtener un presupuesto personalizado para su estancia en Moorea.</p>
+  <div class="btn-row">
+    <a href="../reservation.html?type=hebergement" class="btn-primary">
+      <span data-lang="fr">Demander un devis</span><span data-lang="en">Request a quote</span><span data-lang="de">Angebot anfordern</span><span data-lang="es">Solicitar presupuesto</span> →
+    </a>
+    <a href="../contact.html" class="btn-outline">
+      <span data-lang="fr">Nous contacter</span><span data-lang="en">Contact us</span><span data-lang="de">Kontakt</span><span data-lang="es">Contacto</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Moorea Maire Beach — Polynésie française &nbsp;|&nbsp; <a href="tel:+68987707858">87 70 78 58</a> &nbsp;|&nbsp; <a href="../index.html" data-lang="fr">Accueil</a><a href="../index.html" data-lang="en">Home</a><a href="../index.html" data-lang="de">Startseite</a><a href="../index.html" data-lang="es">Inicio</a></p>
+</footer>
+
+<script>
+function setLang(l){document.querySelectorAll('[data-lang]').forEach(e=>{e.style.display=e.getAttribute('data-lang')===l?'':'none'});document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',b.textContent===l.toUpperCase())});document.documentElement.lang=l}
+window.addEventListener('scroll',()=>{document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-80)el.classList.add('visible')})});
+document.addEventListener('DOMContentLoaded',()=>{setLang('fr');document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('visible')})});
+</script>
+</body>
+</html>

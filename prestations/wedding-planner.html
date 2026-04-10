@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wedding Planner Moorea Maire Beach — Mariage traditionnel polynésien sur le Motu Moea à Moorea, Polynésie française. Vivez le mana de votre union.">
+<title>Wedding Planner — Moorea Maire Beach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal-deep:#0a3d35;--teal-mid:#1a6b5a;--teal-light:#2d9e82;--teal-pale:#a8d8cc;--teal-mist:#e8f5f2;--gold:#c4a265;--gold-light:#e2c998;--gold-pale:#f7f0e4;--sand:#f9f6f0;--white:#ffffff;--dark:#0d1f1c;--text-body:#2e4a44;--text-muted:#7a9e98;--rose:#b06090;--rose-pale:#f5eaf1;--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Jost',sans-serif;--radius-sm:4px;--radius-md:12px;--radius-lg:24px;--transition:all 0.35s cubic-bezier(0.4,0,0.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text-body);background:var(--white);line-height:1.7;overflow-x:hidden}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,162,101,.15);padding:0 40px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.nav-logo-main{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--teal-deep);letter-spacing:.02em}
+.nav-logo-sub{font-size:10px;font-weight:400;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-switcher{display:flex;gap:4px}
+.lang-btn{background:none;border:1px solid transparent;font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--text-muted);cursor:pointer;padding:4px 8px;border-radius:4px;transition:var(--transition)}
+.lang-btn:hover,.lang-btn.active{color:var(--teal-mid);border-color:var(--teal-pale);background:var(--teal-mist)}
+.btn-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:8px 16px;border-radius:100px;border:1px solid var(--teal-pale);transition:var(--transition)}
+.btn-back:hover{color:var(--teal-mid);background:var(--teal-mist)}
+/* HERO WEDDING */
+.hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,61,53,.5) 0%,rgba(10,61,53,.15) 40%,rgba(10,61,53,.65) 100%),url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1800&q=85') center/cover no-repeat;animation:slowZoom 22s ease-in-out infinite alternate}
+@keyframes slowZoom{from{transform:scale(1)}to{transform:scale(1.06)}}
+.hero-content{position:relative;z-index:2;padding:0 40px;max-width:900px;animation:fadeUp 1.2s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.hero-top{font-family:var(--font-display);font-size:13px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);margin-bottom:24px}
+.hero h1{font-family:var(--font-display);font-size:clamp(54px,7vw,96px);font-weight:300;color:var(--white);line-height:1.02;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero-divider{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:20px}
+.hero-divider::before,.hero-divider::after{content:'';width:60px;height:1px;background:rgba(196,162,101,.5)}
+.hero-divider span{font-size:16px}
+.hero-sub{font-family:var(--font-display);font-size:clamp(18px,2.2vw,24px);font-weight:300;color:rgba(255,255,255,.75);font-style:italic;margin-bottom:44px}
+.hero-actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--teal-deep);font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:16px 38px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:16px 38px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.35);cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.1)}
+/* PROMISE */
+.promise{background:var(--gold-pale);padding:80px 80px;text-align:center;border-bottom:1px solid rgba(196,162,101,.2)}
+.promise-title{font-family:var(--font-display);font-size:clamp(36px,4vw,54px);font-weight:300;color:var(--teal-deep);margin-bottom:18px}
+.promise-title em{font-style:italic;color:var(--gold)}
+.promise-body{font-size:15px;font-weight:300;color:var(--text-body);max-width:680px;margin:0 auto;line-height:1.9}
+/* STEPS */
+.steps-section{background:var(--white);padding:100px 80px}
+.section-label{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.section-label span{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.section-label::before{content:'';width:30px;height:1px;background:var(--gold);opacity:.5}
+.section-title{font-family:var(--font-display);font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--teal-deep);line-height:1.1;margin-bottom:16px}
+.section-title em{font-style:italic;color:var(--gold)}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:56px}
+.step-card{border:1px solid rgba(168,216,204,.35);border-radius:var(--radius-lg);padding:32px 24px;position:relative;transition:var(--transition)}
+.step-card:hover{border-color:var(--teal-mid);box-shadow:0 12px 40px rgba(10,61,53,.08);transform:translateY(-4px)}
+.step-number{font-family:var(--font-display);font-size:64px;font-weight:300;color:rgba(196,162,101,.2);line-height:1;margin-bottom:16px}
+.step-icon{font-size:28px;margin-bottom:14px}
+.step-title{font-family:var(--font-display);font-size:20px;font-weight:500;color:var(--teal-deep);margin-bottom:10px}
+.step-body{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.8}
+/* INCLUDED */
+.included{background:var(--teal-deep);padding:100px 80px;position:relative;overflow:hidden}
+.included::before{content:'MARIAGE';position:absolute;right:-40px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:var(--font-display);font-size:120px;font-weight:300;color:rgba(196,162,101,.04);pointer-events:none;white-space:nowrap;letter-spacing:.2em}
+.included-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.inc-label{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.inc-title{font-family:var(--font-display);font-size:clamp(36px,4.5vw,54px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:28px}
+.inc-title em{font-style:italic;color:var(--gold-light)}
+.inc-list{display:flex;flex-direction:column;gap:14px;margin-bottom:40px}
+.inc-item{display:flex;align-items:flex-start;gap:14px}
+.inc-dot{width:20px;height:20px;border-radius:50%;background:rgba(196,162,101,.2);border:1px solid rgba(196,162,101,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:10px;color:var(--gold)}
+.inc-text{font-size:14px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.6}
+.inc-text strong{color:var(--white);font-weight:500}
+.inc-visual{border-radius:var(--radius-lg);background:linear-gradient(145deg,rgba(176,96,144,.3),rgba(10,61,53,.7));display:flex;align-items:center;justify-content:center;font-size:80px;min-height:480px;position:relative}
+.inc-badge{position:absolute;bottom:24px;left:24px;right:24px;background:rgba(196,162,101,.15);backdrop-filter:blur(12px);border:1px solid rgba(196,162,101,.3);border-radius:var(--radius-md);padding:18px}
+.inc-badge-main{font-family:var(--font-display);font-size:22px;font-weight:400;color:var(--white);margin-bottom:4px}
+.inc-badge-sub{font-size:11px;color:var(--gold-light);letter-spacing:.06em}
+/* TESTIMONIAL */
+.testimonial{background:var(--rose-pale);padding:80px;text-align:center}
+.quote-mark{font-family:var(--font-display);font-size:100px;color:rgba(176,96,144,.2);line-height:.8;margin-bottom:0}
+.quote-text{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);font-weight:300;font-style:italic;color:var(--teal-deep);max-width:700px;margin:0 auto 24px;line-height:1.5}
+.quote-author{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+/* CTA */
+.cta-section{background:var(--white);padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.cta-title{font-family:var(--font-display);font-size:clamp(36px,4vw,54px);font-weight:300;color:var(--teal-deep);line-height:1.1;margin-bottom:20px}
+.cta-title em{font-style:italic;color:var(--gold)}
+.cta-body{font-size:15px;font-weight:300;color:var(--text-muted);line-height:1.9;margin-bottom:32px}
+.cta-actions{display:flex;flex-direction:column;gap:16px}
+.cta-visual{border-radius:var(--radius-lg);background:linear-gradient(135deg,var(--gold-pale),rgba(196,162,101,.3));display:flex;align-items:center;justify-content:center;min-height:400px;font-size:80px}
+.btn-outline{background:transparent;color:var(--teal-deep);font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:15px 34px;border-radius:100px;text-decoration:none;border:1.5px solid rgba(168,216,204,.6);cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-outline:hover{background:var(--teal-mist);border-color:var(--teal-mid)}
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:40px 80px;text-align:center;font-size:12px}
+footer a{color:var(--gold);text-decoration:none}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:1024px){.steps-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.included-inner,.cta-section{grid-template-columns:1fr}.navbar,.hero-content,.promise,.steps-section,.included,.testimonial,.cta-section{padding-left:24px;padding-right:24px}}
+@media(max-width:640px){.navbar{padding:0 20px}.steps-grid{grid-template-columns:1fr}}
+[data-lang]:not([data-lang="fr"]){display:none}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <a href="../index.html" class="nav-logo"><span class="nav-logo-main">Moorea Maire Beach</span><span class="nav-logo-sub">Polynésie Française</span></a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button><button class="lang-btn" onclick="setLang('en')">EN</button><button class="lang-btn" onclick="setLang('de')">DE</button><button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="../index.html" class="btn-back">← <span data-lang="fr">Accueil</span><span data-lang="en">Home</span><span data-lang="de">Startseite</span><span data-lang="es">Inicio</span></a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-top" data-lang="fr">Moorea Maire Beach · Wedding Planner</div>
+    <div class="hero-top" data-lang="en">Moorea Maire Beach · Wedding Planner</div>
+    <div class="hero-top" data-lang="de">Moorea Maire Beach · Hochzeitsplanung</div>
+    <div class="hero-top" data-lang="es">Moorea Maire Beach · Organizador de Bodas</div>
+    <h1><span data-lang="fr">Votre mariage<br><em>polynésien</em></span><span data-lang="en">Your <em>Polynesian</em><br>wedding</span><span data-lang="de">Ihre <em>polynesische</em><br>Hochzeit</span><span data-lang="es">Su boda<br><em>polinesia</em></span></h1>
+    <div class="hero-divider"><span>💍</span></div>
+    <p class="hero-sub"><span data-lang="fr">Vivez le mana du mariage traditionnel sur le Motu Moea, île de Moorea</span><span data-lang="en">Experience the mana of a traditional wedding on Motu Moea, island of Moorea</span><span data-lang="de">Erleben Sie das Mana einer traditionellen Hochzeit auf Motu Moea, Insel Moorea</span><span data-lang="es">Viva el mana de una boda tradicional en Motu Moea, isla de Moorea</span></p>
+    <div class="hero-actions">
+      <a href="../reservation.html?type=mariage" class="btn-primary"><span data-lang="fr">Organiser mon mariage</span><span data-lang="en">Plan my wedding</span><span data-lang="de">Meine Hochzeit planen</span><span data-lang="es">Planificar mi boda</span> 💍</a>
+      <a href="#steps" class="btn-ghost"><span data-lang="fr">Découvrir nos services</span><span data-lang="en">Discover our services</span><span data-lang="de">Unsere Dienste entdecken</span><span data-lang="es">Descubrir nuestros servicios</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="promise reveal">
+  <h2 class="promise-title"><span data-lang="fr">Moorea Maire Beach,<br>votre <em>wedding planner</em> sur Moorea</span><span data-lang="en">Moorea Maire Beach,<br>your <em>wedding planner</em> in Moorea</span><span data-lang="de">Moorea Maire Beach,<br>Ihr <em>Hochzeitsplaner</em> auf Moorea</span><span data-lang="es">Moorea Maire Beach,<br>su <em>wedding planner</em> en Moorea</span></h2>
+  <p class="promise-body" data-lang="fr">Nous organisons pour vous un mariage traditionnel polynésien inoubliable sur le Motu Moea, entouré du lagon turquoise et de la nature luxuriante de Moorea. Chaque détail est pensé, chaque moment est sacré — pour que votre union soit gravée à jamais dans votre mémoire et dans le mana de l'île.</p>
+  <p class="promise-body" data-lang="en">We organize for you an unforgettable traditional Polynesian wedding on Motu Moea, surrounded by the turquoise lagoon and lush nature of Moorea. Every detail is considered, every moment is sacred — so that your union is forever etched in your memory and in the mana of the island.</p>
+  <p class="promise-body" data-lang="de">Wir organisieren für Sie eine unvergessliche traditionelle polynesische Hochzeit auf Motu Moea, umgeben von der türkisfarbenen Lagune und der üppigen Natur Mooreas. Jedes Detail wird bedacht, jeder Moment ist heilig — damit Ihre Verbindung für immer in Ihrer Erinnerung und im Mana der Insel verankert ist.</p>
+  <p class="promise-body" data-lang="es">Organizamos para usted una boda tradicional polinesia inolvidable en Motu Moea, rodeada de la laguna turquesa y la exuberante naturaleza de Moorea. Cada detalle está considerado, cada momento es sagrado — para que su unión quede grabada para siempre en su memoria y en el mana de la isla.</p>
+</div>
+
+<section class="steps-section reveal" id="steps">
+  <div class="section-label"><span data-lang="fr">Comment ça se passe</span><span data-lang="en">How it works</span><span data-lang="de">Wie es funktioniert</span><span data-lang="es">Cómo funciona</span></div>
+  <h2 class="section-title"><span data-lang="fr">De votre <em>rêve</em> à la réalité</span><span data-lang="en">From your <em>dream</em> to reality</span><span data-lang="de">Von Ihrem <em>Traum</em> zur Realität</span><span data-lang="es">De su <em>sueño</em> a la realidad</span></h2>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-number">01</div>
+      <div class="step-icon">💬</div>
+      <h3 class="step-title" data-lang="fr">Premier contact</h3><h3 class="step-title" data-lang="en">First contact</h3><h3 class="step-title" data-lang="de">Erstkontakt</h3><h3 class="step-title" data-lang="es">Primer contacto</h3>
+      <p class="step-body" data-lang="fr">Contactez-nous par téléphone, WhatsApp ou email pour parler de votre projet et de vos envies. Nous répondons sous 24h.</p>
+      <p class="step-body" data-lang="en">Contact us by phone, WhatsApp or email to discuss your project and wishes. We reply within 24 hours.</p>
+      <p class="step-body" data-lang="de">Kontaktieren Sie uns per Telefon, WhatsApp oder E-Mail, um Ihr Projekt und Ihre Wünsche zu besprechen. Wir antworten innerhalb von 24 Stunden.</p>
+      <p class="step-body" data-lang="es">Contáctenos por teléfono, WhatsApp o correo para hablar de su proyecto y deseos. Respondemos en 24 horas.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">02</div>
+      <div class="step-icon">📋</div>
+      <h3 class="step-title" data-lang="fr">Devis personnalisé</h3><h3 class="step-title" data-lang="en">Personalized quote</h3><h3 class="step-title" data-lang="de">Persönliches Angebot</h3><h3 class="step-title" data-lang="es">Presupuesto personalizado</h3>
+      <p class="step-body" data-lang="fr">Nous vous envoyons un devis détaillé selon vos souhaits : date, nombre d'invités, prestations incluses, décoration…</p>
+      <p class="step-body" data-lang="en">We send you a detailed quote based on your wishes: date, number of guests, included services, decoration…</p>
+      <p class="step-body" data-lang="de">Wir senden Ihnen ein detailliertes Angebot gemäß Ihren Wünschen: Datum, Anzahl der Gäste, enthaltene Leistungen, Dekoration…</p>
+      <p class="step-body" data-lang="es">Le enviamos un presupuesto detallado según sus deseos: fecha, número de invitados, servicios incluidos, decoración…</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">03</div>
+      <div class="step-icon">🌺</div>
+      <h3 class="step-title" data-lang="fr">Organisation</h3><h3 class="step-title" data-lang="en">Organisation</h3><h3 class="step-title" data-lang="de">Organisation</h3><h3 class="step-title" data-lang="es">Organización</h3>
+      <p class="step-body" data-lang="fr">Nous préparons chaque détail de votre cérémonie — décoration florale, repas, animation, transport maritime — pour que tout soit parfait.</p>
+      <p class="step-body" data-lang="en">We prepare every detail of your ceremony — floral decoration, meals, entertainment, maritime transport — so that everything is perfect.</p>
+      <p class="step-body" data-lang="de">Wir bereiten jedes Detail Ihrer Zeremonie vor — Blumendekoration, Mahlzeiten, Unterhaltung, Seetransport — damit alles perfekt ist.</p>
+      <p class="step-body" data-lang="es">Preparamos cada detalle de su ceremonia — decoración floral, comidas, animación, transporte marítimo — para que todo sea perfecto.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">04</div>
+      <div class="step-icon">💍</div>
+      <h3 class="step-title" data-lang="fr">Le grand jour</h3><h3 class="step-title" data-lang="en">The big day</h3><h3 class="step-title" data-lang="de">Der große Tag</h3><h3 class="step-title" data-lang="es">El gran día</h3>
+      <p class="step-body" data-lang="fr">Votre mariage traditionnel polynésien se déroule sur le Motu Moea. Vous n'avez qu'à profiter — nous gérons tout.</p>
+      <p class="step-body" data-lang="en">Your traditional Polynesian wedding takes place on Motu Moea. You just enjoy — we manage everything.</p>
+      <p class="step-body" data-lang="de">Ihre traditionelle polynesische Hochzeit findet auf Motu Moea statt. Sie müssen nur genießen — wir kümmern uns um alles.</p>
+      <p class="step-body" data-lang="es">Su boda tradicional polinesia tiene lugar en Motu Moea. Solo tiene que disfrutar — nosotros gestionamos todo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDED -->
+<section class="included reveal">
+  <div class="included-inner">
+    <div>
+      <div class="inc-label" data-lang="fr">Ce qui est inclus</div><div class="inc-label" data-lang="en">What is included</div><div class="inc-label" data-lang="de">Was enthalten ist</div><div class="inc-label" data-lang="es">Qué está incluido</div>
+      <h2 class="inc-title"><span data-lang="fr">Une cérémonie<br><em>complète</em> et sur mesure</span><span data-lang="en">A <em>complete</em><br>bespoke ceremony</span><span data-lang="de">Eine <em>vollständige</em><br>maßgeschneiderte Zeremonie</span><span data-lang="es">Una ceremonia<br><em>completa</em> a medida</span></h2>
+      <div class="inc-list">
+        <div class="inc-item"><div class="inc-dot">✓</div><div class="inc-text" data-lang="fr"><strong>Cérémonie traditionnelle polynésienne</strong> — officiant, rituels traditionnels, mana de l'île</div><div class="inc-text" data-lang="en"><strong>Traditional Polynesian ceremony</strong> — officiant, traditional rituals, island mana</div><div class="inc-text" data-lang="de"><strong>Traditionelle polynesische Zeremonie</strong> — Standesbeamter, traditionelle Rituale, Insel-Mana</div><div class="inc-text" data-lang="es"><strong>Ceremonia tradicional polinesia</strong> — oficiant, rituales tradicionales, mana de la isla</div></div>
+        <div class="inc-item"><div class="inc-dot">✓</div><div class="inc-text" data-lang="fr"><strong>Décoration florale sur mesure</strong> — fleurs polynésiennes, tiare, compositions naturelles</div><div class="inc-text" data-lang="en"><strong>Custom floral decoration</strong> — Polynesian flowers, tiare, natural compositions</div><div class="inc-text" data-lang="de"><strong>Individuelle Blumendekoration</strong> — polynesische Blumen, Tiare, natürliche Kompositionen</div><div class="inc-text" data-lang="es"><strong>Decoración floral a medida</strong> — flores polinesicas, tiare, composiciones naturales</div></div>
+        <div class="inc-item"><div class="inc-dot">✓</div><div class="inc-text" data-lang="fr"><strong>Repas traditionnel</strong> — Ma'a Tahiti ou buffet gastronomique selon vos souhaits</div><div class="inc-text" data-lang="en"><strong>Traditional meal</strong> — Ma'a Tahiti or gourmet buffet according to your wishes</div><div class="inc-text" data-lang="de"><strong>Traditionelles Mahl</strong> — Ma'a Tahiti oder Gourmet-Buffet nach Ihren Wünschen</div><div class="inc-text" data-lang="es"><strong>Comida tradicional</strong> — Ma'a Tahiti o buffet gourmet según sus deseos</div></div>
+        <div class="inc-item"><div class="inc-dot">✓</div><div class="inc-text" data-lang="fr"><strong>Transport maritime</strong> — transfert en catamaran depuis le port jusqu'au Motu Moea</div><div class="inc-text" data-lang="en"><strong>Maritime transport</strong> — catamaran transfer from the port to Motu Moea</div><div class="inc-text" data-lang="de"><strong>Seetransport</strong> — Katamarantransfer vom Hafen zum Motu Moea</div><div class="inc-text" data-lang="es"><strong>Transporte marítimo</strong> — traslado en catamarán desde el puerto hasta Motu Moea</div></div>
+        <div class="inc-item"><div class="inc-dot">✓</div><div class="inc-text" data-lang="fr"><strong>Animations traditionnelles</strong> — musique polynésienne, danse, couronnes de fleurs</div><div class="inc-text" data-lang="en"><strong>Traditional entertainment</strong> — Polynesian music, dance, flower crowns</div><div class="inc-text" data-lang="de"><strong>Traditionelle Unterhaltung</strong> — polynesische Musik, Tanz, Blumenkränze</div><div class="inc-text" data-lang="es"><strong>Animaciones tradicionales</strong> — música polinesia, danza, coronas de flores</div></div>
+        <div class="inc-item"><div class="inc-dot">✓</div><div class="inc-text" data-lang="fr"><strong>Coordination complète</strong> — nous gérons tout le jour J pour que vous profitiez</div><div class="inc-text" data-lang="en"><strong>Full coordination</strong> — we manage everything on the day so you can enjoy</div><div class="inc-text" data-lang="de"><strong>Vollständige Koordination</strong> — wir organisieren alles am Tag, damit Sie genießen können</div><div class="inc-text" data-lang="es"><strong>Coordinación completa</strong> — gestionamos todo el día para que disfrute</div></div>
+      </div>
+      <a href="../reservation.html?type=mariage" class="btn-primary" style="background:var(--gold);color:var(--teal-deep);"><span data-lang="fr">Demander un devis mariage</span><span data-lang="en">Request a wedding quote</span><span data-lang="de">Hochzeitsangebot anfordern</span><span data-lang="es">Solicitar presupuesto de boda</span> →</a>
+    </div>
+    <div class="inc-visual">
+      💐
+      <div class="inc-badge">
+        <div class="inc-badge-main" data-lang="fr">Mariage traditionnel polynésien</div>
+        <div class="inc-badge-main" data-lang="en">Traditional Polynesian Wedding</div>
+        <div class="inc-badge-main" data-lang="de">Traditionelle Polynesische Hochzeit</div>
+        <div class="inc-badge-main" data-lang="es">Boda Tradicional Polinesia</div>
+        <div class="inc-badge-sub">Motu Moea · Moorea · Polynésie française</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial reveal">
+  <div class="quote-mark">"</div>
+  <p class="quote-text" data-lang="fr">Notre mariage sur le Motu Moea a été le plus beau jour de notre vie. Le mana de Moorea était palpable — la nature, le lagon, la cérémonie traditionnelle... Moorea Maire Beach a tout organisé à la perfection.</p>
+  <p class="quote-text" data-lang="en">Our wedding on Motu Moea was the most beautiful day of our lives. The mana of Moorea was palpable — the nature, the lagoon, the traditional ceremony... Moorea Maire Beach organized everything to perfection.</p>
+  <p class="quote-text" data-lang="de">Unsere Hochzeit auf Motu Moea war der schönste Tag unseres Lebens. Das Mana von Moorea war spürbar — die Natur, die Lagune, die traditionelle Zeremonie... Moorea Maire Beach hat alles perfekt organisiert.</p>
+  <p class="quote-text" data-lang="es">Nuestra boda en Motu Moea fue el día más hermoso de nuestras vidas. El mana de Moorea era palpable — la naturaleza, la laguna, la ceremonia tradicional... Moorea Maire Beach organizó todo a la perfección.</p>
+  <div class="quote-author" data-lang="fr">Marie & Thomas — Mariés sur le Motu Moea</div>
+  <div class="quote-author" data-lang="en">Marie & Thomas — Married on Motu Moea</div>
+  <div class="quote-author" data-lang="de">Marie & Thomas — Verheiratet auf Motu Moea</div>
+  <div class="quote-author" data-lang="es">Marie & Thomas — Casados en Motu Moea</div>
+</div>
+
+<!-- CTA FINAL -->
+<section class="cta-section reveal">
+  <div>
+    <div class="section-label"><span data-lang="fr">Passez à l'action</span><span data-lang="en">Take action</span><span data-lang="de">Handeln Sie</span><span data-lang="es">Tome acción</span></div>
+    <h2 class="cta-title"><span data-lang="fr">Commencez à planifier<br>votre <em>mariage de rêve</em></span><span data-lang="en">Start planning<br>your <em>dream wedding</em></span><span data-lang="de">Beginnen Sie mit der Planung<br>Ihrer <em>Traumhochzeit</em></span><span data-lang="es">Empiece a planificar<br>su <em>boda de ensueño</em></span></h2>
+    <p class="cta-body" data-lang="fr">Contactez-nous dès aujourd'hui pour discuter de votre projet de mariage. Nous répondons dans les 24 heures et vous proposons un devis personnalisé selon vos envies et votre budget.</p>
+    <p class="cta-body" data-lang="en">Contact us today to discuss your wedding project. We reply within 24 hours and offer you a personalized quote based on your wishes and budget.</p>
+    <p class="cta-body" data-lang="de">Kontaktieren Sie uns noch heute, um Ihr Hochzeitsprojekt zu besprechen. Wir antworten innerhalb von 24 Stunden und unterbreiten Ihnen ein persönliches Angebot entsprechend Ihren Wünschen und Ihrem Budget.</p>
+    <p class="cta-body" data-lang="es">Contáctenos hoy para hablar de su proyecto de boda. Respondemos en 24 horas y le ofrecemos un presupuesto personalizado según sus deseos y presupuesto.</p>
+    <div class="cta-actions">
+      <a href="../reservation.html?type=mariage" class="btn-primary"><span data-lang="fr">Demander un devis mariage</span><span data-lang="en">Request a wedding quote</span><span data-lang="de">Hochzeitsangebot anfordern</span><span data-lang="es">Solicitar presupuesto de boda</span> 💍</a>
+      <a href="../contact.html" class="btn-outline"><span data-lang="fr">Nous appeler ou écrire</span><span data-lang="en">Call or write to us</span><span data-lang="de">Anrufen oder schreiben</span><span data-lang="es">Llamarnos o escribirnos</span></a>
+      <a href="https://wa.me/68987707858" target="_blank" rel="noopener" class="btn-outline" style="background:#25d366;color:white;border-color:#25d366;">WhatsApp →</a>
+    </div>
+  </div>
+  <div class="cta-visual">🌸</div>
+</section>
+
+<footer><p>© 2026 Moorea Maire Beach — Polynésie française &nbsp;|&nbsp; <a href="tel:+68987707858">87 70 78 58</a> &nbsp;|&nbsp; <a href="../index.html" data-lang="fr">Accueil</a><a href="../index.html" data-lang="en">Home</a><a href="../index.html" data-lang="de">Startseite</a><a href="../index.html" data-lang="es">Inicio</a></p></footer>
+<script>
+function setLang(l){document.querySelectorAll('[data-lang]').forEach(e=>{e.style.display=e.getAttribute('data-lang')===l?'':'none'});document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',b.textContent===l.toUpperCase())});document.documentElement.lang=l}
+window.addEventListener('scroll',()=>{document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-80)el.classList.add('visible')})});
+document.addEventListener('DOMContentLoaded',()=>{setLang('fr');document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('visible')})});
+</script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prestations privées Moorea Maire Beach — Événements sur mesure, fêtes privées, location catamaran Vahine Etene jusqu'à 60 passagers à Moorea.">
+<title>Prestations Privées — Moorea Maire Beach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal-deep:#0a3d35;--teal-mid:#1a6b5a;--teal-light:#2d9e82;--teal-pale:#a8d8cc;--teal-mist:#e8f5f2;--gold:#c4a265;--gold-light:#e2c998;--gold-pale:#f7f0e4;--sand:#f9f6f0;--white:#ffffff;--dark:#0d1f1c;--text-body:#2e4a44;--text-muted:#7a9e98;--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Jost',sans-serif;--radius-sm:4px;--radius-md:12px;--radius-lg:24px;--transition:all 0.35s cubic-bezier(0.4,0,0.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text-body);background:var(--white);line-height:1.7;overflow-x:hidden}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,162,101,.15);padding:0 40px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.nav-logo-main{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--teal-deep);letter-spacing:.02em}
+.nav-logo-sub{font-size:10px;font-weight:400;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-switcher{display:flex;gap:4px}
+.lang-btn{background:none;border:1px solid transparent;font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--text-muted);cursor:pointer;padding:4px 8px;border-radius:4px;transition:var(--transition)}
+.lang-btn:hover,.lang-btn.active{color:var(--teal-mid);border-color:var(--teal-pale);background:var(--teal-mist)}
+.btn-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:8px 16px;border-radius:100px;border:1px solid var(--teal-pale);transition:var(--transition)}
+.btn-back:hover{color:var(--teal-mid);background:var(--teal-mist)}
+.hero{position:relative;height:86vh;min-height:520px;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,61,53,.75) 0%,rgba(10,61,53,.2) 50%,rgba(196,162,101,.25) 100%),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1800&q=85') center/cover no-repeat;animation:slowZoom 20s ease-in-out infinite alternate}
+@keyframes slowZoom{from{transform:scale(1)}to{transform:scale(1.05)}}
+.hero-content{position:relative;z-index:2;padding:0 80px 80px;max-width:820px;animation:fadeUp 1.1s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(196,162,101,.15);border:1px solid rgba(196,162,101,.4);border-radius:100px;padding:6px 18px;margin-bottom:24px;backdrop-filter:blur(8px)}
+.hero-badge span{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);font-family:var(--font-body)}
+.hero h1{font-family:var(--font-display);font-size:clamp(48px,6vw,82px);font-weight:300;color:var(--white);line-height:1.05;margin-bottom:16px}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero-sub{font-family:var(--font-display);font-size:clamp(17px,2vw,22px);font-weight:300;color:rgba(255,255,255,.78);font-style:italic;margin-bottom:36px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--teal-deep);font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:15px 34px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:15px 34px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.35);cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.1)}
+.section-label{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.section-label span{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.section-label::before{content:'';width:30px;height:1px;background:var(--gold);opacity:.5}
+.intro{padding:70px 80px;background:var(--gold-pale);text-align:center;border-bottom:1px solid rgba(196,162,101,.18)}
+.intro-title{font-family:var(--font-display);font-size:clamp(36px,4vw,54px);font-weight:300;color:var(--teal-deep);margin-bottom:18px}
+.intro-title em{font-style:italic;color:var(--gold)}
+.intro-body{font-size:15px;font-weight:300;color:var(--text-body);line-height:1.9;max-width:680px;margin:0 auto}
+.prestations{padding:100px 80px;background:var(--white)}
+.prestations-grid{display:flex;flex-direction:column;gap:80px}
+.prestation-block{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.prestation-block.reverse{direction:rtl}
+.prestation-block.reverse>*{direction:ltr}
+.prestation-visual{border-radius:var(--radius-lg);height:460px;background:linear-gradient(135deg,var(--gold-pale),rgba(196,162,101,.25));display:flex;align-items:center;justify-content:center;font-size:80px;position:relative;overflow:hidden}
+.prestation-tag{position:absolute;top:20px;left:20px;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;background:var(--teal-deep);color:var(--white)}
+.prestation-num{position:absolute;bottom:20px;right:24px;font-family:var(--font-display);font-size:80px;font-weight:300;color:rgba(196,162,101,.15);line-height:1}
+.prestation-cat{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.prestation-name{font-family:var(--font-display);font-size:clamp(30px,3.5vw,44px);font-weight:300;color:var(--teal-deep);line-height:1.1;margin-bottom:18px}
+.prestation-name em{font-style:italic;color:var(--gold)}
+.prestation-desc{font-size:15px;font-weight:300;color:var(--text-body);line-height:1.9;margin-bottom:24px}
+.prestation-details{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
+.detail-row{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text-muted)}
+.detail-row::before{content:'';width:16px;height:1px;background:var(--gold);flex-shrink:0}
+/* CATAMARAN */
+.catamaran-section{background:var(--teal-deep);padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;overflow:hidden}
+.catamaran-section::before{content:'VAHINE';position:absolute;right:-30px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:var(--font-display);font-size:100px;font-weight:300;color:rgba(196,162,101,.05);pointer-events:none;white-space:nowrap;letter-spacing:.2em}
+.cat-label{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.cat-title{font-family:var(--font-display);font-size:clamp(36px,4.5vw,56px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:22px}
+.cat-title em{font-style:italic;color:var(--gold-light)}
+.cat-body{font-size:15px;font-weight:300;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:28px}
+.cat-specs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:36px}
+.spec-card{background:rgba(255,255,255,.06);border:1px solid rgba(196,162,101,.2);border-radius:var(--radius-md);padding:18px}
+.spec-num{font-family:var(--font-display);font-size:36px;font-weight:300;color:var(--gold-light);line-height:1;margin-bottom:4px}
+.spec-label{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:.06em}
+.cat-visual{height:460px;border-radius:var(--radius-lg);background:linear-gradient(145deg,rgba(45,158,130,.5),rgba(10,61,53,.85));display:flex;align-items:center;justify-content:center;font-size:80px}
+.cta-section{background:var(--sand);padding:80px;text-align:center}
+.cta-title{font-family:var(--font-display);font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--teal-deep);margin-bottom:14px}
+.cta-title em{font-style:italic;color:var(--gold)}
+.cta-sub{font-size:15px;font-weight:300;color:var(--text-muted);max-width:500px;margin:0 auto 40px;line-height:1.8}
+.btn-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn-outline{background:transparent;color:var(--teal-deep);font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:15px 34px;border-radius:100px;text-decoration:none;border:1.5px solid rgba(168,216,204,.6);cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-outline:hover{background:var(--teal-mist);border-color:var(--teal-mid)}
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:40px 80px;text-align:center;font-size:12px}
+footer a{color:var(--gold);text-decoration:none}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){.prestation-block,.catamaran-section{grid-template-columns:1fr}.prestation-block.reverse{direction:ltr}.navbar,.hero-content,.intro,.prestations,.catamaran-section,.cta-section{padding-left:24px;padding-right:24px}}
+@media(max-width:640px){.navbar{padding:0 20px}.hero-content{padding:0 20px 50px}.cat-specs{grid-template-columns:1fr 1fr}}
+[data-lang]:not([data-lang="fr"]){display:none}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <a href="../index.html" class="nav-logo"><span class="nav-logo-main">Moorea Maire Beach</span><span class="nav-logo-sub">Polynésie Française</span></a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button><button class="lang-btn" onclick="setLang('en')">EN</button><button class="lang-btn" onclick="setLang('de')">DE</button><button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="../index.html" class="btn-back">← <span data-lang="fr">Accueil</span><span data-lang="en">Home</span><span data-lang="de">Startseite</span><span data-lang="es">Inicio</span></a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span data-lang="fr">Moorea · Événements Privés</span><span data-lang="en">Moorea · Private Events</span><span data-lang="de">Moorea · Private Veranstaltungen</span><span data-lang="es">Moorea · Eventos Privados</span></div>
+    <h1><span data-lang="fr">Votre événement,<br><em>notre expertise</em></span><span data-lang="en">Your event,<br><em>our expertise</em></span><span data-lang="de">Ihre Veranstaltung,<br><em>unsere Expertise</em></span><span data-lang="es">Su evento,<br><em>nuestra experiencia</em></span></h1>
+    <p class="hero-sub"><span data-lang="fr">Événements sur mesure · Fêtes privées · Location catamaran — Jusqu'à 60 personnes</span><span data-lang="en">Custom events · Private parties · Catamaran rental — Up to 60 people</span><span data-lang="de">Maßgeschneiderte Events · Privatpartys · Katamaranvermietung — Bis zu 60 Personen</span><span data-lang="es">Eventos a medida · Fiestas privadas · Alquiler catamarán — Hasta 60 personas</span></p>
+    <div class="hero-actions">
+      <a href="../reservation.html?type=prive" class="btn-primary"><span data-lang="fr">Demander un devis</span><span data-lang="en">Request a quote</span><span data-lang="de">Angebot anfordern</span><span data-lang="es">Solicitar presupuesto</span> →</a>
+      <a href="#prestations" class="btn-ghost"><span data-lang="fr">Découvrir</span><span data-lang="en">Discover</span><span data-lang="de">Entdecken</span><span data-lang="es">Descubrir</span></a>
+    </div>
+  </div>
+</section>
+<div class="intro">
+  <div class="section-label" style="justify-content:center"><span data-lang="fr">Sur mesure</span><span data-lang="en">Bespoke</span><span data-lang="de">Maßgeschneidert</span><span data-lang="es">A medida</span></div>
+  <h2 class="intro-title"><span data-lang="fr">Des événements <em>exclusifs</em> sur le Motu Moea</span><span data-lang="en"><em>Exclusive</em> events on Motu Moea</span><span data-lang="de"><em>Exklusive</em> Veranstaltungen auf Motu Moea</span><span data-lang="es">Eventos <em>exclusivos</em> en Motu Moea</span></h2>
+  <p class="intro-body" data-lang="fr">Moorea Maire Beach organise des événements privés sur mesure sur l'île de Moorea. Fêtes d'anniversaire, séminaires d'entreprise, réunions de famille, team building — nous concrétisons chaque projet avec soin, sur le Motu Moea ou à bord de notre catamaran Vahine Etene.</p>
+  <p class="intro-body" data-lang="en">Moorea Maire Beach organizes bespoke private events on the island of Moorea. Birthday parties, corporate seminars, family reunions, team building — we bring every project to life with care, on Motu Moea or aboard our catamaran Vahine Etene.</p>
+  <p class="intro-body" data-lang="de">Moorea Maire Beach organisiert maßgeschneiderte private Veranstaltungen auf der Insel Moorea. Geburtstagsfeiern, Unternehmensseminare, Familientreffen, Teambuilding — wir setzen jedes Projekt sorgfältig um, auf Motu Moea oder an Bord unseres Katamarans Vahine Etene.</p>
+  <p class="intro-body" data-lang="es">Moorea Maire Beach organiza eventos privados a medida en la isla de Moorea. Fiestas de cumpleaños, seminarios corporativos, reuniones familiares, team building — llevamos cada proyecto a la vida con cuidado, en Motu Moea o a bordo de nuestro catamarán Vahine Etene.</p>
+</div>
+<section class="prestations" id="prestations">
+  <div class="prestations-grid">
+    <div class="prestation-block reveal">
+      <div class="prestation-visual">✨<span class="prestation-tag" data-lang="fr">Sur mesure</span><span class="prestation-tag" data-lang="en">Bespoke</span><span class="prestation-tag" data-lang="de">Maßgeschneidert</span><span class="prestation-tag" data-lang="es">A medida</span><span class="prestation-num">01</span></div>
+      <div class="prestation-body">
+        <div class="prestation-cat" data-lang="fr">Événement privé</div><div class="prestation-cat" data-lang="en">Private event</div><div class="prestation-cat" data-lang="de">Private Veranstaltung</div><div class="prestation-cat" data-lang="es">Evento privado</div>
+        <h2 class="prestation-name"><span data-lang="fr">Votre <em>événement</em><br>sur mesure</span><span data-lang="en">Your <em>bespoke</em><br>event</span><span data-lang="de">Ihr <em>maßgeschneidertes</em><br>Ereignis</span><span data-lang="es">Su evento<br><em>a medida</em></span></h2>
+        <p class="prestation-desc" data-lang="fr">Une gamme complète de services spécialisés, adaptés à vos besoins spécifiques sur le Motu Moea. Anniversaire, séminaire, team building, réception — nous travaillons avec vous pour concevoir un événement unique qui vous ressemble, dans le cadre exceptionnel du lagon de Moorea.</p>
+        <p class="prestation-desc" data-lang="en">A complete range of specialized services, tailored to your specific needs on Motu Moea. Birthday, seminar, team building, reception — we work with you to design a unique event that reflects you, in the exceptional setting of Moorea's lagoon.</p>
+        <p class="prestation-desc" data-lang="de">Eine vollständige Palette spezialisierter Dienstleistungen, die auf Ihre spezifischen Bedürfnisse auf Motu Moea zugeschnitten sind. Geburtstag, Seminar, Teambuilding, Empfang — wir arbeiten mit Ihnen zusammen, um eine einzigartige Veranstaltung zu gestalten, die Sie widerspiegelt, im außergewöhnlichen Rahmen der Lagune von Moorea.</p>
+        <p class="prestation-desc" data-lang="es">Una gama completa de servicios especializados, adaptados a sus necesidades específicas en Motu Moea. Cumpleaños, seminario, team building, recepción — trabajamos con usted para diseñar un evento único que lo refleje, en el excepcional entorno de la laguna de Moorea.</p>
+        <div class="prestation-details">
+          <div class="detail-row"><span data-lang="fr">Capacité sur demande — petit ou grand groupe</span><span data-lang="en">Capacity on request — small or large group</span><span data-lang="de">Kapazität auf Anfrage — kleine oder große Gruppe</span><span data-lang="es">Capacidad a petición — grupo pequeño o grande</span></div>
+          <div class="detail-row"><span data-lang="fr">Sur le Motu Moea ou à bord du catamaran</span><span data-lang="en">On Motu Moea or aboard the catamaran</span><span data-lang="de">Auf Motu Moea oder an Bord des Katamarans</span><span data-lang="es">En Motu Moea o a bordo del catamarán</span></div>
+          <div class="detail-row"><span data-lang="fr">Décoration, restauration, animations sur demande</span><span data-lang="en">Decoration, catering, entertainment on request</span><span data-lang="de">Dekoration, Catering, Unterhaltung auf Anfrage</span><span data-lang="es">Decoración, catering, entretenimiento a petición</span></div>
+        </div>
+        <a href="../reservation.html?type=prive" class="btn-primary"><span data-lang="fr">Demander un devis</span><span data-lang="en">Request a quote</span><span data-lang="de">Angebot anfordern</span><span data-lang="es">Solicitar presupuesto</span> →</a>
+      </div>
+    </div>
+    <div class="prestation-block reverse reveal">
+      <div class="prestation-visual">🎉<span class="prestation-tag" data-lang="fr">Fête privée</span><span class="prestation-tag" data-lang="en">Private party</span><span class="prestation-tag" data-lang="de">Privatfeier</span><span class="prestation-tag" data-lang="es">Fiesta privada</span><span class="prestation-num">02</span></div>
+      <div class="prestation-body">
+        <div class="prestation-cat" data-lang="fr">Événement festif</div><div class="prestation-cat" data-lang="en">Festive event</div><div class="prestation-cat" data-lang="de">Festliche Veranstaltung</div><div class="prestation-cat" data-lang="es">Evento festivo</div>
+        <h2 class="prestation-name"><span data-lang="fr">Fête privée &<br><em>festive</em> sur Motu</span><span data-lang="en">Private & <em>festive</em><br>party on Motu</span><span data-lang="de">Private &<br><em>festliche</em> Feier auf Motu</span><span data-lang="es">Fiesta privada &<br><em>festiva</em> en Motu</span></h2>
+        <p class="prestation-desc" data-lang="fr">Vous projetez une fête mémorable en famille, entre amis ou entre collègues ? Sur le Motu Moea, en plein cœur du lagon de Moorea, Moorea Maire Beach s'occupe de concrétiser avec vous votre projet pour que chaque invité reparte avec des souvenirs inoubliables.</p>
+        <p class="prestation-desc" data-lang="en">Planning a memorable party with family, friends or colleagues? On Motu Moea, in the heart of Moorea's lagoon, Moorea Maire Beach takes care of bringing your project to life so that every guest leaves with unforgettable memories.</p>
+        <p class="prestation-desc" data-lang="de">Planen Sie eine unvergessliche Feier mit Familie, Freunden oder Kollegen? Auf Motu Moea, mitten in der Lagune von Moorea, kümmert sich Moorea Maire Beach darum, Ihr Projekt zum Leben zu erwecken, damit jeder Gast mit unvergesslichen Erinnerungen nach Hause geht.</p>
+        <p class="prestation-desc" data-lang="es">¿Planea una fiesta memorable con familia, amigos o compañeros? En Motu Moea, en el corazón de la laguna de Moorea, Moorea Maire Beach se encarga de dar vida a su proyecto para que cada invitado se vaya con recuerdos inolvidables.</p>
+        <div class="prestation-details">
+          <div class="detail-row"><span data-lang="fr">Famille, amis, entreprise — toutes occasions</span><span data-lang="en">Family, friends, company — all occasions</span><span data-lang="de">Familie, Freunde, Unternehmen — alle Anlässe</span><span data-lang="es">Familia, amigos, empresa — todas las ocasiones</span></div>
+          <div class="detail-row"><span data-lang="fr">Organisation complète prise en charge</span><span data-lang="en">Complete organization taken care of</span><span data-lang="de">Vollständige Organisation übernommen</span><span data-lang="es">Organización completa a cargo</span></div>
+          <div class="detail-row"><span data-lang="fr">Capacité jusqu'à 60 personnes avec catamaran</span><span data-lang="en">Capacity up to 60 people with catamaran</span><span data-lang="de">Kapazität bis zu 60 Personen mit Katamaran</span><span data-lang="es">Capacidad hasta 60 personas con catamarán</span></div>
+        </div>
+        <a href="../reservation.html?type=prive" class="btn-primary"><span data-lang="fr">Organiser ma fête</span><span data-lang="en">Organise my party</span><span data-lang="de">Meine Feier organisieren</span><span data-lang="es">Organizar mi fiesta</span> →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CATAMARAN -->
+<section class="catamaran-section reveal">
+  <div>
+    <div class="cat-label" data-lang="fr">Notre flotte</div><div class="cat-label" data-lang="en">Our fleet</div><div class="cat-label" data-lang="de">Unsere Flotte</div><div class="cat-label" data-lang="es">Nuestra flota</div>
+    <h2 class="cat-title"><span data-lang="fr">Le <em>Vahine Etene</em> —<br>Notre catamaran 60 places</span><span data-lang="en">The <em>Vahine Etene</em> —<br>Our 60-passenger catamaran</span><span data-lang="de">Die <em>Vahine Etene</em> —<br>Unser 60-Passagier-Katamaran</span><span data-lang="es">El <em>Vahine Etene</em> —<br>Nuestro catamarán de 60 pasajeros</span></h2>
+    <p class="cat-body" data-lang="fr">Notre catamaran Vahine Etene est disponible à la location avec son équipage complet — capitaine et matelots — pour vous emmener sur les eaux cristallines de Moorea. Idéal pour les excursions privées, les transferts maritimes et les événements de groupe.</p>
+    <p class="cat-body" data-lang="en">Our catamaran Vahine Etene is available for rental with its full crew — captain and sailors — to take you on the crystal clear waters of Moorea. Ideal for private excursions, maritime transfers and group events.</p>
+    <p class="cat-body" data-lang="de">Unser Katamaran Vahine Etene ist mit seiner vollständigen Besatzung — Kapitän und Matrosen — zur Miete verfügbar, um Sie auf das kristallklare Wasser von Moorea zu führen. Ideal für private Ausflüge, Seetransfers und Gruppenveranstaltungen.</p>
+    <p class="cat-body" data-lang="es">Nuestro catamarán Vahine Etene está disponible para alquiler con su tripulación completa — capitán y marineros — para llevarle por las aguas cristalinas de Moorea. Ideal para excursiones privadas, traslados marítimos y eventos grupales.</p>
+    <div class="cat-specs">
+      <div class="spec-card"><div class="spec-num">60</div><div class="spec-label" data-lang="fr">Passagers maximum</div><div class="spec-label" data-lang="en">Maximum passengers</div><div class="spec-label" data-lang="de">Max. Passagiere</div><div class="spec-label" data-lang="es">Pasajeros máximos</div></div>
+      <div class="spec-card"><div class="spec-num">A→B</div><div class="spec-label" data-lang="fr">Transferts maritimes</div><div class="spec-label" data-lang="en">Maritime transfers</div><div class="spec-label" data-lang="de">Seetransfers</div><div class="spec-label" data-lang="es">Traslados marítimos</div></div>
+      <div class="spec-card"><div class="spec-num">✓</div><div class="spec-label" data-lang="fr">Capitaine & équipage inclus</div><div class="spec-label" data-lang="en">Captain & crew included</div><div class="spec-label" data-lang="de">Kapitän & Besatzung inklusive</div><div class="spec-label" data-lang="es">Capitán & tripulación incluidos</div></div>
+      <div class="spec-card"><div class="spec-num">24h</div><div class="spec-label" data-lang="fr">Devis sous 24h</div><div class="spec-label" data-lang="en">Quote within 24h</div><div class="spec-label" data-lang="de">Angebot innerhalb 24h</div><div class="spec-label" data-lang="es">Presupuesto en 24h</div></div>
+    </div>
+    <a href="../reservation.html?type=prive" class="btn-primary" style="background:var(--gold);color:var(--teal-deep);"><span data-lang="fr">Louer le catamaran</span><span data-lang="en">Rent the catamaran</span><span data-lang="de">Katamaran mieten</span><span data-lang="es">Alquilar el catamarán</span> →</a>
+  </div>
+  <div class="cat-visual">⛵</div>
+</section>
+<div class="cta-section">
+  <h2 class="cta-title"><span data-lang="fr">Votre projet, notre <em>passion</em></span><span data-lang="en">Your project, our <em>passion</em></span><span data-lang="de">Ihr Projekt, unsere <em>Leidenschaft</em></span><span data-lang="es">Su proyecto, nuestra <em>pasión</em></span></h2>
+  <p class="cta-sub" data-lang="fr">Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé. Nous répondons dans les 24 heures.</p>
+  <p class="cta-sub" data-lang="en">Contact us to discuss your project and get a personalized quote. We reply within 24 hours.</p>
+  <p class="cta-sub" data-lang="de">Kontaktieren Sie uns, um Ihr Projekt zu besprechen und ein persönliches Angebot zu erhalten. Wir antworten innerhalb von 24 Stunden.</p>
+  <p class="cta-sub" data-lang="es">Contáctenos para hablar de su proyecto y obtener un presupuesto personalizado. Respondemos en 24 horas.</p>
+  <div class="btn-row">
+    <a href="../reservation.html?type=prive" class="btn-primary"><span data-lang="fr">Demander un devis</span><span data-lang="en">Request a quote</span><span data-lang="de">Angebot anfordern</span><span data-lang="es">Solicitar presupuesto</span> →</a>
+    <a href="../contact.html" class="btn-outline"><span data-lang="fr">Nous contacter</span><span data-lang="en">Contact us</span><span data-lang="de">Kontakt</span><span data-lang="es">Contacto</span></a>
+  </div>
+</div>
+<footer><p>© 2026 Moorea Maire Beach — Polynésie française &nbsp;|&nbsp; <a href="tel:+68987707858">87 70 78 58</a> &nbsp;|&nbsp; <a href="../index.html" data-lang="fr">Accueil</a><a href="../index.html" data-lang="en">Home</a><a href="../index.html" data-lang="de">Startseite</a><a href="../index.html" data-lang="es">Inicio</a></p></footer>
+<script>
+function setLang(l){document.querySelectorAll('[data-lang]').forEach(e=>{e.style.display=e.getAttribute('data-lang')===l?'':'none'});document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',b.textContent===l.toUpperCase())});document.documentElement.lang=l}
+window.addEventListener('scroll',()=>{document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-80)el.classList.add('visible')})});
+document.addEventListener('DOMContentLoaded',()=>{setLang('fr');document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('visible')})});
+</script>
+</body>
+</html>
