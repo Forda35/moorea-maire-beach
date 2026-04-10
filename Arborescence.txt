@@ -1,0 +1,34 @@
+moorea-maire-beach/
+│
+├── index.html                  ← Page d'accueil (hero + breaking news + prestations)
+├── prestations/
+│   ├── privees.html            ← Prestations privées
+│   ├── eco-citoyennes.html     ← Tour Bout / Eco
+│   ├── romantiques.html        ← Dîner îlot, Kahaia, Mariage
+│   └── wedding-planner.html    ← Wedding Planner complet
+│
+├── reservation.html            ← Formulaire de réservation (par prestation)
+├── hebergements.html           ← Bungalows côté mer
+├── galerie.html                ← Galerie photos/vidéo
+├── a-propos.html               ← Qui sommes-nous
+├── contact.html                ← Formulaire de contact + carte
+├── faq.html                    ← FAQ multilingue
+│
+├── assets/
+│   ├── css/
+│   │   ├── main.css            ← Styles globaux + variables premium
+│   │   ├── components.css      ← Navbar, footer, cards, boutons
+│   │   └── animations.css      ← Transitions, effets scroll
+│   ├── js/
+│   │   ├── main.js             ← Navigation, scroll, interactions
+│   │   ├── i18n.js             ← Système multilingue FR/EN/DE/ES
+│   │   ├── reservation.js      ← Logique formulaire de réservation
+│   │   └── breaking-news.js    ← Bandeau actualités dynamique
+│   ├── images/                 ← (vos photos existantes)
+│   └── fonts/                  ← Polices premium locales
+│
+└── locales/
+    ├── fr.json                 ← Traductions français
+    ├── en.json                 ← Traductions anglais
+    ├── de.json                 ← Traductions allemand
+    └── es.json                 ← Traductions espagnol

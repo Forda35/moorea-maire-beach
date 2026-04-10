@@ -91,7 +91,35 @@ footer a{color:var(--gold);text-decoration:none}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:900px){.prestation-block,.ambiance-inner{grid-template-columns:1fr}.prestation-block.reverse{direction:ltr}.navbar,.hero-content,.intro,.prestations,.ambiance,.cta-section{padding-left:24px;padding-right:24px}}
 @media(max-width:640px){.navbar{padding:0 20px}.hero-content{padding:0 20px 50px}}
-[data-lang]:not([data-lang="fr"]){display:none}
+[data-lang]:not([data-lang="fr"]){display:revert}
+
+/* ─── SVG ICONS ─── */
+.service-icon svg, .card-img-ph svg, .res-icon svg, .contact-item-icon svg,
+.feature-icon svg, .pratique-icon svg, .value-icon svg, .story-visual-emoji svg,
+.contact-card-icon svg, .prest-emoji svg, .success-icon svg, .sidebar-icon svg,
+.step-icon svg, .inc-visual svg, .cta-visual svg, .ambiance-visual svg,
+.intro-img svg, .bungalow-tab svg, .exp-badge-icon svg, .map-pin svg { 
+  display:block; 
+}
+.service-icon svg { width:32px; height:32px; color:var(--teal-light); }
+.card-img-ph svg { width:64px; height:64px; color:var(--teal-light); opacity:0.6; }
+.res-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.contact-item-icon svg, .contact-card-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.feature-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.pratique-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.value-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.story-visual-emoji svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.5; }
+.prest-emoji svg { width:32px; height:32px; color:var(--teal-light); }
+.success-icon svg { width:56px; height:56px; color:var(--teal-light); }
+.sidebar-icon svg { width:16px; height:16px; color:var(--text-muted); }
+.step-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.inc-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.cta-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.ambiance-visual svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.6; }
+.intro-img svg { width:100%; height:100%; object-fit:contain; color:var(--teal-pale); }
+.map-pin svg { width:28px; height:28px; color:var(--gold); }
+.amenity svg { width:14px; height:14px; display:inline; vertical-align:middle; margin-right:4px; color:var(--teal-light); }
+.prestation-visual svg.visual-icon-inline { width:80px; height:80px; color:var(--teal-mid); opacity:0.6; }
 </style>
 </head>
 <body>
@@ -136,7 +164,7 @@ footer a{color:var(--gold);text-decoration:none}
     <!-- DÎNER ROMANTIQUE -->
     <div class="prestation-block reveal">
       <div class="prestation-visual">
-        🌙
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <span class="prestation-tag" data-lang="fr">Romantique</span><span class="prestation-tag" data-lang="en">Romantic</span><span class="prestation-tag" data-lang="de">Romantisch</span><span class="prestation-tag" data-lang="es">Romántico</span>
         <span class="prestation-num">01</span>
       </div>
@@ -160,7 +188,7 @@ footer a{color:var(--gold);text-decoration:none}
     <!-- KAHAIA -->
     <div class="prestation-block reverse reveal">
       <div class="prestation-visual">
-        🌅
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 0 0-10 0"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"/><line x1="1" y1="18" x2="3" y2="18"/><line x1="21" y1="18" x2="23" y2="18"/><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"/><line x1="23" y1="22" x2="1" y2="22"/><polyline points="8 6 12 2 16 6"/></svg>
         <span class="prestation-tag" data-lang="fr">Romantique</span><span class="prestation-tag" data-lang="en">Romantic</span><span class="prestation-tag" data-lang="de">Romantisch</span><span class="prestation-tag" data-lang="es">Romántico</span>
         <span class="prestation-num">02</span>
       </div>
@@ -198,7 +226,7 @@ footer a{color:var(--gold);text-decoration:none}
         <span data-lang="fr">Créer votre moment</span><span data-lang="en">Create your moment</span><span data-lang="de">Ihren Moment schaffen</span><span data-lang="es">Crear su momento</span> →
       </a>
     </div>
-    <div class="ambiance-visual">🌺</div>
+    <div class="ambiance-visual"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a3 3 0 0 1 3 3c0 1.5-1 2.5-1 3.5a3 3 0 0 1-4 0C10 7.5 9 6.5 9 5a3 3 0 0 1 3-3z"/><path d="M12 22a3 3 0 0 0 3-3c0-1.5-1-2.5-1-3.5a3 3 0 0 0-4 0c0 1-.9 2-1 3.5a3 3 0 0 0 3 3z"/><path d="M2 12a3 3 0 0 1 3-3c1.5 0 2.5 1 3.5 1a3 3 0 0 1 0 4C7.5 14 6.5 15 5 15a3 3 0 0 1-3-3z"/><path d="M22 12a3 3 0 0 0-3-3c-1.5 0-2.5 1-3.5 1a3 3 0 0 0 0 4c1 0 2 .9 3.5 1a3 3 0 0 0 3-3z"/></svg></div>
   </div>
 </section>
 

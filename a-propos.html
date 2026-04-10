@@ -74,7 +74,35 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--white)
 footer{background:var(--dark);color:rgba(255,255,255,.5);padding:40px 80px;text-align:center;font-size:12px}
 footer a{color:var(--gold);text-decoration:none}
 @media(max-width:900px){.story-section,.moorea-section{grid-template-columns:1fr}.stats-section{grid-template-columns:repeat(2,1fr)}.page-hero,.values-section,.about-cta,.story-section,.moorea-section,.stats-section{padding-left:24px;padding-right:24px}.navbar{padding:0 20px}}
-[data-lang]:not([data-lang="fr"]){display:none}
+[data-lang]:not([data-lang="fr"]){display:revert}
+
+/* ─── SVG ICONS ─── */
+.service-icon svg, .card-img-ph svg, .res-icon svg, .contact-item-icon svg,
+.feature-icon svg, .pratique-icon svg, .value-icon svg, .story-visual-emoji svg,
+.contact-card-icon svg, .prest-emoji svg, .success-icon svg, .sidebar-icon svg,
+.step-icon svg, .inc-visual svg, .cta-visual svg, .ambiance-visual svg,
+.intro-img svg, .bungalow-tab svg, .exp-badge-icon svg, .map-pin svg { 
+  display:block; 
+}
+.service-icon svg { width:32px; height:32px; color:var(--teal-light); }
+.card-img-ph svg { width:64px; height:64px; color:var(--teal-light); opacity:0.6; }
+.res-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.contact-item-icon svg, .contact-card-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.feature-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.pratique-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.value-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.story-visual-emoji svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.5; }
+.prest-emoji svg { width:32px; height:32px; color:var(--teal-light); }
+.success-icon svg { width:56px; height:56px; color:var(--teal-light); }
+.sidebar-icon svg { width:16px; height:16px; color:var(--text-muted); }
+.step-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.inc-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.cta-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.ambiance-visual svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.6; }
+.intro-img svg { width:100%; height:100%; object-fit:contain; color:var(--teal-pale); }
+.map-pin svg { width:28px; height:28px; color:var(--gold); }
+.amenity svg { width:14px; height:14px; display:inline; vertical-align:middle; margin-right:4px; color:var(--teal-light); }
+.prestation-visual svg.visual-icon-inline { width:80px; height:80px; color:var(--teal-mid); opacity:0.6; }
 </style>
 </head>
 <body>
@@ -139,7 +167,7 @@ footer a{color:var(--gold);text-decoration:none}
     <p class="story-signature" data-lang="es">— Ia Ora Na, bienvenido a Moorea</p>
   </div>
   <div class="story-visual" role="img" aria-label="Vue de Moorea, Polynésie française">
-    <div class="story-visual-emoji">🌴</div>
+    <div class="story-visual-emoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="16" rx="8" ry="3"/><path d="M12 13V7"/><path d="M9 9c0-2 1.5-4 3-5 1.5 1 3 3 3 5"/><path d="M7 10c-2 0-4 1-4 1"/><path d="M17 10c2 0 4 1 4 1"/></svg></div>
     <div class="story-visual-label" data-lang="fr">Île de Moorea<br>Polynésie française</div>
     <div class="story-visual-label" data-lang="en">Island of Moorea<br>French Polynesia</div>
     <div class="story-visual-label" data-lang="de">Insel Moorea<br>Französisch-Polynesien</div>
@@ -193,7 +221,7 @@ footer a{color:var(--gold);text-decoration:none}
   </div>
   <div class="values-grid">
     <div class="value-card">
-      <div class="value-icon">🌿</div>
+      <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a7 7 0 0 1-7 7h-3z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
       <div class="value-title" data-lang="fr">Respect de la nature</div>
       <div class="value-title" data-lang="en">Respect for nature</div>
       <div class="value-title" data-lang="de">Respekt vor der Natur</div>
@@ -204,7 +232,7 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="value-body" data-lang="es">Nuestros servicios eco-ciudadanos como Tour Bout contribuyen directamente a la preservación del arrecife de coral de Moorea.</p>
     </div>
     <div class="value-card">
-      <div class="value-icon">✨</div>
+      <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg></div>
       <div class="value-title" data-lang="fr">Excellence & sur mesure</div>
       <div class="value-title" data-lang="en">Excellence & customization</div>
       <div class="value-title" data-lang="de">Exzellenz & Maßanfertigung</div>
@@ -215,7 +243,7 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="value-body" data-lang="es">Cada servicio es diseñado específicamente para usted. Nada está estandarizado — todo es único, como la isla de Moorea.</p>
     </div>
     <div class="value-card">
-      <div class="value-icon">🌺</div>
+      <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a3 3 0 0 1 3 3c0 1.5-1 2.5-1 3.5a3 3 0 0 1-4 0C10 7.5 9 6.5 9 5a3 3 0 0 1 3-3z"/><path d="M12 22a3 3 0 0 0 3-3c0-1.5-1-2.5-1-3.5a3 3 0 0 0-4 0c0 1-.9 2-1 3.5a3 3 0 0 0 3 3z"/><path d="M2 12a3 3 0 0 1 3-3c1.5 0 2.5 1 3.5 1a3 3 0 0 1 0 4C7.5 14 6.5 15 5 15a3 3 0 0 1-3-3z"/><path d="M22 12a3 3 0 0 0-3-3c-1.5 0-2.5 1-3.5 1a3 3 0 0 0 0 4c1 0 2 .9 3.5 1a3 3 0 0 0 3-3z"/></svg></div>
       <div class="value-title" data-lang="fr">Culture polynésienne</div>
       <div class="value-title" data-lang="en">Polynesian culture</div>
       <div class="value-title" data-lang="de">Polynesische Kultur</div>
@@ -226,7 +254,7 @@ footer a{color:var(--gold);text-decoration:none}
       <p class="value-body" data-lang="es">Estamos orgullosos de transmitir la riqueza de la cultura polinesia — sus tradiciones, su mana, su espiritualidad — a través de cada uno de nuestros servicios.</p>
     </div>
     <div class="value-card">
-      <div class="value-icon">🤝</div>
+      <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/></svg></div>
       <div class="value-title" data-lang="fr">Proximité & disponibilité</div>
       <div class="value-title" data-lang="en">Closeness & availability</div>
       <div class="value-title" data-lang="de">Nähe & Verfügbarkeit</div>
@@ -241,7 +269,7 @@ footer a{color:var(--gold);text-decoration:none}
 
 <!-- MOOREA INFO -->
 <section class="moorea-section">
-  <div class="moorea-visual" role="img" aria-label="Île de Moorea vue du ciel">🏝️</div>
+  <div class="moorea-visual" role="img" aria-label="Île de Moorea vue du ciel"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="16" rx="8" ry="3"/><path d="M12 13V7"/><path d="M9 9c0-2 1.5-4 3-5 1.5 1 3 3 3 5"/><path d="M7 10c-2 0-4 1-4 1"/><path d="M17 10c2 0 4 1 4 1"/></svg></div>
   <div>
     <div class="story-label"><span data-lang="fr">L'île de Moorea</span><span data-lang="en">The island of Moorea</span><span data-lang="de">Die Insel Moorea</span><span data-lang="es">La isla de Moorea</span></div>
     <h2 class="story-title">

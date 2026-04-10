@@ -82,7 +82,35 @@ footer a{color:var(--gold);text-decoration:none}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:900px){.prestation-block,.catamaran-section{grid-template-columns:1fr}.prestation-block.reverse{direction:ltr}.navbar,.hero-content,.intro,.prestations,.catamaran-section,.cta-section{padding-left:24px;padding-right:24px}}
 @media(max-width:640px){.navbar{padding:0 20px}.hero-content{padding:0 20px 50px}.cat-specs{grid-template-columns:1fr 1fr}}
-[data-lang]:not([data-lang="fr"]){display:none}
+[data-lang]:not([data-lang="fr"]){display:revert}
+
+/* ─── SVG ICONS ─── */
+.service-icon svg, .card-img-ph svg, .res-icon svg, .contact-item-icon svg,
+.feature-icon svg, .pratique-icon svg, .value-icon svg, .story-visual-emoji svg,
+.contact-card-icon svg, .prest-emoji svg, .success-icon svg, .sidebar-icon svg,
+.step-icon svg, .inc-visual svg, .cta-visual svg, .ambiance-visual svg,
+.intro-img svg, .bungalow-tab svg, .exp-badge-icon svg, .map-pin svg { 
+  display:block; 
+}
+.service-icon svg { width:32px; height:32px; color:var(--teal-light); }
+.card-img-ph svg { width:64px; height:64px; color:var(--teal-light); opacity:0.6; }
+.res-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.contact-item-icon svg, .contact-card-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.feature-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.pratique-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.value-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.story-visual-emoji svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.5; }
+.prest-emoji svg { width:32px; height:32px; color:var(--teal-light); }
+.success-icon svg { width:56px; height:56px; color:var(--teal-light); }
+.sidebar-icon svg { width:16px; height:16px; color:var(--text-muted); }
+.step-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.inc-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.cta-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.ambiance-visual svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.6; }
+.intro-img svg { width:100%; height:100%; object-fit:contain; color:var(--teal-pale); }
+.map-pin svg { width:28px; height:28px; color:var(--gold); }
+.amenity svg { width:14px; height:14px; display:inline; vertical-align:middle; margin-right:4px; color:var(--teal-light); }
+.prestation-visual svg.visual-icon-inline { width:80px; height:80px; color:var(--teal-mid); opacity:0.6; }
 </style>
 </head>
 <body>
@@ -118,7 +146,7 @@ footer a{color:var(--gold);text-decoration:none}
 <section class="prestations" id="prestations">
   <div class="prestations-grid">
     <div class="prestation-block reveal">
-      <div class="prestation-visual">✨<span class="prestation-tag" data-lang="fr">Sur mesure</span><span class="prestation-tag" data-lang="en">Bespoke</span><span class="prestation-tag" data-lang="de">Maßgeschneidert</span><span class="prestation-tag" data-lang="es">A medida</span><span class="prestation-num">01</span></div>
+      <div class="prestation-visual"><svg style="width:80px;height:80px;color:var(--teal-mid);opacity:0.6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg><span class="prestation-tag" data-lang="fr">Sur mesure</span><span class="prestation-tag" data-lang="en">Bespoke</span><span class="prestation-tag" data-lang="de">Maßgeschneidert</span><span class="prestation-tag" data-lang="es">A medida</span><span class="prestation-num">01</span></div>
       <div class="prestation-body">
         <div class="prestation-cat" data-lang="fr">Événement privé</div><div class="prestation-cat" data-lang="en">Private event</div><div class="prestation-cat" data-lang="de">Private Veranstaltung</div><div class="prestation-cat" data-lang="es">Evento privado</div>
         <h2 class="prestation-name"><span data-lang="fr">Votre <em>événement</em><br>sur mesure</span><span data-lang="en">Your <em>bespoke</em><br>event</span><span data-lang="de">Ihr <em>maßgeschneidertes</em><br>Ereignis</span><span data-lang="es">Su evento<br><em>a medida</em></span></h2>
@@ -135,7 +163,7 @@ footer a{color:var(--gold);text-decoration:none}
       </div>
     </div>
     <div class="prestation-block reverse reveal">
-      <div class="prestation-visual">🎉<span class="prestation-tag" data-lang="fr">Fête privée</span><span class="prestation-tag" data-lang="en">Private party</span><span class="prestation-tag" data-lang="de">Privatfeier</span><span class="prestation-tag" data-lang="es">Fiesta privada</span><span class="prestation-num">02</span></div>
+      <div class="prestation-visual"><svg style="width:80px;height:80px;color:var(--teal-mid);opacity:0.6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01M22 8h.01M15 2h.01M22 20h.01M22 2l-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="M5 3 3.5 7.5l4.49 1.05"/><path d="M8 5.5l3.5 5.5"/></svg><span class="prestation-tag" data-lang="fr">Fête privée</span><span class="prestation-tag" data-lang="en">Private party</span><span class="prestation-tag" data-lang="de">Privatfeier</span><span class="prestation-tag" data-lang="es">Fiesta privada</span><span class="prestation-num">02</span></div>
       <div class="prestation-body">
         <div class="prestation-cat" data-lang="fr">Événement festif</div><div class="prestation-cat" data-lang="en">Festive event</div><div class="prestation-cat" data-lang="de">Festliche Veranstaltung</div><div class="prestation-cat" data-lang="es">Evento festivo</div>
         <h2 class="prestation-name"><span data-lang="fr">Fête privée &<br><em>festive</em> sur Motu</span><span data-lang="en">Private & <em>festive</em><br>party on Motu</span><span data-lang="de">Private &<br><em>festliche</em> Feier auf Motu</span><span data-lang="es">Fiesta privada &<br><em>festiva</em> en Motu</span></h2>
@@ -170,7 +198,7 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <a href="../reservation.html?type=prive" class="btn-primary" style="background:var(--gold);color:var(--teal-deep);"><span data-lang="fr">Louer le catamaran</span><span data-lang="en">Rent the catamaran</span><span data-lang="de">Katamaran mieten</span><span data-lang="es">Alquilar el catamarán</span> →</a>
   </div>
-  <div class="cat-visual">⛵</div>
+  <div class="cat-visual"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l1.5 3h15L21 17"/><path d="M3 17H21"/><path d="M12 3v10"/><path d="M12 3L6 13h12L12 3z"/></svg></div>
 </section>
 <div class="cta-section">
   <h2 class="cta-title"><span data-lang="fr">Votre projet, notre <em>passion</em></span><span data-lang="en">Your project, our <em>passion</em></span><span data-lang="de">Ihr Projekt, unsere <em>Leidenschaft</em></span><span data-lang="es">Su proyecto, nuestra <em>pasión</em></span></h2>

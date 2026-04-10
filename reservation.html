@@ -142,7 +142,65 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);
 
 @media(max-width:1024px){.resa-layout{grid-template-columns:1fr;padding:40px 40px 60px;}.resa-sidebar{display:none;}}
 @media(max-width:640px){.resa-layout{padding:24px 20px 40px;}.page-hero{padding:40px 20px 50px;}.navbar{padding:0 20px;}.prestation-grid{grid-template-columns:1fr;}.fields-grid{grid-template-columns:1fr;}.field.full{grid-column:auto;}.form-card{padding:24px;}}
-[data-lang]:not([data-lang="fr"]){display:none;}
+[data-lang]:not([data-lang="fr"]){display:revert;}
+
+/* ─── SVG ICONS ─── */
+.service-icon svg, .card-img-ph svg, .res-icon svg, .contact-item-icon svg,
+.feature-icon svg, .pratique-icon svg, .value-icon svg, .story-visual-emoji svg,
+.contact-card-icon svg, .prest-emoji svg, .success-icon svg, .sidebar-icon svg,
+.step-icon svg, .inc-visual svg, .cta-visual svg, .ambiance-visual svg,
+.intro-img svg, .bungalow-tab svg, .exp-badge-icon svg, .map-pin svg { 
+  display:block; 
+}
+.service-icon svg { width:32px; height:32px; color:var(--teal-light); }
+.card-img-ph svg { width:64px; height:64px; color:var(--teal-light); opacity:0.6; }
+.res-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.contact-item-icon svg, .contact-card-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.feature-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.pratique-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.value-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.story-visual-emoji svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.5; }
+.prest-emoji svg { width:32px; height:32px; color:var(--teal-light); }
+.success-icon svg { width:56px; height:56px; color:var(--teal-light); }
+.sidebar-icon svg { width:16px; height:16px; color:var(--text-muted); }
+.step-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.inc-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.cta-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.ambiance-visual svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.6; }
+.intro-img svg { width:100%; height:100%; object-fit:contain; color:var(--teal-pale); }
+.map-pin svg { width:28px; height:28px; color:var(--gold); }
+.amenity svg { width:14px; height:14px; display:inline; vertical-align:middle; margin-right:4px; color:var(--teal-light); }
+.prestation-visual svg.visual-icon-inline { width:80px; height:80px; color:var(--teal-mid); opacity:0.6; }
+/* Lang switching */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.lang-btn {
+  background: none;
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+.lang-btn:hover, .lang-btn.active {
+  color: var(--teal-mid);
+  border-color: var(--teal-pale);
+  background: var(--teal-mist);
+}
+
 </style>
 </head>
 <body>
@@ -158,6 +216,13 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);
     <span data-lang="de">Zurück zur Startseite</span>
     <span data-lang="es">Volver al inicio</span>
   </a>
+  <div class="nav-right">
+    <div class="lang-switcher" role="group" aria-label="Sélection de langue">
+      <button class="lang-btn active" onclick="setLang('fr')" aria-label="Français">FR</button>
+      <button class="lang-btn" onclick="setLang('en')" aria-label="English">EN</button>
+      <button class="lang-btn" onclick="setLang('de')" aria-label="Deutsch">DE</button>
+      <button class="lang-btn" onclick="setLang('es')" aria-label="Español">ES</button>
+    </div>
   <a href="tel:+68987707858" class="nav-tel">87 70 78 58</a>
 </nav>
 
@@ -225,7 +290,7 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);
 
           <label class="prest-option" data-value="lagunaire" tabindex="0">
             <input type="radio" name="prestation" value="lagunaire">
-            <span class="prest-emoji" aria-hidden="true">🌊</span>
+            <span class="prest-emoji" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/><path d="M2 18c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/></svg></span>
             <div class="prest-info">
               <div class="prest-cat" data-lang="fr">Lagunaire</div>
               <div class="prest-cat" data-lang="en">Lagoon</div>
@@ -244,7 +309,7 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);
 
           <label class="prest-option" data-value="mariage" tabindex="0">
             <input type="radio" name="prestation" value="mariage">
-            <span class="prest-emoji" aria-hidden="true">💍</span>
+            <span class="prest-emoji" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="7"/><path d="M8.5 6.5 12 2l3.5 4.5"/><path d="M10 6h4"/><path d="M12 15v-3"/><path d="M9 13l3 2 3-2"/></svg></span>
             <div class="prest-info">
               <div class="prest-cat" data-lang="fr">Wedding Planner</div>
               <div class="prest-cat" data-lang="en">Wedding Planner</div>
@@ -263,7 +328,7 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);
 
           <label class="prest-option" data-value="romantique" tabindex="0">
             <input type="radio" name="prestation" value="romantique">
-            <span class="prest-emoji" aria-hidden="true">🌺</span>
+            <span class="prest-emoji" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a3 3 0 0 1 3 3c0 1.5-1 2.5-1 3.5a3 3 0 0 1-4 0C10 7.5 9 6.5 9 5a3 3 0 0 1 3-3z"/><path d="M12 22a3 3 0 0 0 3-3c0-1.5-1-2.5-1-3.5a3 3 0 0 0-4 0c0 1-.9 2-1 3.5a3 3 0 0 0 3 3z"/><path d="M2 12a3 3 0 0 1 3-3c1.5 0 2.5 1 3.5 1a3 3 0 0 1 0 4C7.5 14 6.5 15 5 15a3 3 0 0 1-3-3z"/><path d="M22 12a3 3 0 0 0-3-3c-1.5 0-2.5 1-3.5 1a3 3 0 0 0 0 4c1 0 2 .9 3.5 1a3 3 0 0 0 3-3z"/></svg></span>
             <div class="prest-info">
               <div class="prest-cat" data-lang="fr">Romantique</div>
               <div class="prest-cat" data-lang="en">Romantic</div>
@@ -282,7 +347,7 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);
 
           <label class="prest-option" data-value="eco" tabindex="0">
             <input type="radio" name="prestation" value="eco">
-            <span class="prest-emoji" aria-hidden="true">🌿</span>
+            <span class="prest-emoji" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a7 7 0 0 1-7 7h-3z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
             <div class="prest-info">
               <div class="prest-cat" data-lang="fr">Éco-Citoyen</div>
               <div class="prest-cat" data-lang="en">Eco-Citizen</div>
@@ -298,7 +363,7 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);
 
           <label class="prest-option" data-value="prive" tabindex="0">
             <input type="radio" name="prestation" value="prive">
-            <span class="prest-emoji" aria-hidden="true">✨</span>
+            <span class="prest-emoji" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg></span>
             <div class="prest-info">
               <div class="prest-cat" data-lang="fr">Privé · Sur mesure</div>
               <div class="prest-cat" data-lang="en">Private · Custom</div>
@@ -317,7 +382,7 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);
 
           <label class="prest-option" data-value="hebergement" tabindex="0">
             <input type="radio" name="prestation" value="hebergement">
-            <span class="prest-emoji" aria-hidden="true">🏡</span>
+            <span class="prest-emoji" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
             <div class="prest-info">
               <div class="prest-cat" data-lang="fr">Hébergement</div>
               <div class="prest-cat" data-lang="en">Accommodation</div>
@@ -645,7 +710,7 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);
 
     <!-- SUCCESS -->
     <div class="success-card" id="success-card" role="alert" aria-live="polite">
-      <div class="success-icon" aria-hidden="true">🌺</div>
+      <div class="success-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a3 3 0 0 1 3 3c0 1.5-1 2.5-1 3.5a3 3 0 0 1-4 0C10 7.5 9 6.5 9 5a3 3 0 0 1 3-3z"/><path d="M12 22a3 3 0 0 0 3-3c0-1.5-1-2.5-1-3.5a3 3 0 0 0-4 0c0 1-.9 2-1 3.5a3 3 0 0 0 3 3z"/><path d="M2 12a3 3 0 0 1 3-3c1.5 0 2.5 1 3.5 1a3 3 0 0 1 0 4C7.5 14 6.5 15 5 15a3 3 0 0 1-3-3z"/><path d="M22 12a3 3 0 0 0-3-3c-1.5 0-2.5 1-3.5 1a3 3 0 0 0 0 4c1 0 2 .9 3.5 1a3 3 0 0 0 3-3z"/></svg></div>
       <h2 class="success-title">
         <span data-lang="fr">Demande <em>envoyée !</em></span>
         <span data-lang="en">Request <em>sent!</em></span>
@@ -713,9 +778,9 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);
       <div class="sidebar-title" data-lang="en">Need help?</div>
       <div class="sidebar-title" data-lang="de">Brauchen Sie Hilfe?</div>
       <div class="sidebar-title" data-lang="es">¿Necesita ayuda?</div>
-      <a href="tel:+68987707858"><span class="sidebar-icon" aria-hidden="true">📞</span> 87 70 78 58</a>
-      <a href="https://wa.me/68987707858" target="_blank" rel="noopener"><span class="sidebar-icon" aria-hidden="true">💬</span> WhatsApp</a>
-      <a href="contact.html"><span class="sidebar-icon" aria-hidden="true">✉️</span>
+      <a href="tel:+68987707858"><span class="sidebar-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> 87 70 78 58</a>
+      <a href="https://wa.me/68987707858" target="_blank" rel="noopener"><span class="sidebar-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span> WhatsApp</a>
+      <a href="contact.html"><span class="sidebar-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
         <span data-lang="fr">Formulaire de contact</span>
         <span data-lang="en">Contact form</span>
         <span data-lang="de">Kontaktformular</span>

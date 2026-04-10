@@ -84,7 +84,35 @@ body{font-family:var(--font-body);color:var(--text-body);background:var(--white)
 footer{background:var(--dark);color:rgba(255,255,255,.5);padding:40px 80px;text-align:center;font-size:12px}
 footer a{color:var(--gold);text-decoration:none}
 @media(max-width:900px){.contact-main{grid-template-columns:1fr}.page-hero,.contact-left,.contact-right{padding-left:24px;padding-right:24px}.navbar{padding:0 20px}.form-grid{grid-template-columns:1fr}}
-[data-lang]:not([data-lang="fr"]){display:none}
+[data-lang]:not([data-lang="fr"]){display:revert}
+
+/* ─── SVG ICONS ─── */
+.service-icon svg, .card-img-ph svg, .res-icon svg, .contact-item-icon svg,
+.feature-icon svg, .pratique-icon svg, .value-icon svg, .story-visual-emoji svg,
+.contact-card-icon svg, .prest-emoji svg, .success-icon svg, .sidebar-icon svg,
+.step-icon svg, .inc-visual svg, .cta-visual svg, .ambiance-visual svg,
+.intro-img svg, .bungalow-tab svg, .exp-badge-icon svg, .map-pin svg { 
+  display:block; 
+}
+.service-icon svg { width:32px; height:32px; color:var(--teal-light); }
+.card-img-ph svg { width:64px; height:64px; color:var(--teal-light); opacity:0.6; }
+.res-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.contact-item-icon svg, .contact-card-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.feature-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.pratique-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.value-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.story-visual-emoji svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.5; }
+.prest-emoji svg { width:32px; height:32px; color:var(--teal-light); }
+.success-icon svg { width:56px; height:56px; color:var(--teal-light); }
+.sidebar-icon svg { width:16px; height:16px; color:var(--text-muted); }
+.step-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.inc-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.cta-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.ambiance-visual svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.6; }
+.intro-img svg { width:100%; height:100%; object-fit:contain; color:var(--teal-pale); }
+.map-pin svg { width:28px; height:28px; color:var(--gold); }
+.amenity svg { width:14px; height:14px; display:inline; vertical-align:middle; margin-right:4px; color:var(--teal-light); }
+.prestation-visual svg.visual-icon-inline { width:80px; height:80px; color:var(--teal-mid); opacity:0.6; }
 </style>
 </head>
 <body>
@@ -133,7 +161,7 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
 
     <div class="contact-card">
-      <div class="contact-card-icon">📞</div>
+      <div class="contact-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
       <div class="contact-card-body">
         <div class="contact-card-label" data-lang="fr">Téléphone</div>
         <div class="contact-card-label" data-lang="en">Phone</div>
@@ -164,7 +192,7 @@ footer a{color:var(--gold);text-decoration:none}
     </a>
 
     <div class="contact-card">
-      <div class="contact-card-icon">📍</div>
+      <div class="contact-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
       <div class="contact-card-body">
         <div class="contact-card-label" data-lang="fr">Adresse</div>
         <div class="contact-card-label" data-lang="en">Address</div>
@@ -312,10 +340,10 @@ footer a{color:var(--gold);text-decoration:none}
         →
       </button>
       <div class="success-msg" id="contact-success">
-        <strong data-lang="fr">Message envoyé ! 🌺</strong>
-        <strong data-lang="en">Message sent! 🌺</strong>
-        <strong data-lang="de">Nachricht gesendet! 🌺</strong>
-        <strong data-lang="es">¡Mensaje enviado! 🌺</strong>
+        <strong data-lang="fr">Message envoyé !</strong>
+        <strong data-lang="en">Message sent!</strong>
+        <strong data-lang="de">Nachricht gesendet!</strong>
+        <strong data-lang="es">¡Mensaje enviado!</strong>
         <br>
         <span data-lang="fr">Nous vous répondrons dans les 24 heures.</span>
         <span data-lang="en">We'll reply within 24 hours.</span>
@@ -329,7 +357,7 @@ footer a{color:var(--gold);text-decoration:none}
 <!-- MAP -->
 <div class="map-section" role="img" aria-label="Localisation Moorea, Polynésie française">
   <div class="map-placeholder">
-    <div class="map-pin">📍</div>
+    <div class="map-pin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
     <div class="map-placeholder-title" data-lang="fr">Moorea, Polynésie française</div>
     <div class="map-placeholder-title" data-lang="en">Moorea, French Polynesia</div>
     <div class="map-placeholder-title" data-lang="de">Moorea, Französisch-Polynesien</div>

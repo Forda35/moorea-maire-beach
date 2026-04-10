@@ -90,7 +90,7 @@ body {
 .breaking-ticker {
   display: flex;
   gap: 80px;
-  animation: ticker 30s linear infinite;
+  animation: ticker 60s linear infinite;
   white-space: nowrap;
   color: var(--teal-pale);
 }
@@ -259,7 +259,7 @@ body {
   inset: 0;
   background:
     linear-gradient(160deg, rgba(10,61,53,0.82) 0%, rgba(10,61,53,0.3) 50%, rgba(10,61,53,0.55) 100%),
-    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=85') center/cover no-repeat;
+    url('assets/bg2.jpeg') center/cover no-repeat;
   transform-origin: center;
   animation: slowZoom 18s ease-in-out infinite alternate;
 }
@@ -1099,7 +1099,35 @@ footer {
 }
 
 /* ─── I18N ─── */
-[data-lang]:not([data-lang="fr"]) { display: none; }
+[data-lang]:not([data-lang="fr"]) { display: revert; }
+
+/* ─── SVG ICONS ─── */
+.service-icon svg, .card-img-ph svg, .res-icon svg, .contact-item-icon svg,
+.feature-icon svg, .pratique-icon svg, .value-icon svg, .story-visual-emoji svg,
+.contact-card-icon svg, .prest-emoji svg, .success-icon svg, .sidebar-icon svg,
+.step-icon svg, .inc-visual svg, .cta-visual svg, .ambiance-visual svg,
+.intro-img svg, .bungalow-tab svg, .exp-badge-icon svg, .map-pin svg { 
+  display:block; 
+}
+.service-icon svg { width:32px; height:32px; color:var(--teal-light); }
+.card-img-ph svg { width:64px; height:64px; color:var(--teal-light); opacity:0.6; }
+.res-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.contact-item-icon svg, .contact-card-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.feature-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.pratique-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.value-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.story-visual-emoji svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.5; }
+.prest-emoji svg { width:32px; height:32px; color:var(--teal-light); }
+.success-icon svg { width:56px; height:56px; color:var(--teal-light); }
+.sidebar-icon svg { width:16px; height:16px; color:var(--text-muted); }
+.step-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.inc-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.cta-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.ambiance-visual svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.6; }
+.intro-img svg { width:100%; height:100%; object-fit:contain; color:var(--teal-pale); }
+.map-pin svg { width:28px; height:28px; color:var(--gold); }
+.amenity svg { width:14px; height:14px; display:inline; vertical-align:middle; margin-right:4px; color:var(--teal-light); }
+.prestation-visual svg.visual-icon-inline { width:80px; height:80px; color:var(--teal-mid); opacity:0.6; }
 </style>
 </head>
 <body>
@@ -1109,35 +1137,35 @@ footer {
   <div class="breaking-label">Actualités</div>
   <div class="breaking-ticker-wrap">
     <div class="breaking-ticker" id="ticker">
-      <span data-lang="fr">🌺 Nouvelle saison 2026 — Réservez votre excursion lagunaire dès maintenant</span>
-      <span data-lang="fr">🐋 Whale seating watching disponible — Découverte des baleines en saison</span>
-      <span data-lang="fr">💍 Wedding Planner — Vivez un mariage traditionnel inoubliable sur le Motu Moea</span>
-      <span data-lang="fr">🌿 Tour Bout éco-citoyen — Participez au bouturage de corail avec nous</span>
-      <span data-lang="en">🌺 New 2026 Season — Book your lagoon excursion now</span>
-      <span data-lang="en">🐋 Whale watching available — Discover humpback whales in season</span>
-      <span data-lang="en">💍 Wedding Planner — Live a traditional Polynesian wedding on Motu Moea</span>
-      <span data-lang="en">🌿 Eco Tour — Join us for coral reef restoration on the motu</span>
-      <span data-lang="de">🌺 Neue Saison 2026 — Jetzt Lagunenausflug buchen</span>
-      <span data-lang="de">🐋 Walbeobachtung verfügbar — Erleben Sie Buckelwale in der Saison</span>
-      <span data-lang="de">💍 Hochzeitsplaner — Traditionelle polynesische Hochzeit auf Motu Moea</span>
-      <span data-lang="es">🌺 Nueva temporada 2026 — Reserve su excursión a la laguna ahora</span>
-      <span data-lang="es">🐋 Avistamiento de ballenas disponible — Descubra las jorobadas en temporada</span>
-      <span data-lang="es">💍 Wedding Planner — Viva una boda tradicional polinesica en Motu Moea</span>
+      <span data-lang="fr">◆ Nouvelle saison 2026 — Réservez votre excursion lagunaire dès maintenant</span>
+      <span data-lang="fr">◆ Whale seating watching disponible — Découverte des baleines en saison</span>
+      <span data-lang="fr">◆ Wedding Planner — Vivez un mariage traditionnel inoubliable sur le Motu Moea</span>
+      <span data-lang="fr">◆ Tour Bout éco-citoyen — Participez au bouturage de corail avec nous</span>
+      <span data-lang="en">◆ New 2026 Season — Book your lagoon excursion now</span>
+      <span data-lang="en">◆ Whale watching available — Discover humpback whales in season</span>
+      <span data-lang="en">◆ Wedding Planner — Live a traditional Polynesian wedding on Motu Moea</span>
+      <span data-lang="en">◆ Eco Tour — Join us for coral reef restoration on the motu</span>
+      <span data-lang="de">◆ Neue Saison 2026 — Jetzt Lagunenausflug buchen</span>
+      <span data-lang="de">◆ Walbeobachtung verfügbar — Erleben Sie Buckelwale in der Saison</span>
+      <span data-lang="de">◆ Hochzeitsplaner — Traditionelle polynesische Hochzeit auf Motu Moea</span>
+      <span data-lang="es">◆ Nueva temporada 2026 — Reserve su excursión a la laguna ahora</span>
+      <span data-lang="es">◆ Avistamiento de ballenas disponible — Descubra las jorobadas en temporada</span>
+      <span data-lang="es">◆ Wedding Planner — Viva una boda tradicional polinesica en Motu Moea</span>
       <!-- duplicate for seamless loop -->
-      <span data-lang="fr">🌺 Nouvelle saison 2026 — Réservez votre excursion lagunaire dès maintenant</span>
-      <span data-lang="fr">🐋 Whale seating watching disponible — Découverte des baleines en saison</span>
-      <span data-lang="fr">💍 Wedding Planner — Vivez un mariage traditionnel inoubliable sur le Motu Moea</span>
-      <span data-lang="fr">🌿 Tour Bout éco-citoyen — Participez au bouturage de corail avec nous</span>
-      <span data-lang="en">🌺 New 2026 Season — Book your lagoon excursion now</span>
-      <span data-lang="en">🐋 Whale watching available — Discover humpback whales in season</span>
-      <span data-lang="en">💍 Wedding Planner — Live a traditional Polynesian wedding on Motu Moea</span>
-      <span data-lang="en">🌿 Eco Tour — Join us for coral reef restoration on the motu</span>
-      <span data-lang="de">🌺 Neue Saison 2026 — Jetzt Lagunenausflug buchen</span>
-      <span data-lang="de">🐋 Walbeobachtung verfügbar — Erleben Sie Buckelwale in der Saison</span>
-      <span data-lang="de">💍 Hochzeitsplaner — Traditionelle polynesische Hochzeit auf Motu Moea</span>
-      <span data-lang="es">🌺 Nueva temporada 2026 — Reserve su excursión a la laguna ahora</span>
-      <span data-lang="es">🐋 Avistamiento de ballenas disponible — Descubra las jorobadas en temporada</span>
-      <span data-lang="es">💍 Wedding Planner — Viva una boda tradicional polinesica en Motu Moea</span>
+      <span data-lang="fr">◆ Nouvelle saison 2026 — Réservez votre excursion lagunaire dès maintenant</span>
+      <span data-lang="fr">◆ Whale seating watching disponible — Découverte des baleines en saison</span>
+      <span data-lang="fr">◆ Wedding Planner — Vivez un mariage traditionnel inoubliable sur le Motu Moea</span>
+      <span data-lang="fr">◆ Tour Bout éco-citoyen — Participez au bouturage de corail avec nous</span>
+      <span data-lang="en">◆ New 2026 Season — Book your lagoon excursion now</span>
+      <span data-lang="en">◆ Whale watching available — Discover humpback whales in season</span>
+      <span data-lang="en">◆ Wedding Planner — Live a traditional Polynesian wedding on Motu Moea</span>
+      <span data-lang="en">◆ Eco Tour — Join us for coral reef restoration on the motu</span>
+      <span data-lang="de">◆ Neue Saison 2026 — Jetzt Lagunenausflug buchen</span>
+      <span data-lang="de">◆ Walbeobachtung verfügbar — Erleben Sie Buckelwale in der Saison</span>
+      <span data-lang="de">◆ Hochzeitsplaner — Traditionelle polynesische Hochzeit auf Motu Moea</span>
+      <span data-lang="es">◆ Nueva temporada 2026 — Reserve su excursión a la laguna ahora</span>
+      <span data-lang="es">◆ Avistamiento de ballenas disponible — Descubra las jorobadas en temporada</span>
+      <span data-lang="es">◆ Wedding Planner — Viva una boda tradicional polinesica en Motu Moea</span>
     </div>
   </div>
 </div>
@@ -1237,7 +1265,7 @@ footer {
 <!-- SERVICES STRIP -->
 <div class="services-strip" role="list" aria-label="Nos services">
   <div class="service-item" role="listitem">
-    <div class="service-icon" aria-hidden="true">⛵</div>
+    <div class="service-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l1.5 3h15L21 17"/><path d="M3 17H21"/><path d="M12 3v10"/><path d="M12 3L6 13h12L12 3z"/></svg></div>
     <div class="service-item-text">
       <div class="service-item-name" data-lang="fr">Excursion Lagunaire</div>
       <div class="service-item-name" data-lang="en">Lagoon Excursion</div>
@@ -1250,7 +1278,7 @@ footer {
     </div>
   </div>
   <div class="service-item" role="listitem">
-    <div class="service-icon" aria-hidden="true">💍</div>
+    <div class="service-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="7"/><path d="M8.5 6.5 12 2l3.5 4.5"/><path d="M10 6h4"/><path d="M12 15v-3"/><path d="M9 13l3 2 3-2"/></svg></div>
     <div class="service-item-text">
       <div class="service-item-name" data-lang="fr">Mariage Traditionnel</div>
       <div class="service-item-name" data-lang="en">Traditional Wedding</div>
@@ -1263,7 +1291,7 @@ footer {
     </div>
   </div>
   <div class="service-item" role="listitem">
-    <div class="service-icon" aria-hidden="true">🌺</div>
+    <div class="service-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a3 3 0 0 1 3 3c0 1.5-1 2.5-1 3.5a3 3 0 0 1-4 0C10 7.5 9 6.5 9 5a3 3 0 0 1 3-3z"/><path d="M12 22a3 3 0 0 0 3-3c0-1.5-1-2.5-1-3.5a3 3 0 0 0-4 0c0 1-.9 2-1 3.5a3 3 0 0 0 3 3z"/><path d="M2 12a3 3 0 0 1 3-3c1.5 0 2.5 1 3.5 1a3 3 0 0 1 0 4C7.5 14 6.5 15 5 15a3 3 0 0 1-3-3z"/><path d="M22 12a3 3 0 0 0-3-3c-1.5 0-2.5 1-3.5 1a3 3 0 0 0 0 4c1 0 2 .9 3.5 1a3 3 0 0 0 3-3z"/></svg></div>
     <div class="service-item-text">
       <div class="service-item-name" data-lang="fr">Romantique</div>
       <div class="service-item-name" data-lang="en">Romantic</div>
@@ -1276,7 +1304,7 @@ footer {
     </div>
   </div>
   <div class="service-item" role="listitem">
-    <div class="service-icon" aria-hidden="true">🏡</div>
+    <div class="service-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
     <div class="service-item-text">
       <div class="service-item-name" data-lang="fr">Hébergement</div>
       <div class="service-item-name" data-lang="en">Accommodation</div>
@@ -1289,7 +1317,7 @@ footer {
     </div>
   </div>
   <div class="service-item" role="listitem">
-    <div class="service-icon" aria-hidden="true">🌿</div>
+    <div class="service-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a7 7 0 0 1-7 7h-3z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
     <div class="service-item-text">
       <div class="service-item-name" data-lang="fr">Éco-Citoyen</div>
       <div class="service-item-name" data-lang="en">Eco-Citizen</div>
@@ -1328,13 +1356,13 @@ footer {
   </div>
   <div class="intro-images" aria-hidden="true">
     <div class="intro-img">
-      <div class="intro-img-placeholder">Photo du lagon<br>de Moorea</div>
+      <div class="intro-img-placeholder"><img src="assets/lagon.jpeg" /></div>
     </div>
     <div class="intro-img">
-      <div class="intro-img-placeholder" style="height:200px;">Motu Moea</div>
+      <div class="intro-img-placeholder" style="height:200px;"><img src="assets/motus.jpeg" /></div>
     </div>
     <div class="intro-img">
-      <div class="intro-img-placeholder" style="height:200px;">Excursion</div>
+      <div class="intro-img-placeholder" style="height:200px;"><img src="assets/excursion.jpeg" /></div>
     </div>
   </div>
 </section>
@@ -1379,7 +1407,7 @@ footer {
     <!-- LAGUNAIRE -->
     <a href="prestations/eco-citoyennes.html" class="prestation-card" data-category="lagunaire eco">
       <div class="card-img">
-        <div class="card-img-ph" aria-hidden="true">🌿</div>
+        <div class="card-img-ph" aria-hidden="true"><img src="assets/corail.jpg" /></div>
         <span class="card-tag" style="background:var(--teal-mid);" data-lang="fr">Éco-Citoyen</span>
         <span class="card-tag" style="background:var(--teal-mid);" data-lang="en">Eco-Citizen</span>
         <span class="card-tag" style="background:var(--teal-mid);" data-lang="de">Öko</span>
@@ -1406,7 +1434,7 @@ footer {
 
     <a href="prestations/lagunaire.html" class="prestation-card" data-category="lagunaire">
       <div class="card-img">
-        <div class="card-img-ph" aria-hidden="true">🍽️</div>
+        <div class="card-img-ph" aria-hidden="true"><img src="assets/lagune2.jpg" /></div>
         <span class="card-tag gold" data-lang="fr">Lagunaire</span>
         <span class="card-tag gold" data-lang="en">Lagoon</span>
         <span class="card-tag gold" data-lang="de">Lagune</span>
@@ -1433,7 +1461,7 @@ footer {
 
     <a href="prestations/lagunaire.html" class="prestation-card" data-category="lagunaire">
       <div class="card-img">
-        <div class="card-img-ph" aria-hidden="true">🌊</div>
+        <div class="card-img-ph" aria-hidden="true"><img src="assets/raie.jpeg" /></div>
         <span class="card-tag gold" data-lang="fr">Tour de l'île</span>
         <span class="card-tag gold" data-lang="en">Island Tour</span>
         <span class="card-tag gold" data-lang="de">Inselrundfahrt</span>
@@ -1460,7 +1488,7 @@ footer {
 
     <a href="prestations/lagunaire.html" class="prestation-card" data-category="lagunaire">
       <div class="card-img">
-        <div class="card-img-ph" aria-hidden="true">🦈</div>
+        <div class="card-img-ph" aria-hidden="true"><img src="assets/excursion2.jpg" /></div>
         <span class="card-tag gold" data-lang="fr">Découverte</span>
         <span class="card-tag gold" data-lang="en">Discovery</span>
         <span class="card-tag gold" data-lang="de">Entdeckung</span>
@@ -1488,7 +1516,7 @@ footer {
     <!-- ROMANTIQUE -->
     <a href="prestations/romantiques.html" class="prestation-card" data-category="romantique">
       <div class="card-img">
-        <div class="card-img-ph" aria-hidden="true">🌙</div>
+        <div class="card-img-ph" aria-hidden="true"><img src="assets/diner.jpg" /></div>
         <span class="card-tag" style="background:#b06090;" data-lang="fr">Romantique</span>
         <span class="card-tag" style="background:#b06090;" data-lang="en">Romantic</span>
         <span class="card-tag" style="background:#b06090;" data-lang="de">Romantisch</span>
@@ -1518,7 +1546,7 @@ footer {
 
     <a href="prestations/romantiques.html" class="prestation-card" data-category="romantique">
       <div class="card-img">
-        <div class="card-img-ph" aria-hidden="true">🌅</div>
+        <div class="card-img-ph" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 0 0-10 0"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"/><line x1="1" y1="18" x2="3" y2="18"/><line x1="21" y1="18" x2="23" y2="18"/><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"/><line x1="23" y1="22" x2="1" y2="22"/><polyline points="8 6 12 2 16 6"/></svg></div>
         <span class="card-tag" style="background:#b06090;" data-lang="fr">Romantique</span>
         <span class="card-tag" style="background:#b06090;" data-lang="en">Romantic</span>
         <span class="card-tag" style="background:#b06090;" data-lang="de">Romantisch</span>
@@ -1546,7 +1574,7 @@ footer {
     <!-- PRIVÉE -->
     <a href="prestations/privees.html" class="prestation-card" data-category="prive">
       <div class="card-img">
-        <div class="card-img-ph" aria-hidden="true">✨</div>
+        <div class="card-img-ph" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg></div>
         <span class="card-tag" data-lang="fr">Sur Mesure</span>
         <span class="card-tag" data-lang="en">Custom</span>
         <span class="card-tag" data-lang="de">Maßgeschneidert</span>
@@ -1576,7 +1604,7 @@ footer {
 
     <a href="prestations/privees.html" class="prestation-card" data-category="prive">
       <div class="card-img">
-        <div class="card-img-ph" aria-hidden="true">⛵</div>
+        <div class="card-img-ph" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l1.5 3h15L21 17"/><path d="M3 17H21"/><path d="M12 3v10"/><path d="M12 3L6 13h12L12 3z"/></svg></div>
         <span class="card-tag" data-lang="fr">Location</span>
         <span class="card-tag" data-lang="en">Rental</span>
         <span class="card-tag" data-lang="de">Vermietung</span>
@@ -1685,7 +1713,7 @@ footer {
 
   <div class="reservation-cards">
     <a href="reservation.html?type=lagunaire" class="res-card">
-      <div class="res-icon" aria-hidden="true">🌊</div>
+      <div class="res-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/><path d="M2 18c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/></svg></div>
       <div class="res-title" data-lang="fr">Tour Lagunaire</div>
       <div class="res-title" data-lang="en">Lagoon Tour</div>
       <div class="res-title" data-lang="de">Lagunenrundfahrt</div>
@@ -1696,7 +1724,7 @@ footer {
       <div class="res-sub" data-lang="es">Excursión marina</div>
     </a>
     <a href="reservation.html?type=mariage" class="res-card">
-      <div class="res-icon" aria-hidden="true">💍</div>
+      <div class="res-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="7"/><path d="M8.5 6.5 12 2l3.5 4.5"/><path d="M10 6h4"/><path d="M12 15v-3"/><path d="M9 13l3 2 3-2"/></svg></div>
       <div class="res-title" data-lang="fr">Mariage</div>
       <div class="res-title" data-lang="en">Wedding</div>
       <div class="res-title" data-lang="de">Hochzeit</div>
@@ -1707,7 +1735,7 @@ footer {
       <div class="res-sub" data-lang="es">Organizador de bodas</div>
     </a>
     <a href="reservation.html?type=romantique" class="res-card">
-      <div class="res-icon" aria-hidden="true">🌺</div>
+      <div class="res-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a3 3 0 0 1 3 3c0 1.5-1 2.5-1 3.5a3 3 0 0 1-4 0C10 7.5 9 6.5 9 5a3 3 0 0 1 3-3z"/><path d="M12 22a3 3 0 0 0 3-3c0-1.5-1-2.5-1-3.5a3 3 0 0 0-4 0c0 1-.9 2-1 3.5a3 3 0 0 0 3 3z"/><path d="M2 12a3 3 0 0 1 3-3c1.5 0 2.5 1 3.5 1a3 3 0 0 1 0 4C7.5 14 6.5 15 5 15a3 3 0 0 1-3-3z"/><path d="M22 12a3 3 0 0 0-3-3c-1.5 0-2.5 1-3.5 1a3 3 0 0 0 0 4c1 0 2 .9 3.5 1a3 3 0 0 0 3-3z"/></svg></div>
       <div class="res-title" data-lang="fr">Romantique</div>
       <div class="res-title" data-lang="en">Romantic</div>
       <div class="res-title" data-lang="de">Romantisch</div>
@@ -1718,7 +1746,7 @@ footer {
       <div class="res-sub" data-lang="es">Cena · Escapada</div>
     </a>
     <a href="reservation.html?type=prive" class="res-card">
-      <div class="res-icon" aria-hidden="true">✨</div>
+      <div class="res-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg></div>
       <div class="res-title" data-lang="fr">Privé</div>
       <div class="res-title" data-lang="en">Private</div>
       <div class="res-title" data-lang="de">Privat</div>
@@ -1729,7 +1757,7 @@ footer {
       <div class="res-sub" data-lang="es">A medida</div>
     </a>
     <a href="reservation.html?type=hebergement" class="res-card">
-      <div class="res-icon" aria-hidden="true">🏡</div>
+      <div class="res-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
       <div class="res-title" data-lang="fr">Hébergement</div>
       <div class="res-title" data-lang="en">Accommodation</div>
       <div class="res-title" data-lang="de">Unterkunft</div>
@@ -1753,7 +1781,7 @@ footer {
 <!-- CONTACT BAND -->
 <div class="contact-band" role="contentinfo" aria-label="Coordonnées">
   <div class="contact-item">
-    <div class="contact-item-icon" aria-hidden="true">📞</div>
+    <div class="contact-item-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
     <div>
       <div class="contact-item-label" data-lang="fr">Téléphone</div>
       <div class="contact-item-label" data-lang="en">Phone</div>
@@ -1763,7 +1791,7 @@ footer {
     </div>
   </div>
   <div class="contact-item">
-    <div class="contact-item-icon" aria-hidden="true">📍</div>
+    <div class="contact-item-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
     <div>
       <div class="contact-item-label" data-lang="fr">Localisation</div>
       <div class="contact-item-label" data-lang="en">Location</div>

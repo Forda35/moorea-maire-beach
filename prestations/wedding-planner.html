@@ -94,7 +94,35 @@ footer a{color:var(--gold);text-decoration:none}
 @media(max-width:1024px){.steps-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.included-inner,.cta-section{grid-template-columns:1fr}.navbar,.hero-content,.promise,.steps-section,.included,.testimonial,.cta-section{padding-left:24px;padding-right:24px}}
 @media(max-width:640px){.navbar{padding:0 20px}.steps-grid{grid-template-columns:1fr}}
-[data-lang]:not([data-lang="fr"]){display:none}
+[data-lang]:not([data-lang="fr"]){display:revert}
+
+/* ─── SVG ICONS ─── */
+.service-icon svg, .card-img-ph svg, .res-icon svg, .contact-item-icon svg,
+.feature-icon svg, .pratique-icon svg, .value-icon svg, .story-visual-emoji svg,
+.contact-card-icon svg, .prest-emoji svg, .success-icon svg, .sidebar-icon svg,
+.step-icon svg, .inc-visual svg, .cta-visual svg, .ambiance-visual svg,
+.intro-img svg, .bungalow-tab svg, .exp-badge-icon svg, .map-pin svg { 
+  display:block; 
+}
+.service-icon svg { width:32px; height:32px; color:var(--teal-light); }
+.card-img-ph svg { width:64px; height:64px; color:var(--teal-light); opacity:0.6; }
+.res-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.contact-item-icon svg, .contact-card-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.feature-icon svg { width:28px; height:28px; color:var(--teal-light); }
+.pratique-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.value-icon svg { width:36px; height:36px; color:var(--teal-light); }
+.story-visual-emoji svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.5; }
+.prest-emoji svg { width:32px; height:32px; color:var(--teal-light); }
+.success-icon svg { width:56px; height:56px; color:var(--teal-light); }
+.sidebar-icon svg { width:16px; height:16px; color:var(--text-muted); }
+.step-icon svg { width:24px; height:24px; color:var(--teal-light); }
+.inc-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.cta-visual svg { width:80px; height:80px; color:var(--gold-light); opacity:0.7; }
+.ambiance-visual svg { width:80px; height:80px; color:var(--teal-pale); opacity:0.6; }
+.intro-img svg { width:100%; height:100%; object-fit:contain; color:var(--teal-pale); }
+.map-pin svg { width:28px; height:28px; color:var(--gold); }
+.amenity svg { width:14px; height:14px; display:inline; vertical-align:middle; margin-right:4px; color:var(--teal-light); }
+.prestation-visual svg.visual-icon-inline { width:80px; height:80px; color:var(--teal-mid); opacity:0.6; }
 </style>
 </head>
 <body>
@@ -116,10 +144,10 @@ footer a{color:var(--gold);text-decoration:none}
     <div class="hero-top" data-lang="de">Moorea Maire Beach · Hochzeitsplanung</div>
     <div class="hero-top" data-lang="es">Moorea Maire Beach · Organizador de Bodas</div>
     <h1><span data-lang="fr">Votre mariage<br><em>polynésien</em></span><span data-lang="en">Your <em>Polynesian</em><br>wedding</span><span data-lang="de">Ihre <em>polynesische</em><br>Hochzeit</span><span data-lang="es">Su boda<br><em>polinesia</em></span></h1>
-    <div class="hero-divider"><span>💍</span></div>
+    <div class="hero-divider"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="7"/><path d="M8.5 6.5 12 2l3.5 4.5"/><path d="M10 6h4"/><path d="M12 15v-3"/><path d="M9 13l3 2 3-2"/></svg></span></div>
     <p class="hero-sub"><span data-lang="fr">Vivez le mana du mariage traditionnel sur le Motu Moea, île de Moorea</span><span data-lang="en">Experience the mana of a traditional wedding on Motu Moea, island of Moorea</span><span data-lang="de">Erleben Sie das Mana einer traditionellen Hochzeit auf Motu Moea, Insel Moorea</span><span data-lang="es">Viva el mana de una boda tradicional en Motu Moea, isla de Moorea</span></p>
     <div class="hero-actions">
-      <a href="../reservation.html?type=mariage" class="btn-primary"><span data-lang="fr">Organiser mon mariage</span><span data-lang="en">Plan my wedding</span><span data-lang="de">Meine Hochzeit planen</span><span data-lang="es">Planificar mi boda</span> 💍</a>
+      <a href="../reservation.html?type=mariage" class="btn-primary"><span data-lang="fr">Organiser mon mariage</span><span data-lang="en">Plan my wedding</span><span data-lang="de">Meine Hochzeit planen</span><span data-lang="es">Planificar mi boda</span> →</a>
       <a href="#steps" class="btn-ghost"><span data-lang="fr">Découvrir nos services</span><span data-lang="en">Discover our services</span><span data-lang="de">Unsere Dienste entdecken</span><span data-lang="es">Descubrir nuestros servicios</span></a>
     </div>
   </div>
@@ -139,7 +167,7 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="steps-grid">
     <div class="step-card">
       <div class="step-number">01</div>
-      <div class="step-icon">💬</div>
+      <div class="step-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
       <h3 class="step-title" data-lang="fr">Premier contact</h3><h3 class="step-title" data-lang="en">First contact</h3><h3 class="step-title" data-lang="de">Erstkontakt</h3><h3 class="step-title" data-lang="es">Primer contacto</h3>
       <p class="step-body" data-lang="fr">Contactez-nous par téléphone, WhatsApp ou email pour parler de votre projet et de vos envies. Nous répondons sous 24h.</p>
       <p class="step-body" data-lang="en">Contact us by phone, WhatsApp or email to discuss your project and wishes. We reply within 24 hours.</p>
@@ -148,7 +176,7 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <div class="step-card">
       <div class="step-number">02</div>
-      <div class="step-icon">📋</div>
+      <div class="step-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></div>
       <h3 class="step-title" data-lang="fr">Devis personnalisé</h3><h3 class="step-title" data-lang="en">Personalized quote</h3><h3 class="step-title" data-lang="de">Persönliches Angebot</h3><h3 class="step-title" data-lang="es">Presupuesto personalizado</h3>
       <p class="step-body" data-lang="fr">Nous vous envoyons un devis détaillé selon vos souhaits : date, nombre d'invités, prestations incluses, décoration…</p>
       <p class="step-body" data-lang="en">We send you a detailed quote based on your wishes: date, number of guests, included services, decoration…</p>
@@ -157,7 +185,7 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <div class="step-card">
       <div class="step-number">03</div>
-      <div class="step-icon">🌺</div>
+      <div class="step-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a3 3 0 0 1 3 3c0 1.5-1 2.5-1 3.5a3 3 0 0 1-4 0C10 7.5 9 6.5 9 5a3 3 0 0 1 3-3z"/><path d="M12 22a3 3 0 0 0 3-3c0-1.5-1-2.5-1-3.5a3 3 0 0 0-4 0c0 1-.9 2-1 3.5a3 3 0 0 0 3 3z"/><path d="M2 12a3 3 0 0 1 3-3c1.5 0 2.5 1 3.5 1a3 3 0 0 1 0 4C7.5 14 6.5 15 5 15a3 3 0 0 1-3-3z"/><path d="M22 12a3 3 0 0 0-3-3c-1.5 0-2.5 1-3.5 1a3 3 0 0 0 0 4c1 0 2 .9 3.5 1a3 3 0 0 0 3-3z"/></svg></div>
       <h3 class="step-title" data-lang="fr">Organisation</h3><h3 class="step-title" data-lang="en">Organisation</h3><h3 class="step-title" data-lang="de">Organisation</h3><h3 class="step-title" data-lang="es">Organización</h3>
       <p class="step-body" data-lang="fr">Nous préparons chaque détail de votre cérémonie — décoration florale, repas, animation, transport maritime — pour que tout soit parfait.</p>
       <p class="step-body" data-lang="en">We prepare every detail of your ceremony — floral decoration, meals, entertainment, maritime transport — so that everything is perfect.</p>
@@ -166,7 +194,7 @@ footer a{color:var(--gold);text-decoration:none}
     </div>
     <div class="step-card">
       <div class="step-number">04</div>
-      <div class="step-icon">💍</div>
+      <div class="step-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="7"/><path d="M8.5 6.5 12 2l3.5 4.5"/><path d="M10 6h4"/><path d="M12 15v-3"/><path d="M9 13l3 2 3-2"/></svg></div>
       <h3 class="step-title" data-lang="fr">Le grand jour</h3><h3 class="step-title" data-lang="en">The big day</h3><h3 class="step-title" data-lang="de">Der große Tag</h3><h3 class="step-title" data-lang="es">El gran día</h3>
       <p class="step-body" data-lang="fr">Votre mariage traditionnel polynésien se déroule sur le Motu Moea. Vous n'avez qu'à profiter — nous gérons tout.</p>
       <p class="step-body" data-lang="en">Your traditional Polynesian wedding takes place on Motu Moea. You just enjoy — we manage everything.</p>
@@ -193,7 +221,7 @@ footer a{color:var(--gold);text-decoration:none}
       <a href="../reservation.html?type=mariage" class="btn-primary" style="background:var(--gold);color:var(--teal-deep);"><span data-lang="fr">Demander un devis mariage</span><span data-lang="en">Request a wedding quote</span><span data-lang="de">Hochzeitsangebot anfordern</span><span data-lang="es">Solicitar presupuesto de boda</span> →</a>
     </div>
     <div class="inc-visual">
-      💐
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12c-2-3-5-4-7-2"/><path d="M12 12c2-3 5-4 7-2"/><path d="M12 12c0-4-1-7-3-8"/><path d="M12 12c0-4 1-7 3-8"/><path d="M9 18c-1 .5-2 .5-3-.5"/><path d="M15 18c1 .5 2 .5 3-.5"/></svg>
       <div class="inc-badge">
         <div class="inc-badge-main" data-lang="fr">Mariage traditionnel polynésien</div>
         <div class="inc-badge-main" data-lang="en">Traditional Polynesian Wedding</div>
@@ -228,12 +256,12 @@ footer a{color:var(--gold);text-decoration:none}
     <p class="cta-body" data-lang="de">Kontaktieren Sie uns noch heute, um Ihr Hochzeitsprojekt zu besprechen. Wir antworten innerhalb von 24 Stunden und unterbreiten Ihnen ein persönliches Angebot entsprechend Ihren Wünschen und Ihrem Budget.</p>
     <p class="cta-body" data-lang="es">Contáctenos hoy para hablar de su proyecto de boda. Respondemos en 24 horas y le ofrecemos un presupuesto personalizado según sus deseos y presupuesto.</p>
     <div class="cta-actions">
-      <a href="../reservation.html?type=mariage" class="btn-primary"><span data-lang="fr">Demander un devis mariage</span><span data-lang="en">Request a wedding quote</span><span data-lang="de">Hochzeitsangebot anfordern</span><span data-lang="es">Solicitar presupuesto de boda</span> 💍</a>
+      <a href="../reservation.html?type=mariage" class="btn-primary"><span data-lang="fr">Demander un devis mariage</span><span data-lang="en">Request a wedding quote</span><span data-lang="de">Hochzeitsangebot anfordern</span><span data-lang="es">Solicitar presupuesto de boda</span> →</a>
       <a href="../contact.html" class="btn-outline"><span data-lang="fr">Nous appeler ou écrire</span><span data-lang="en">Call or write to us</span><span data-lang="de">Anrufen oder schreiben</span><span data-lang="es">Llamarnos o escribirnos</span></a>
       <a href="https://wa.me/68987707858" target="_blank" rel="noopener" class="btn-outline" style="background:#25d366;color:white;border-color:#25d366;">WhatsApp →</a>
     </div>
   </div>
-  <div class="cta-visual">🌸</div>
+  <div class="cta-visual"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/></svg></div>
 </section>
 
 <footer><p>© 2026 Moorea Maire Beach — Polynésie française &nbsp;|&nbsp; <a href="tel:+68987707858">87 70 78 58</a> &nbsp;|&nbsp; <a href="../index.html" data-lang="fr">Accueil</a><a href="../index.html" data-lang="en">Home</a><a href="../index.html" data-lang="de">Startseite</a><a href="../index.html" data-lang="es">Inicio</a></p></footer>
