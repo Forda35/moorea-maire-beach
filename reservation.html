@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="description" content="Réservez votre prestation Moorea Maire Beach — Excursions lagunaires, mariage traditionnel, romantique, privé. Formulaire simple et rapide.">
+<title>Réservation — Moorea Maire Beach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal-deep:#0a3d35;--teal-mid:#1a6b5a;--teal-light:#2d9e82;--teal-pale:#a8d8cc;--teal-mist:#e8f5f2;
+  --gold:#c4a265;--gold-light:#e2c998;--gold-pale:#f7f0e4;--sand:#f9f6f0;--white:#ffffff;
+  --dark:#0d1f1c;--text-body:#2e4a44;--text-muted:#7a9e98;--error:#c0392b;--success:#1a6b5a;
+  --font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Jost',sans-serif;
+  --radius-sm:4px;--radius-md:12px;--radius-lg:24px;--transition:all 0.32s cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);color:var(--text-body);background:var(--sand);line-height:1.7;overflow-x:hidden;}
+
+/* NAVBAR */
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,162,101,0.15);padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{text-decoration:none;line-height:1;}
+.nav-logo-main{font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--teal-deep);}
+.nav-logo-sub{font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);font-weight:400;display:block;margin-top:2px;}
+.nav-back{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;transition:var(--transition);}
+.nav-back:hover{color:var(--teal-mid);}
+.nav-back::before{content:'←';font-size:16px;}
+.nav-tel{font-size:13px;font-weight:500;color:var(--teal-deep);text-decoration:none;}
+
+/* PAGE HERO */
+.page-hero{background:var(--teal-deep);padding:60px 60px 70px;position:relative;overflow:hidden;}
+.page-hero::before{content:'RÉSERVATION';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:var(--font-display);font-size:100px;font-weight:300;color:rgba(196,162,101,0.07);pointer-events:none;white-space:nowrap;letter-spacing:0.2em;}
+.page-hero-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px;}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(38px,5vw,62px);font-weight:300;color:var(--white);line-height:1.1;}
+.page-hero h1 em{font-style:italic;color:var(--gold-light);}
+.page-hero-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,0.65);margin-top:14px;max-width:520px;line-height:1.8;}
+
+/* LAYOUT */
+.resa-layout{display:grid;grid-template-columns:1fr 360px;gap:40px;max-width:1100px;margin:0 auto;padding:60px 60px 80px;align-items:start;}
+.resa-form-col{}
+.resa-sidebar{}
+
+/* STEP INDICATOR */
+.steps{display:flex;align-items:center;gap:0;margin-bottom:40px;}
+.step{display:flex;align-items:center;gap:10px;flex:1;}
+.step-num{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--teal-pale);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--text-muted);transition:var(--transition);flex-shrink:0;}
+.step.active .step-num{background:var(--teal-deep);border-color:var(--teal-deep);color:var(--white);}
+.step.done .step-num{background:var(--teal-light);border-color:var(--teal-light);color:var(--white);}
+.step.done .step-num::after{content:'✓';}
+.step.done .step-num span{display:none;}
+.step-label{font-size:11px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);}
+.step.active .step-label{color:var(--teal-deep);}
+.step-line{flex:1;height:1px;background:var(--teal-pale);margin:0 12px;}
+
+/* FORM CARD */
+.form-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid rgba(168,216,204,0.3);padding:40px;margin-bottom:24px;}
+.form-card-title{font-family:var(--font-display);font-size:26px;font-weight:500;color:var(--teal-deep);margin-bottom:6px;}
+.form-card-sub{font-size:13px;color:var(--text-muted);font-weight:300;margin-bottom:28px;}
+
+/* PRESTATION SELECTOR */
+.prestation-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:4px;}
+.prest-option{border:1.5px solid rgba(168,216,204,0.4);border-radius:var(--radius-md);padding:18px 16px;cursor:pointer;transition:var(--transition);display:flex;align-items:flex-start;gap:14px;position:relative;}
+.prest-option:hover{border-color:var(--teal-pale);background:var(--teal-mist);}
+.prest-option.selected{border-color:var(--teal-mid);background:var(--teal-mist);}
+.prest-option.selected::after{content:'✓';position:absolute;top:12px;right:14px;width:20px;height:20px;border-radius:50%;background:var(--teal-mid);color:var(--white);font-size:11px;display:flex;align-items:center;justify-content:center;}
+.prest-option input{position:absolute;opacity:0;pointer-events:none;}
+.prest-emoji{font-size:24px;flex-shrink:0;margin-top:2px;}
+.prest-info{}
+.prest-name{font-family:var(--font-display);font-size:17px;font-weight:500;color:var(--teal-deep);line-height:1.2;}
+.prest-cat{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);font-weight:500;margin-bottom:4px;}
+.prest-cap{font-size:11px;color:var(--text-muted);margin-top:4px;}
+
+/* DYNAMIC SUBTYPE */
+.subtype-section{margin-top:20px;display:none;}
+.subtype-section.visible{display:block;}
+.subtype-label{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);font-weight:600;margin-bottom:10px;}
+.subtype-grid{display:flex;flex-wrap:wrap;gap:8px;}
+.subtype-btn{background:transparent;border:1px solid var(--teal-pale);color:var(--text-body);font-family:var(--font-body);font-size:12px;font-weight:500;padding:8px 16px;border-radius:100px;cursor:pointer;transition:var(--transition);}
+.subtype-btn.active,.subtype-btn:hover{background:var(--teal-deep);border-color:var(--teal-deep);color:var(--white);}
+
+/* FORM FIELDS */
+.fields-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field.full{grid-column:span 2;}
+.field label{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);font-weight:600;}
+.field input,.field select,.field textarea{font-family:var(--font-body);font-size:14px;color:var(--text-body);background:var(--sand);border:1.5px solid rgba(168,216,204,0.4);border-radius:var(--radius-sm);padding:12px 14px;transition:var(--transition);outline:none;width:100%;}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal-mid);background:var(--white);box-shadow:0 0 0 3px rgba(26,107,90,0.08);}
+.field textarea{resize:vertical;min-height:100px;}
+.field select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a9e98' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;}
+.field-hint{font-size:11px;color:var(--text-muted);font-weight:300;}
+.field-error{font-size:11px;color:var(--error);display:none;}
+.field.error input,.field.error select,.field.error textarea{border-color:var(--error);}
+.field.error .field-error{display:block;}
+
+/* CHECKBOX / RGPD */
+.checkbox-row{display:flex;align-items:flex-start;gap:12px;margin-top:4px;}
+.checkbox-row input[type=checkbox]{width:18px;height:18px;border:1.5px solid var(--teal-pale);border-radius:3px;cursor:pointer;accent-color:var(--teal-mid);flex-shrink:0;margin-top:2px;}
+.checkbox-row label{font-size:12px;color:var(--text-muted);font-weight:300;line-height:1.5;cursor:pointer;}
+.checkbox-row a{color:var(--teal-mid);text-decoration:none;}
+
+/* NAVIGATION BTNS */
+.form-nav{display:flex;align-items:center;justify-content:space-between;margin-top:28px;gap:16px;}
+.btn-prev{background:transparent;border:1.5px solid var(--teal-pale);color:var(--text-muted);font-family:var(--font-body);font-size:13px;font-weight:500;padding:13px 28px;border-radius:100px;cursor:pointer;transition:var(--transition);}
+.btn-prev:hover{border-color:var(--teal-mid);color:var(--teal-mid);}
+.btn-next{background:var(--teal-deep);color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:0.06em;padding:14px 36px;border-radius:100px;border:none;cursor:pointer;transition:var(--transition);display:flex;align-items:center;gap:10px;}
+.btn-next:hover{background:var(--teal-mid);transform:translateY(-1px);}
+.btn-submit{background:var(--gold);color:var(--teal-deep);font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:16px 40px;border-radius:100px;border:none;cursor:pointer;transition:var(--transition);display:flex;align-items:center;gap:10px;}
+.btn-submit:hover{background:var(--gold-light);transform:translateY(-2px);}
+
+/* ÉTAPES */
+.form-step{display:none;}
+.form-step.active{display:block;}
+
+/* SUCCESS */
+.success-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid rgba(168,216,204,0.3);padding:60px 40px;text-align:center;display:none;}
+.success-card.visible{display:block;}
+.success-icon{font-size:52px;margin-bottom:20px;}
+.success-title{font-family:var(--font-display);font-size:36px;font-weight:400;color:var(--teal-deep);margin-bottom:12px;}
+.success-title em{font-style:italic;color:var(--gold);}
+.success-body{font-size:14px;font-weight:300;color:var(--text-muted);line-height:1.8;max-width:420px;margin:0 auto 32px;}
+.success-ref{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-mid);font-weight:600;}
+
+/* SIDEBAR */
+.sidebar-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid rgba(168,216,204,0.3);padding:28px;margin-bottom:20px;}
+.sidebar-title{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
+.summary-row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(168,216,204,0.25);font-size:13px;}
+.summary-row:last-child{border-bottom:none;}
+.summary-key{color:var(--text-muted);font-weight:400;}
+.summary-val{color:var(--teal-deep);font-weight:500;text-align:right;}
+.summary-val.empty{color:var(--teal-pale);font-style:italic;font-weight:300;}
+.sidebar-contact a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text-body);font-size:13px;padding:10px 0;border-bottom:1px solid rgba(168,216,204,0.2);transition:color 0.2s;}
+.sidebar-contact a:hover{color:var(--teal-mid);}
+.sidebar-contact a:last-child{border-bottom:none;}
+.sidebar-icon{font-size:16px;width:20px;text-align:center;}
+.infos-list{list-style:none;}
+.infos-list li{font-size:12px;color:var(--text-muted);font-weight:300;line-height:1.6;padding:6px 0;border-bottom:1px solid rgba(168,216,204,0.15);display:flex;gap:8px;}
+.infos-list li:last-child{border-bottom:none;}
+.infos-list li::before{content:'◆';font-size:7px;color:var(--gold);margin-top:5px;flex-shrink:0;}
+
+@media(max-width:1024px){.resa-layout{grid-template-columns:1fr;padding:40px 40px 60px;}.resa-sidebar{display:none;}}
+@media(max-width:640px){.resa-layout{padding:24px 20px 40px;}.page-hero{padding:40px 20px 50px;}.navbar{padding:0 20px;}.prestation-grid{grid-template-columns:1fr;}.fields-grid{grid-template-columns:1fr;}.field.full{grid-column:auto;}.form-card{padding:24px;}}
+[data-lang]:not([data-lang="fr"]){display:none;}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-main">Moorea Maire Beach</span>
+    <span class="nav-logo-sub">Polynésie Française</span>
+  </a>
+  <a href="index.html" class="nav-back">
+    <span data-lang="fr">Retour à l'accueil</span>
+    <span data-lang="en">Back to home</span>
+    <span data-lang="de">Zurück zur Startseite</span>
+    <span data-lang="es">Volver al inicio</span>
+  </a>
+  <a href="tel:+68987707858" class="nav-tel">87 70 78 58</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-label" data-lang="fr">Réservation en ligne</div>
+  <div class="page-hero-label" data-lang="en">Online booking</div>
+  <div class="page-hero-label" data-lang="de">Online-Buchung</div>
+  <div class="page-hero-label" data-lang="es">Reserva en línea</div>
+  <h1>
+    <span data-lang="fr">Réservez votre <em>expérience</em></span>
+    <span data-lang="en">Book your <em>experience</em></span>
+    <span data-lang="de">Buchen Sie Ihr <em>Erlebnis</em></span>
+    <span data-lang="es">Reserve su <em>experiencia</em></span>
+  </h1>
+  <p class="page-hero-desc" data-lang="fr">Formulaire simple en 3 étapes — choisissez votre prestation, vos dates et vos coordonnées. Confirmation par email sous 24h.</p>
+  <p class="page-hero-desc" data-lang="en">Simple 3-step form — choose your service, dates and contact details. Email confirmation within 24 hours.</p>
+  <p class="page-hero-desc" data-lang="de">Einfaches 3-Schritte-Formular — wählen Sie Ihre Leistung, Daten und Kontaktdaten. E-Mail-Bestätigung innerhalb von 24 Stunden.</p>
+  <p class="page-hero-desc" data-lang="es">Formulario sencillo en 3 pasos — elija su servicio, fechas y datos de contacto. Confirmación por correo electrónico en 24 horas.</p>
+</div>
+
+<div class="resa-layout">
+  <!-- FORMULAIRE -->
+  <div class="resa-form-col">
+
+    <!-- STEPS -->
+    <div class="steps" role="list" aria-label="Étapes du formulaire">
+      <div class="step active" id="step-indicator-1" role="listitem">
+        <div class="step-num"><span>1</span></div>
+        <div class="step-label" data-lang="fr">Prestation</div>
+        <div class="step-label" data-lang="en">Service</div>
+        <div class="step-label" data-lang="de">Leistung</div>
+        <div class="step-label" data-lang="es">Servicio</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" id="step-indicator-2" role="listitem">
+        <div class="step-num"><span>2</span></div>
+        <div class="step-label" data-lang="fr">Dates & Groupe</div>
+        <div class="step-label" data-lang="en">Dates & Group</div>
+        <div class="step-label" data-lang="de">Daten & Gruppe</div>
+        <div class="step-label" data-lang="es">Fechas & Grupo</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" id="step-indicator-3" role="listitem">
+        <div class="step-num"><span>3</span></div>
+        <div class="step-label" data-lang="fr">Vos coordonnées</div>
+        <div class="step-label" data-lang="en">Your details</div>
+        <div class="step-label" data-lang="de">Ihre Daten</div>
+        <div class="step-label" data-lang="es">Sus datos</div>
+      </div>
+    </div>
+
+    <!-- STEP 1 : PRESTATION -->
+    <div class="form-step active" id="step-1">
+      <div class="form-card">
+        <h2 class="form-card-title" data-lang="fr">Quelle prestation souhaitez-vous ?</h2>
+        <h2 class="form-card-title" data-lang="en">Which service would you like?</h2>
+        <h2 class="form-card-title" data-lang="de">Welche Leistung möchten Sie?</h2>
+        <h2 class="form-card-title" data-lang="es">¿Qué servicio desea?</h2>
+        <p class="form-card-sub" data-lang="fr">Sélectionnez la prestation qui correspond à votre projet</p>
+        <p class="form-card-sub" data-lang="en">Select the service that matches your project</p>
+        <p class="form-card-sub" data-lang="de">Wählen Sie die Leistung, die zu Ihrem Projekt passt</p>
+        <p class="form-card-sub" data-lang="es">Seleccione el servicio que corresponde a su proyecto</p>
+
+        <div class="prestation-grid" role="group" aria-label="Choix de prestation">
+
+          <label class="prest-option" data-value="lagunaire" tabindex="0">
+            <input type="radio" name="prestation" value="lagunaire">
+            <span class="prest-emoji" aria-hidden="true">🌊</span>
+            <div class="prest-info">
+              <div class="prest-cat" data-lang="fr">Lagunaire</div>
+              <div class="prest-cat" data-lang="en">Lagoon</div>
+              <div class="prest-cat" data-lang="de">Lagune</div>
+              <div class="prest-cat" data-lang="es">Lagunar</div>
+              <div class="prest-name" data-lang="fr">Tour Lagunaire</div>
+              <div class="prest-name" data-lang="en">Lagoon Tour</div>
+              <div class="prest-name" data-lang="de">Lagunenrundfahrt</div>
+              <div class="prest-name" data-lang="es">Tour Lagunar</div>
+              <div class="prest-cap" data-lang="fr">Raies · Requins · Tiki · Baleines</div>
+              <div class="prest-cap" data-lang="en">Rays · Sharks · Tiki · Whales</div>
+              <div class="prest-cap" data-lang="de">Rochen · Haie · Tiki · Wale</div>
+              <div class="prest-cap" data-lang="es">Rayas · Tiburones · Tiki · Ballenas</div>
+            </div>
+          </label>
+
+          <label class="prest-option" data-value="mariage" tabindex="0">
+            <input type="radio" name="prestation" value="mariage">
+            <span class="prest-emoji" aria-hidden="true">💍</span>
+            <div class="prest-info">
+              <div class="prest-cat" data-lang="fr">Wedding Planner</div>
+              <div class="prest-cat" data-lang="en">Wedding Planner</div>
+              <div class="prest-cat" data-lang="de">Hochzeitsplanung</div>
+              <div class="prest-cat" data-lang="es">Organizador de Bodas</div>
+              <div class="prest-name" data-lang="fr">Mariage Traditionnel</div>
+              <div class="prest-name" data-lang="en">Traditional Wedding</div>
+              <div class="prest-name" data-lang="de">Traditionelle Hochzeit</div>
+              <div class="prest-name" data-lang="es">Boda Tradicional</div>
+              <div class="prest-cap" data-lang="fr">Sur le Motu Moea</div>
+              <div class="prest-cap" data-lang="en">On Motu Moea</div>
+              <div class="prest-cap" data-lang="de">Auf Motu Moea</div>
+              <div class="prest-cap" data-lang="es">En el Motu Moea</div>
+            </div>
+          </label>
+
+          <label class="prest-option" data-value="romantique" tabindex="0">
+            <input type="radio" name="prestation" value="romantique">
+            <span class="prest-emoji" aria-hidden="true">🌺</span>
+            <div class="prest-info">
+              <div class="prest-cat" data-lang="fr">Romantique</div>
+              <div class="prest-cat" data-lang="en">Romantic</div>
+              <div class="prest-cat" data-lang="de">Romantisch</div>
+              <div class="prest-cat" data-lang="es">Romántico</div>
+              <div class="prest-name" data-lang="fr">Escapade Romantique</div>
+              <div class="prest-name" data-lang="en">Romantic Getaway</div>
+              <div class="prest-name" data-lang="de">Romantischer Ausflug</div>
+              <div class="prest-name" data-lang="es">Escapada Romántica</div>
+              <div class="prest-cap" data-lang="fr">Dîner · Kahaia · Îlot</div>
+              <div class="prest-cap" data-lang="en">Dinner · Kahaia · Islet</div>
+              <div class="prest-cap" data-lang="de">Abendessen · Kahaia · Inselchen</div>
+              <div class="prest-cap" data-lang="es">Cena · Kahaia · Islote</div>
+            </div>
+          </label>
+
+          <label class="prest-option" data-value="eco" tabindex="0">
+            <input type="radio" name="prestation" value="eco">
+            <span class="prest-emoji" aria-hidden="true">🌿</span>
+            <div class="prest-info">
+              <div class="prest-cat" data-lang="fr">Éco-Citoyen</div>
+              <div class="prest-cat" data-lang="en">Eco-Citizen</div>
+              <div class="prest-cat" data-lang="de">Öko-Bürger</div>
+              <div class="prest-cat" data-lang="es">Eco-Ciudadano</div>
+              <div class="prest-name">Tour Bout</div>
+              <div class="prest-cap" data-lang="fr">Bouturage de corail · Min. 25 pers.</div>
+              <div class="prest-cap" data-lang="en">Coral reef restoration · Min. 25 pax</div>
+              <div class="prest-cap" data-lang="de">Korallenrestaurierung · Mind. 25 Pers.</div>
+              <div class="prest-cap" data-lang="es">Restauración coral · Mín. 25 pers.</div>
+            </div>
+          </label>
+
+          <label class="prest-option" data-value="prive" tabindex="0">
+            <input type="radio" name="prestation" value="prive">
+            <span class="prest-emoji" aria-hidden="true">✨</span>
+            <div class="prest-info">
+              <div class="prest-cat" data-lang="fr">Privé · Sur mesure</div>
+              <div class="prest-cat" data-lang="en">Private · Custom</div>
+              <div class="prest-cat" data-lang="de">Privat · Maßgeschneidert</div>
+              <div class="prest-cat" data-lang="es">Privado · A medida</div>
+              <div class="prest-name" data-lang="fr">Événement Privé</div>
+              <div class="prest-name" data-lang="en">Private Event</div>
+              <div class="prest-name" data-lang="de">Privates Event</div>
+              <div class="prest-name" data-lang="es">Evento Privado</div>
+              <div class="prest-cap" data-lang="fr">Catamaran · Fête · Entreprise</div>
+              <div class="prest-cap" data-lang="en">Catamaran · Party · Corporate</div>
+              <div class="prest-cap" data-lang="de">Katamaran · Feier · Unternehmen</div>
+              <div class="prest-cap" data-lang="es">Catamarán · Fiesta · Empresa</div>
+            </div>
+          </label>
+
+          <label class="prest-option" data-value="hebergement" tabindex="0">
+            <input type="radio" name="prestation" value="hebergement">
+            <span class="prest-emoji" aria-hidden="true">🏡</span>
+            <div class="prest-info">
+              <div class="prest-cat" data-lang="fr">Hébergement</div>
+              <div class="prest-cat" data-lang="en">Accommodation</div>
+              <div class="prest-cat" data-lang="de">Unterkunft</div>
+              <div class="prest-cat" data-lang="es">Alojamiento</div>
+              <div class="prest-name" data-lang="fr">Bungalow côté mer</div>
+              <div class="prest-name" data-lang="en">Oceanfront bungalow</div>
+              <div class="prest-name" data-lang="de">Bungalow am Meer</div>
+              <div class="prest-name" data-lang="es">Bungalow frente al mar</div>
+              <div class="prest-cap" data-lang="fr">Location saisonnière</div>
+              <div class="prest-cap" data-lang="en">Seasonal rental</div>
+              <div class="prest-cap" data-lang="de">Saisonale Vermietung</div>
+              <div class="prest-cap" data-lang="es">Alquiler de temporada</div>
+            </div>
+          </label>
+        </div>
+
+        <!-- Sous-type dynamique -->
+        <div class="subtype-section" id="subtype-lagunaire">
+          <div class="subtype-label" data-lang="fr">Quelle excursion ?</div>
+          <div class="subtype-label" data-lang="en">Which excursion?</div>
+          <div class="subtype-label" data-lang="de">Welcher Ausflug?</div>
+          <div class="subtype-label" data-lang="es">¿Qué excursión?</div>
+          <div class="subtype-grid">
+            <button type="button" class="subtype-btn" onclick="selectSubtype('tere-moana', this)">Tere Moana</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('tour-lagunaire', this)" data-lang="fr">Tour Lagunaire (Tamaeva'a)</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('tour-lagunaire', this)" data-lang="en">Lagoon Tour (Tamaeva'a)</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('tour-lagunaire', this)" data-lang="de">Lagunenrundfahrt (Tamaeva'a)</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('tour-lagunaire', this)" data-lang="es">Tour Lagunar (Tamaeva'a)</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('ma-a-tahiti', this)">Ma'a Tahiti sur le Motu</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('whale', this)" data-lang="fr">Observation des baleines</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('whale', this)" data-lang="en">Whale watching</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('whale', this)" data-lang="de">Walbeobachtung</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('whale', this)" data-lang="es">Avistamiento de ballenas</button>
+          </div>
+        </div>
+        <div class="subtype-section" id="subtype-romantique">
+          <div class="subtype-label" data-lang="fr">Quelle escapade ?</div>
+          <div class="subtype-label" data-lang="en">Which getaway?</div>
+          <div class="subtype-label" data-lang="de">Welcher Ausflug?</div>
+          <div class="subtype-label" data-lang="es">¿Qué escapada?</div>
+          <div class="subtype-grid">
+            <button type="button" class="subtype-btn" onclick="selectSubtype('diner-ilot', this)" data-lang="fr">Dîner romantique sur îlot</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('diner-ilot', this)" data-lang="en">Romantic dinner on islet</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('diner-ilot', this)" data-lang="de">Romantisches Dinner auf Inselchen</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('diner-ilot', this)" data-lang="es">Cena romántica en islote</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('kahaia', this)">Kahaia</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('excursion-privee', this)" data-lang="fr">Excursion privée en couple</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('excursion-privee', this)" data-lang="en">Private couple excursion</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('excursion-privee', this)" data-lang="de">Private Paarausflug</button>
+            <button type="button" class="subtype-btn" onclick="selectSubtype('excursion-privee', this)" data-lang="es">Excursión privada en pareja</button>
+          </div>
+        </div>
+
+        <p id="prest-error" style="font-size:12px;color:var(--error);margin-top:14px;display:none;" role="alert">
+          <span data-lang="fr">Veuillez sélectionner une prestation.</span>
+          <span data-lang="en">Please select a service.</span>
+          <span data-lang="de">Bitte wählen Sie eine Leistung aus.</span>
+          <span data-lang="es">Por favor seleccione un servicio.</span>
+        </p>
+      </div>
+      <div class="form-nav" style="justify-content:flex-end;">
+        <button class="btn-next" onclick="goStep(2)">
+          <span data-lang="fr">Étape suivante</span>
+          <span data-lang="en">Next step</span>
+          <span data-lang="de">Nächster Schritt</span>
+          <span data-lang="es">Siguiente paso</span>
+          →
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2 : DATES -->
+    <div class="form-step" id="step-2">
+      <div class="form-card">
+        <h2 class="form-card-title" data-lang="fr">Dates & composition du groupe</h2>
+        <h2 class="form-card-title" data-lang="en">Dates & group details</h2>
+        <h2 class="form-card-title" data-lang="de">Daten & Gruppendetails</h2>
+        <h2 class="form-card-title" data-lang="es">Fechas & detalles del grupo</h2>
+        <p class="form-card-sub" data-lang="fr">Précisez vos disponibilités et la taille de votre groupe</p>
+        <p class="form-card-sub" data-lang="en">Specify your availability and the size of your group</p>
+        <p class="form-card-sub" data-lang="de">Geben Sie Ihre Verfügbarkeit und die Größe Ihrer Gruppe an</p>
+        <p class="form-card-sub" data-lang="es">Especifique su disponibilidad y el tamaño de su grupo</p>
+
+        <div class="fields-grid">
+          <div class="field" id="field-date-debut">
+            <label for="date-debut" data-lang="fr">Date souhaitée *</label>
+            <label for="date-debut" data-lang="en">Preferred date *</label>
+            <label for="date-debut" data-lang="de">Gewünschtes Datum *</label>
+            <label for="date-debut" data-lang="es">Fecha deseada *</label>
+            <input type="date" id="date-debut" name="date-debut" required min="">
+            <span class="field-error" data-lang="fr">Date requise</span>
+            <span class="field-error" data-lang="en">Date required</span>
+            <span class="field-error" data-lang="de">Datum erforderlich</span>
+            <span class="field-error" data-lang="es">Fecha requerida</span>
+          </div>
+          <div class="field" id="field-date-alt">
+            <label for="date-alt" data-lang="fr">Date alternative</label>
+            <label for="date-alt" data-lang="en">Alternative date</label>
+            <label for="date-alt" data-lang="de">Alternatives Datum</label>
+            <label for="date-alt" data-lang="es">Fecha alternativa</label>
+            <input type="date" id="date-alt" name="date-alt" min="">
+            <span class="field-hint" data-lang="fr">En cas d'indisponibilité</span>
+            <span class="field-hint" data-lang="en">In case of unavailability</span>
+            <span class="field-hint" data-lang="de">Bei Nicht-Verfügbarkeit</span>
+            <span class="field-hint" data-lang="es">En caso de no disponibilidad</span>
+          </div>
+          <div class="field" id="field-date-fin" style="display:none;">
+            <label for="date-fin" data-lang="fr">Date de départ *</label>
+            <label for="date-fin" data-lang="en">Departure date *</label>
+            <label for="date-fin" data-lang="de">Abreisedatum *</label>
+            <label for="date-fin" data-lang="es">Fecha de salida *</label>
+            <input type="date" id="date-fin" name="date-fin" min="">
+          </div>
+          <div class="field" id="field-nb-adultes">
+            <label for="nb-adultes" data-lang="fr">Adultes *</label>
+            <label for="nb-adultes" data-lang="en">Adults *</label>
+            <label for="nb-adultes" data-lang="de">Erwachsene *</label>
+            <label for="nb-adultes" data-lang="es">Adultos *</label>
+            <input type="number" id="nb-adultes" name="nb-adultes" min="1" max="60" placeholder="2" required>
+            <span class="field-error" data-lang="fr">Nombre d'adultes requis</span>
+            <span class="field-error" data-lang="en">Number of adults required</span>
+            <span class="field-error" data-lang="de">Anzahl der Erwachsenen erforderlich</span>
+            <span class="field-error" data-lang="es">Número de adultos requerido</span>
+          </div>
+          <div class="field">
+            <label for="nb-enfants" data-lang="fr">Enfants (- 12 ans)</label>
+            <label for="nb-enfants" data-lang="en">Children (under 12)</label>
+            <label for="nb-enfants" data-lang="de">Kinder (unter 12)</label>
+            <label for="nb-enfants" data-lang="es">Niños (menores de 12)</label>
+            <input type="number" id="nb-enfants" name="nb-enfants" min="0" max="30" placeholder="0">
+          </div>
+          <div class="field full">
+            <label for="occasion" data-lang="fr">Occasion / contexte</label>
+            <label for="occasion" data-lang="en">Occasion / context</label>
+            <label for="occasion" data-lang="de">Anlass / Kontext</label>
+            <label for="occasion" data-lang="es">Ocasión / contexto</label>
+            <select id="occasion" name="occasion">
+              <option value="" disabled selected>—</option>
+              <option value="anniversaire" data-lang="fr">Anniversaire</option>
+              <option value="birthday" data-lang="en">Birthday</option>
+              <option value="geburtstag" data-lang="de">Geburtstag</option>
+              <option value="cumpleanos" data-lang="es">Cumpleaños</option>
+              <option value="lune-de-miel" data-lang="fr">Lune de miel</option>
+              <option value="honeymoon" data-lang="en">Honeymoon</option>
+              <option value="flitterwochen" data-lang="de">Flitterwochen</option>
+              <option value="luna-de-miel" data-lang="es">Luna de miel</option>
+              <option value="vacances" data-lang="fr">Vacances en famille</option>
+              <option value="family" data-lang="en">Family vacation</option>
+              <option value="familienurlaub" data-lang="de">Familienurlaub</option>
+              <option value="vacaciones" data-lang="es">Vacaciones en familia</option>
+              <option value="entreprise" data-lang="fr">Séminaire / Entreprise</option>
+              <option value="corporate" data-lang="en">Corporate event</option>
+              <option value="firmenevent" data-lang="de">Firmenevent</option>
+              <option value="empresa" data-lang="es">Evento de empresa</option>
+              <option value="autre" data-lang="fr">Autre</option>
+              <option value="other" data-lang="en">Other</option>
+              <option value="sonstiges" data-lang="de">Sonstiges</option>
+              <option value="otro" data-lang="es">Otro</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="demandes" data-lang="fr">Demandes particulières</label>
+            <label for="demandes" data-lang="en">Special requests</label>
+            <label for="demandes" data-lang="de">Besondere Wünsche</label>
+            <label for="demandes" data-lang="es">Peticiones especiales</label>
+            <textarea id="demandes" name="demandes" placeholder="Allergies alimentaires, mobilité réduite, besoins spéciaux..."></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="form-nav">
+        <button class="btn-prev" onclick="goStep(1)">
+          <span data-lang="fr">← Retour</span>
+          <span data-lang="en">← Back</span>
+          <span data-lang="de">← Zurück</span>
+          <span data-lang="es">← Atrás</span>
+        </button>
+        <button class="btn-next" onclick="goStep(3)">
+          <span data-lang="fr">Étape suivante</span>
+          <span data-lang="en">Next step</span>
+          <span data-lang="de">Nächster Schritt</span>
+          <span data-lang="es">Siguiente paso</span>
+          →
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 3 : COORDONNÉES -->
+    <div class="form-step" id="step-3">
+      <div class="form-card">
+        <h2 class="form-card-title" data-lang="fr">Vos coordonnées</h2>
+        <h2 class="form-card-title" data-lang="en">Your contact details</h2>
+        <h2 class="form-card-title" data-lang="de">Ihre Kontaktdaten</h2>
+        <h2 class="form-card-title" data-lang="es">Sus datos de contacto</h2>
+        <p class="form-card-sub" data-lang="fr">Nous vous confirmons votre réservation par email sous 24h</p>
+        <p class="form-card-sub" data-lang="en">We will confirm your booking by email within 24 hours</p>
+        <p class="form-card-sub" data-lang="de">Wir bestätigen Ihre Buchung per E-Mail innerhalb von 24 Stunden</p>
+        <p class="form-card-sub" data-lang="es">Confirmaremos su reserva por correo electrónico en 24 horas</p>
+
+        <div class="fields-grid">
+          <div class="field" id="field-prenom">
+            <label for="prenom" data-lang="fr">Prénom *</label>
+            <label for="prenom" data-lang="en">First name *</label>
+            <label for="prenom" data-lang="de">Vorname *</label>
+            <label for="prenom" data-lang="es">Nombre *</label>
+            <input type="text" id="prenom" name="prenom" required autocomplete="given-name">
+            <span class="field-error" data-lang="fr">Prénom requis</span>
+            <span class="field-error" data-lang="en">First name required</span>
+            <span class="field-error" data-lang="de">Vorname erforderlich</span>
+            <span class="field-error" data-lang="es">Nombre requerido</span>
+          </div>
+          <div class="field" id="field-nom">
+            <label for="nom" data-lang="fr">Nom *</label>
+            <label for="nom" data-lang="en">Last name *</label>
+            <label for="nom" data-lang="de">Nachname *</label>
+            <label for="nom" data-lang="es">Apellido *</label>
+            <input type="text" id="nom" name="nom" required autocomplete="family-name">
+            <span class="field-error" data-lang="fr">Nom requis</span>
+            <span class="field-error" data-lang="en">Last name required</span>
+            <span class="field-error" data-lang="de">Nachname erforderlich</span>
+            <span class="field-error" data-lang="es">Apellido requerido</span>
+          </div>
+          <div class="field full" id="field-email">
+            <label for="email" data-lang="fr">Email *</label>
+            <label for="email" data-lang="en">Email *</label>
+            <label for="email" data-lang="de">E-Mail *</label>
+            <label for="email" data-lang="es">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="votre@email.com">
+            <span class="field-error" data-lang="fr">Email valide requis</span>
+            <span class="field-error" data-lang="en">Valid email required</span>
+            <span class="field-error" data-lang="de">Gültige E-Mail erforderlich</span>
+            <span class="field-error" data-lang="es">Correo electrónico válido requerido</span>
+          </div>
+          <div class="field">
+            <label for="tel" data-lang="fr">Téléphone</label>
+            <label for="tel" data-lang="en">Phone</label>
+            <label for="tel" data-lang="de">Telefon</label>
+            <label for="tel" data-lang="es">Teléfono</label>
+            <input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="+689 87 00 00 00">
+          </div>
+          <div class="field">
+            <label for="pays" data-lang="fr">Pays de résidence</label>
+            <label for="pays" data-lang="en">Country of residence</label>
+            <label for="pays" data-lang="de">Wohnsitzland</label>
+            <label for="pays" data-lang="es">País de residencia</label>
+            <select id="pays" name="pays">
+              <option value="">—</option>
+              <option value="PF">Polynésie française</option>
+              <option value="FR">France</option>
+              <option value="US">États-Unis / USA</option>
+              <option value="DE">Allemagne / Deutschland</option>
+              <option value="ES">Espagne / España</option>
+              <option value="GB">Royaume-Uni / UK</option>
+              <option value="AU">Australie / Australia</option>
+              <option value="NZ">Nouvelle-Zélande</option>
+              <option value="JP">Japon / Japan</option>
+              <option value="CH">Suisse</option>
+              <option value="CA">Canada</option>
+              <option value="OTHER" data-lang="fr">Autre</option>
+              <option value="OTHER" data-lang="en">Other</option>
+              <option value="OTHER" data-lang="de">Sonstiges</option>
+              <option value="OTHER" data-lang="es">Otro</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="comment-connu" data-lang="fr">Comment nous avez-vous connus ?</label>
+            <label for="comment-connu" data-lang="en">How did you hear about us?</label>
+            <label for="comment-connu" data-lang="de">Wie haben Sie von uns erfahren?</label>
+            <label for="comment-connu" data-lang="es">¿Cómo nos conoció?</label>
+            <select id="comment-connu" name="comment-connu">
+              <option value="">—</option>
+              <option value="bouche" data-lang="fr">Bouche à oreille</option>
+              <option value="word-of-mouth" data-lang="en">Word of mouth</option>
+              <option value="empfehlung" data-lang="de">Empfehlung</option>
+              <option value="boca-a-boca" data-lang="es">Boca a boca</option>
+              <option value="google">Google</option>
+              <option value="instagram">Instagram</option>
+              <option value="facebook">Facebook</option>
+              <option value="tripadvisor">TripAdvisor</option>
+              <option value="agence" data-lang="fr">Agence de voyage</option>
+              <option value="travel-agency" data-lang="en">Travel agency</option>
+              <option value="reisebuero" data-lang="de">Reisebüro</option>
+              <option value="agencia" data-lang="es">Agencia de viajes</option>
+              <option value="hotel" data-lang="fr">Hôtel / Bungalow</option>
+              <option value="hotel" data-lang="en">Hotel / Bungalow</option>
+              <option value="hotel" data-lang="de">Hotel / Bungalow</option>
+              <option value="hotel" data-lang="es">Hotel / Bungalow</option>
+            </select>
+          </div>
+          <div class="field full">
+            <div class="checkbox-row">
+              <input type="checkbox" id="rgpd" name="rgpd" required>
+              <label for="rgpd">
+                <span data-lang="fr">J'accepte que mes données soient utilisées pour traiter ma demande de réservation, conformément à la <a href="confidentialite.html">politique de confidentialité</a>.</span>
+                <span data-lang="en">I agree that my data will be used to process my booking request, in accordance with the <a href="confidentialite.html">privacy policy</a>.</span>
+                <span data-lang="de">Ich stimme zu, dass meine Daten zur Bearbeitung meiner Buchungsanfrage gemäß der <a href="confidentialite.html">Datenschutzrichtlinie</a> verwendet werden.</span>
+                <span data-lang="es">Acepto que mis datos sean utilizados para procesar mi solicitud de reserva, conforme a la <a href="confidentialite.html">política de privacidad</a>.</span>
+              </label>
+            </div>
+            <span id="rgpd-error" style="font-size:11px;color:var(--error);display:none;" role="alert">
+              <span data-lang="fr">Veuillez accepter la politique de confidentialité.</span>
+              <span data-lang="en">Please accept the privacy policy.</span>
+              <span data-lang="de">Bitte akzeptieren Sie die Datenschutzrichtlinie.</span>
+              <span data-lang="es">Por favor acepte la política de privacidad.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-nav">
+        <button class="btn-prev" onclick="goStep(2)">
+          <span data-lang="fr">← Retour</span>
+          <span data-lang="en">← Back</span>
+          <span data-lang="de">← Zurück</span>
+          <span data-lang="es">← Atrás</span>
+        </button>
+        <button class="btn-submit" onclick="submitForm()">
+          <span data-lang="fr">Envoyer ma réservation</span>
+          <span data-lang="en">Send my booking</span>
+          <span data-lang="de">Buchung absenden</span>
+          <span data-lang="es">Enviar mi reserva</span>
+          ✓
+        </button>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="success-card" id="success-card" role="alert" aria-live="polite">
+      <div class="success-icon" aria-hidden="true">🌺</div>
+      <h2 class="success-title">
+        <span data-lang="fr">Demande <em>envoyée !</em></span>
+        <span data-lang="en">Request <em>sent!</em></span>
+        <span data-lang="de">Anfrage <em>gesendet!</em></span>
+        <span data-lang="es">¡Solicitud <em>enviada!</em></span>
+      </h2>
+      <p class="success-body" data-lang="fr">Merci pour votre demande de réservation. Nous vous confirmons votre prestation par email sous 24h. En attendant, n'hésitez pas à nous contacter par téléphone ou WhatsApp.</p>
+      <p class="success-body" data-lang="en">Thank you for your booking request. We will confirm your service by email within 24 hours. In the meantime, feel free to contact us by phone or WhatsApp.</p>
+      <p class="success-body" data-lang="de">Vielen Dank für Ihre Buchungsanfrage. Wir bestätigen Ihre Leistung per E-Mail innerhalb von 24 Stunden. In der Zwischenzeit können Sie uns gerne per Telefon oder WhatsApp kontaktieren.</p>
+      <p class="success-body" data-lang="es">Gracias por su solicitud de reserva. Confirmaremos su servicio por correo electrónico en 24 horas. Mientras tanto, no dude en contactarnos por teléfono o WhatsApp.</p>
+      <p class="success-ref" id="ref-number"></p>
+      <div style="display:flex;gap:16px;justify-content:center;margin-top:32px;flex-wrap:wrap;">
+        <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--teal-deep);color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:600;padding:14px 28px;border-radius:100px;text-decoration:none;">
+          <span data-lang="fr">← Retour à l'accueil</span>
+          <span data-lang="en">← Back to home</span>
+          <span data-lang="de">← Zurück zur Startseite</span>
+          <span data-lang="es">← Volver al inicio</span>
+        </a>
+        <a href="https://wa.me/68987707858" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#25d366;color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:600;padding:14px 28px;border-radius:100px;text-decoration:none;">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="resa-sidebar" aria-label="Récapitulatif et informations">
+    <div class="sidebar-card">
+      <div class="sidebar-title" data-lang="fr">Récapitulatif</div>
+      <div class="sidebar-title" data-lang="en">Summary</div>
+      <div class="sidebar-title" data-lang="de">Zusammenfassung</div>
+      <div class="sidebar-title" data-lang="es">Resumen</div>
+      <div class="summary-row">
+        <span class="summary-key" data-lang="fr">Prestation</span>
+        <span class="summary-key" data-lang="en">Service</span>
+        <span class="summary-key" data-lang="de">Leistung</span>
+        <span class="summary-key" data-lang="es">Servicio</span>
+        <span class="summary-val empty" id="sum-prestation" data-lang="fr">—</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key" data-lang="fr">Date</span>
+        <span class="summary-key" data-lang="en">Date</span>
+        <span class="summary-key" data-lang="de">Datum</span>
+        <span class="summary-key" data-lang="es">Fecha</span>
+        <span class="summary-val empty" id="sum-date">—</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key" data-lang="fr">Personnes</span>
+        <span class="summary-key" data-lang="en">People</span>
+        <span class="summary-key" data-lang="de">Personen</span>
+        <span class="summary-key" data-lang="es">Personas</span>
+        <span class="summary-val empty" id="sum-pax">—</span>
+      </div>
+      <div class="summary-row" style="border-bottom:none;">
+        <span class="summary-key" data-lang="fr">Nom</span>
+        <span class="summary-key" data-lang="en">Name</span>
+        <span class="summary-key" data-lang="de">Name</span>
+        <span class="summary-key" data-lang="es">Nombre</span>
+        <span class="summary-val empty" id="sum-nom">—</span>
+      </div>
+    </div>
+
+    <div class="sidebar-card sidebar-contact">
+      <div class="sidebar-title" data-lang="fr">Besoin d'aide ?</div>
+      <div class="sidebar-title" data-lang="en">Need help?</div>
+      <div class="sidebar-title" data-lang="de">Brauchen Sie Hilfe?</div>
+      <div class="sidebar-title" data-lang="es">¿Necesita ayuda?</div>
+      <a href="tel:+68987707858"><span class="sidebar-icon" aria-hidden="true">📞</span> 87 70 78 58</a>
+      <a href="https://wa.me/68987707858" target="_blank" rel="noopener"><span class="sidebar-icon" aria-hidden="true">💬</span> WhatsApp</a>
+      <a href="contact.html"><span class="sidebar-icon" aria-hidden="true">✉️</span>
+        <span data-lang="fr">Formulaire de contact</span>
+        <span data-lang="en">Contact form</span>
+        <span data-lang="de">Kontaktformular</span>
+        <span data-lang="es">Formulario de contacto</span>
+      </a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title" data-lang="fr">Bon à savoir</div>
+      <div class="sidebar-title" data-lang="en">Good to know</div>
+      <div class="sidebar-title" data-lang="de">Gut zu wissen</div>
+      <div class="sidebar-title" data-lang="es">Bueno saber</div>
+      <ul class="infos-list">
+        <li><span data-lang="fr">Confirmation par email sous 24h</span><span data-lang="en">Email confirmation within 24h</span><span data-lang="de">E-Mail-Bestätigung innerhalb 24h</span><span data-lang="es">Confirmación por email en 24h</span></li>
+        <li><span data-lang="fr">Prestations soumises aux conditions météo</span><span data-lang="en">Services subject to weather conditions</span><span data-lang="de">Leistungen abhängig von Wetterbedingungen</span><span data-lang="es">Servicios sujetos a condiciones meteorológicas</span></li>
+        <li><span data-lang="fr">Annulation possible 48h avant la prestation</span><span data-lang="en">Cancellation possible 48h before the service</span><span data-lang="de">Stornierung 48h vor der Leistung möglich</span><span data-lang="es">Cancelación posible 48h antes del servicio</span></li>
+        <li><span data-lang="fr">Paiement sur place ou selon modalités convenues</span><span data-lang="en">Payment on site or as agreed</span><span data-lang="de">Zahlung vor Ort oder nach Vereinbarung</span><span data-lang="es">Pago en el lugar o según lo acordado</span></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER MINI -->
+<footer style="background:var(--dark);padding:32px 60px;text-align:center;font-size:12px;color:rgba(255,255,255,0.35);font-family:var(--font-body);">
+  © 2026 Moorea Maire Beach · Polynésie française ·
+  <a href="index.html" style="color:rgba(255,255,255,0.4);text-decoration:none;margin:0 8px;" data-lang="fr">Accueil</a>
+  <a href="index.html" style="color:rgba(255,255,255,0.4);text-decoration:none;margin:0 8px;" data-lang="en">Home</a>
+  <a href="contact.html" style="color:rgba(255,255,255,0.4);text-decoration:none;margin:0 8px;" data-lang="fr">Contact</a>
+  <a href="contact.html" style="color:rgba(255,255,255,0.4);text-decoration:none;margin:0 8px;" data-lang="en">Contact</a>
+</footer>
+
+<script>
+let currentLang='fr';
+let selectedPrestation='';
+let selectedSubtype='';
+let currentStep=1;
+
+function setLang(lang){
+  currentLang=lang;
+  document.querySelectorAll('[data-lang]').forEach(el=>{
+    el.style.display=el.getAttribute('data-lang')===lang?'':'none';
+  });
+  document.documentElement.lang=lang;
+}
+
+// Prestation selection
+document.querySelectorAll('.prest-option').forEach(opt=>{
+  opt.addEventListener('click',()=>selectPrestation(opt));
+  opt.addEventListener('keydown',e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();selectPrestation(opt);}});
+});
+
+function selectPrestation(opt){
+  document.querySelectorAll('.prest-option').forEach(o=>o.classList.remove('selected'));
+  opt.classList.add('selected');
+  opt.querySelector('input').checked=true;
+  selectedPrestation=opt.getAttribute('data-value');
+  document.querySelectorAll('.subtype-section').forEach(s=>s.classList.remove('visible'));
+  const sub=document.getElementById('subtype-'+selectedPrestation);
+  if(sub) sub.classList.add('visible');
+  if(selectedPrestation==='hebergement'){
+    document.getElementById('field-date-fin').style.display='';
+    document.getElementById('field-date-alt').style.display='none';
+  } else {
+    document.getElementById('field-date-fin').style.display='none';
+    document.getElementById('field-date-alt').style.display='';
+  }
+  updateSummary();
+}
+
+function selectSubtype(val,btn){
+  document.querySelectorAll('.subtype-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  selectedSubtype=val;
+}
+
+function goStep(n){
+  if(n>currentStep){
+    if(currentStep===1){
+      if(!selectedPrestation){document.getElementById('prest-error').style.display='block';return;}
+      document.getElementById('prest-error').style.display='none';
+    }
+    if(currentStep===2){
+      const dateDebut=document.getElementById('date-debut').value;
+      const adultes=document.getElementById('nb-adultes').value;
+      let ok=true;
+      const fd=document.getElementById('field-date-debut');
+      const fa=document.getElementById('field-nb-adultes');
+      if(!dateDebut){fd.classList.add('error');ok=false;}else{fd.classList.remove('error');}
+      if(!adultes){fa.classList.add('error');ok=false;}else{fa.classList.remove('error');}
+      if(!ok)return;
+      updateSummary();
+    }
+  }
+  document.getElementById('step-'+currentStep).classList.remove('active');
+  document.getElementById('step-indicator-'+currentStep).classList.remove('active');
+  if(currentStep<n) document.getElementById('step-indicator-'+currentStep).classList.add('done');
+  else document.getElementById('step-indicator-'+currentStep).classList.remove('done');
+  currentStep=n;
+  document.getElementById('step-'+n).classList.add('active');
+  document.getElementById('step-indicator-'+n).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function updateSummary(){
+  const labels={
+    lagunaire:{fr:'Tour Lagunaire',en:'Lagoon Tour',de:'Lagunenrundfahrt',es:'Tour Lagunar'},
+    mariage:{fr:'Mariage Traditionnel',en:'Traditional Wedding',de:'Traditionelle Hochzeit',es:'Boda Tradicional'},
+    romantique:{fr:'Escapade Romantique',en:'Romantic Getaway',de:'Romantischer Ausflug',es:'Escapada Romántica'},
+    eco:{fr:'Tour Bout (Éco)',en:'Tour Bout (Eco)',de:'Tour Bout (Öko)',es:'Tour Bout (Eco)'},
+    prive:{fr:'Événement Privé',en:'Private Event',de:'Privates Event',es:'Evento Privado'},
+    hebergement:{fr:'Bungalow côté mer',en:'Oceanfront bungalow',de:'Bungalow am Meer',es:'Bungalow frente al mar'}
+  };
+  const sp=document.getElementById('sum-prestation');
+  if(selectedPrestation&&labels[selectedPrestation]){
+    sp.textContent=labels[selectedPrestation][currentLang]||labels[selectedPrestation]['fr'];
+    sp.classList.remove('empty');
+  }
+  const dateVal=document.getElementById('date-debut').value;
+  const sd=document.getElementById('sum-date');
+  if(dateVal){
+    const d=new Date(dateVal);
+    sd.textContent=d.toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'});
+    sd.classList.remove('empty');
+  }
+  const adultes=document.getElementById('nb-adultes').value;
+  const enfants=document.getElementById('nb-enfants').value;
+  const sp2=document.getElementById('sum-pax');
+  if(adultes){
+    sp2.textContent=adultes+(enfants&&parseInt(enfants)>0?' + '+enfants+' enf.':'');
+    sp2.classList.remove('empty');
+  }
+  const prenom=document.getElementById('prenom').value;
+  const nom=document.getElementById('nom').value;
+  const sn=document.getElementById('sum-nom');
+  if(prenom||nom){sn.textContent=(prenom+' '+nom).trim();sn.classList.remove('empty');}
+}
+
+['date-debut','nb-adultes','nb-enfants','prenom','nom'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el) el.addEventListener('input',updateSummary);
+});
+
+function submitForm(){
+  let ok=true;
+  ['prenom','nom','email'].forEach(id=>{
+    const el=document.getElementById(id);
+    const field=document.getElementById('field-'+id);
+    if(!el.value.trim()||(id==='email'&&!/\S+@\S+\.\S+/.test(el.value))){
+      if(field) field.classList.add('error');
+      ok=false;
+    } else {
+      if(field) field.classList.remove('error');
+    }
+  });
+  const rgpd=document.getElementById('rgpd');
+  const rgpdErr=document.getElementById('rgpd-error');
+  if(!rgpd.checked){rgpdErr.style.display='block';ok=false;}else{rgpdErr.style.display='none';}
+  if(!ok) return;
+
+  // Dans un vrai site, on enverrait les données à un backend ici
+  // Ex: fetch('/api/reservations', {method:'POST', body: JSON.stringify(data)})
+  document.getElementById('step-3').classList.remove('active');
+  document.querySelectorAll('.steps').forEach(s=>s.style.display='none');
+  const ref='MMB-'+Date.now().toString().slice(-6).toUpperCase();
+  document.getElementById('ref-number').textContent='Référence : '+ref;
+  const sc=document.getElementById('success-card');
+  sc.classList.add('visible');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// Initialisation
+const today=new Date().toISOString().split('T')[0];
+document.getElementById('date-debut').min=today;
+document.getElementById('date-alt').min=today;
+document.getElementById('date-fin').min=today;
+
+// URL param ?type=
+const urlType=new URLSearchParams(window.location.search).get('type');
+if(urlType){
+  const opt=document.querySelector('.prest-option[data-value="'+urlType+'"]');
+  if(opt) selectPrestation(opt);
+}
+
+setLang('fr');
+</script>
+</body>
+</html>

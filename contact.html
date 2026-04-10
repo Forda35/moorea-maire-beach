@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Contactez Moorea Maire Beach — Tél: 87 70 78 58 — WhatsApp disponible — Moorea, Polynésie française.">
+<title>Contact — Moorea Maire Beach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal-deep:#0a3d35;--teal-mid:#1a6b5a;--teal-light:#2d9e82;--teal-pale:#a8d8cc;--teal-mist:#e8f5f2;--gold:#c4a265;--gold-light:#e2c998;--gold-pale:#f7f0e4;--sand:#f9f6f0;--white:#ffffff;--dark:#0d1f1c;--text-body:#2e4a44;--text-muted:#7a9e98;--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Jost',sans-serif;--radius-sm:4px;--radius-md:12px;--radius-lg:24px;--transition:all 0.35s cubic-bezier(0.4,0,0.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);color:var(--text-body);background:var(--white);line-height:1.7;overflow-x:hidden}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,162,101,.15);padding:0 40px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.nav-logo-main{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--teal-deep);letter-spacing:.02em}
+.nav-logo-sub{font-size:10px;font-weight:400;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-switcher{display:flex;gap:4px}
+.lang-btn{background:none;border:1px solid transparent;font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--text-muted);cursor:pointer;padding:4px 8px;border-radius:4px;transition:var(--transition)}
+.lang-btn:hover,.lang-btn.active{color:var(--teal-mid);border-color:var(--teal-pale);background:var(--teal-mist)}
+.btn-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:8px 16px;border-radius:100px;border:1px solid var(--teal-pale);transition:var(--transition)}
+.btn-back:hover{color:var(--teal-mid);background:var(--teal-mist)}
+/* HERO */
+.page-hero{background:var(--teal-deep);padding:80px 80px 60px;position:relative;overflow:hidden}
+.page-hero::before{content:'CONTACT';position:absolute;right:-20px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:var(--font-display);font-size:120px;font-weight:300;color:rgba(196,162,101,.06);pointer-events:none;white-space:nowrap;letter-spacing:.2em}
+.page-hero-label{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.page-hero-title{font-family:var(--font-display);font-size:clamp(42px,5vw,64px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:16px}
+.page-hero-title em{font-style:italic;color:var(--gold-light)}
+.page-hero-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.65);max-width:560px;line-height:1.8}
+/* CONTACT GRID */
+.contact-main{display:grid;grid-template-columns:1fr 1.4fr;gap:0;min-height:600px}
+/* LEFT PANEL */
+.contact-left{background:var(--sand);padding:70px 60px;display:flex;flex-direction:column;gap:40px}
+.contact-section-title{font-family:var(--font-display);font-size:28px;font-weight:400;color:var(--teal-deep);margin-bottom:24px}
+.contact-card{background:var(--white);border:1px solid rgba(168,216,204,.35);border-radius:var(--radius-md);padding:24px;display:flex;align-items:flex-start;gap:16px;transition:var(--transition)}
+.contact-card:hover{border-color:var(--teal-mid);box-shadow:0 8px 30px rgba(10,61,53,.08)}
+.contact-card-icon{width:48px;height:48px;border-radius:50%;background:var(--teal-deep);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.contact-card-body{}
+.contact-card-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
+.contact-card-value{font-family:var(--font-display);font-size:22px;font-weight:500;color:var(--teal-deep);line-height:1.2}
+.contact-card-value a{color:inherit;text-decoration:none}
+.contact-card-value a:hover{color:var(--teal-mid)}
+.contact-card-sub{font-size:12px;color:var(--text-muted);margin-top:4px;font-weight:300}
+.whatsapp-big{display:flex;align-items:center;gap:14px;background:#25d366;color:var(--white);border-radius:var(--radius-md);padding:20px 24px;text-decoration:none;transition:var(--transition)}
+.whatsapp-big:hover{background:#1fb55a;transform:translateY(-3px)}
+.whatsapp-big-icon{width:48px;height:48px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.whatsapp-big-icon svg{width:24px;height:24px}
+.whatsapp-big-text{}
+.whatsapp-big-title{font-size:15px;font-weight:600;margin-bottom:2px}
+.whatsapp-big-sub{font-size:12px;opacity:.85;font-weight:300}
+.hours-grid{display:flex;flex-direction:column;gap:8px}
+.hours-row{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:8px 0;border-bottom:1px solid rgba(168,216,204,.25)}
+.hours-row:last-child{border-bottom:none}
+.hours-day{font-weight:500;color:var(--text-body)}
+.hours-time{color:var(--text-muted);font-weight:300}
+/* RIGHT PANEL: FORM */
+.contact-right{background:var(--white);padding:70px 60px}
+.form-title{font-family:var(--font-display);font-size:32px;font-weight:400;color:var(--teal-deep);margin-bottom:8px}
+.form-sub{font-size:14px;color:var(--text-muted);font-weight:300;margin-bottom:40px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.form-grid.full{grid-template-columns:1fr}
+.form-group{display:flex;flex-direction:column;gap:8px}
+.form-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
+.form-label span{color:#e24b4a;margin-left:2px}
+.form-input,.form-select,.form-textarea{font-family:var(--font-body);font-size:14px;color:var(--text-body);background:var(--white);border:1.5px solid rgba(168,216,204,.5);border-radius:var(--radius-sm);padding:12px 16px;transition:var(--transition);outline:none;width:100%}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--teal-mid);box-shadow:0 0 0 3px rgba(26,107,90,.08)}
+.form-textarea{resize:vertical;min-height:140px;line-height:1.7}
+.form-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a9e98' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;cursor:pointer}
+.btn-primary{background:var(--teal-deep);color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:16px 40px;border-radius:100px;border:none;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px;margin-top:8px}
+.btn-primary:hover{background:var(--teal-mid);transform:translateY(-2px)}
+.success-msg{display:none;background:var(--teal-mist);border:1px solid var(--teal-pale);border-radius:var(--radius-md);padding:20px 24px;margin-top:20px;font-size:14px;color:var(--teal-deep);font-weight:400}
+/* MAP SECTION */
+.map-section{height:400px;background:linear-gradient(135deg,var(--teal-mist),var(--teal-pale));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.map-placeholder{text-align:center}
+.map-placeholder-title{font-family:var(--font-display);font-size:28px;font-weight:400;color:var(--teal-deep);margin-bottom:12px}
+.map-placeholder-sub{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.map-pin{font-size:48px;margin-bottom:16px;animation:bounce 2s ease infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.map-open-btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal-deep);color:var(--white);font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:12px 28px;border-radius:100px;text-decoration:none;transition:var(--transition)}
+.map-open-btn:hover{background:var(--teal-mid)}
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:40px 80px;text-align:center;font-size:12px}
+footer a{color:var(--gold);text-decoration:none}
+@media(max-width:900px){.contact-main{grid-template-columns:1fr}.page-hero,.contact-left,.contact-right{padding-left:24px;padding-right:24px}.navbar{padding:0 20px}.form-grid{grid-template-columns:1fr}}
+[data-lang]:not([data-lang="fr"]){display:none}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-main">Moorea Maire Beach</span>
+    <span class="nav-logo-sub">Polynésie Française</span>
+  </a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="index.html" class="btn-back">← <span data-lang="fr">Accueil</span><span data-lang="en">Home</span><span data-lang="de">Startseite</span><span data-lang="es">Inicio</span></a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-label" data-lang="fr">Nous écrire</div>
+  <div class="page-hero-label" data-lang="en">Get in touch</div>
+  <div class="page-hero-label" data-lang="de">Kontaktieren Sie uns</div>
+  <div class="page-hero-label" data-lang="es">Escríbanos</div>
+  <h1 class="page-hero-title">
+    <span data-lang="fr">Contactez-<em>nous</em></span>
+    <span data-lang="en">Contact <em>us</em></span>
+    <span data-lang="de">Kontaktieren Sie <em>uns</em></span>
+    <span data-lang="es">Contáct<em>enos</em></span>
+  </h1>
+  <p class="page-hero-sub" data-lang="fr">Nous répondons à toutes vos questions — par téléphone, WhatsApp ou email. Ia Ora Na !</p>
+  <p class="page-hero-sub" data-lang="en">We answer all your questions — by phone, WhatsApp or email. Ia Ora Na!</p>
+  <p class="page-hero-sub" data-lang="de">Wir beantworten alle Ihre Fragen — per Telefon, WhatsApp oder E-Mail. Ia Ora Na!</p>
+  <p class="page-hero-sub" data-lang="es">Respondemos todas sus preguntas — por teléfono, WhatsApp o correo electrónico. Ia Ora Na!</p>
+</div>
+
+<div class="contact-main">
+  <div class="contact-left">
+
+    <div>
+      <h2 class="contact-section-title" data-lang="fr">Nos coordonnées</h2>
+      <h2 class="contact-section-title" data-lang="en">Our contact info</h2>
+      <h2 class="contact-section-title" data-lang="de">Unsere Kontaktdaten</h2>
+      <h2 class="contact-section-title" data-lang="es">Nuestros datos</h2>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-card-icon">📞</div>
+      <div class="contact-card-body">
+        <div class="contact-card-label" data-lang="fr">Téléphone</div>
+        <div class="contact-card-label" data-lang="en">Phone</div>
+        <div class="contact-card-label" data-lang="de">Telefon</div>
+        <div class="contact-card-label" data-lang="es">Teléfono</div>
+        <div class="contact-card-value"><a href="tel:+68987707858">87 70 78 58</a></div>
+        <div class="contact-card-sub" data-lang="fr">Polynésie française (+689)</div>
+        <div class="contact-card-sub" data-lang="en">French Polynesia (+689)</div>
+        <div class="contact-card-sub" data-lang="de">Französisch-Polynesien (+689)</div>
+        <div class="contact-card-sub" data-lang="es">Polinesia francesa (+689)</div>
+      </div>
+    </div>
+
+    <a href="https://wa.me/68987707858" target="_blank" rel="noopener" class="whatsapp-big">
+      <div class="whatsapp-big-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <div class="whatsapp-big-text">
+        <div class="whatsapp-big-title" data-lang="fr">Écrire sur WhatsApp</div>
+        <div class="whatsapp-big-title" data-lang="en">Message on WhatsApp</div>
+        <div class="whatsapp-big-title" data-lang="de">WhatsApp schreiben</div>
+        <div class="whatsapp-big-title" data-lang="es">Escribir por WhatsApp</div>
+        <div class="whatsapp-big-sub" data-lang="fr">Réponse rapide garantie</div>
+        <div class="whatsapp-big-sub" data-lang="en">Quick response guaranteed</div>
+        <div class="whatsapp-big-sub" data-lang="de">Schnelle Antwort garantiert</div>
+        <div class="whatsapp-big-sub" data-lang="es">Respuesta rápida garantizada</div>
+      </div>
+    </a>
+
+    <div class="contact-card">
+      <div class="contact-card-icon">📍</div>
+      <div class="contact-card-body">
+        <div class="contact-card-label" data-lang="fr">Adresse</div>
+        <div class="contact-card-label" data-lang="en">Address</div>
+        <div class="contact-card-label" data-lang="de">Adresse</div>
+        <div class="contact-card-label" data-lang="es">Dirección</div>
+        <div class="contact-card-value">Moorea, Polynésie française</div>
+        <div class="contact-card-sub" data-lang="fr">Île de Moorea — à 17 km de Tahiti</div>
+        <div class="contact-card-sub" data-lang="en">Island of Moorea — 17 km from Tahiti</div>
+        <div class="contact-card-sub" data-lang="de">Insel Moorea — 17 km von Tahiti</div>
+        <div class="contact-card-sub" data-lang="es">Isla de Moorea — a 17 km de Tahití</div>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="font-family:var(--font-display);font-size:22px;font-weight:400;color:var(--teal-deep);margin-bottom:16px;" data-lang="fr">Horaires</h3>
+      <h3 style="font-family:var(--font-display);font-size:22px;font-weight:400;color:var(--teal-deep);margin-bottom:16px;" data-lang="en">Opening hours</h3>
+      <h3 style="font-family:var(--font-display);font-size:22px;font-weight:400;color:var(--teal-deep);margin-bottom:16px;" data-lang="de">Öffnungszeiten</h3>
+      <h3 style="font-family:var(--font-display);font-size:22px;font-weight:400;color:var(--teal-deep);margin-bottom:16px;" data-lang="es">Horarios</h3>
+      <div class="hours-grid">
+        <div class="hours-row">
+          <span class="hours-day" data-lang="fr">Lundi — Vendredi</span>
+          <span class="hours-day" data-lang="en">Monday — Friday</span>
+          <span class="hours-day" data-lang="de">Montag — Freitag</span>
+          <span class="hours-day" data-lang="es">Lunes — Viernes</span>
+          <span class="hours-time">07:00 — 18:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day" data-lang="fr">Samedi</span>
+          <span class="hours-day" data-lang="en">Saturday</span>
+          <span class="hours-day" data-lang="de">Samstag</span>
+          <span class="hours-day" data-lang="es">Sábado</span>
+          <span class="hours-time">07:00 — 17:00</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day" data-lang="fr">Dimanche</span>
+          <span class="hours-day" data-lang="en">Sunday</span>
+          <span class="hours-day" data-lang="de">Sonntag</span>
+          <span class="hours-day" data-lang="es">Domingo</span>
+          <span class="hours-time" data-lang="fr">Sur réservation</span>
+          <span class="hours-time" data-lang="en">On booking</span>
+          <span class="hours-time" data-lang="de">Nach Buchung</span>
+          <span class="hours-time" data-lang="es">Bajo reserva</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="contact-right">
+    <h2 class="form-title" data-lang="fr">Envoyez-nous un message</h2>
+    <h2 class="form-title" data-lang="en">Send us a message</h2>
+    <h2 class="form-title" data-lang="de">Schreiben Sie uns</h2>
+    <h2 class="form-title" data-lang="es">Envíenos un mensaje</h2>
+    <p class="form-sub" data-lang="fr">Nous répondons sous 24 heures — ou appelez-nous directement</p>
+    <p class="form-sub" data-lang="en">We reply within 24 hours — or call us directly</p>
+    <p class="form-sub" data-lang="de">Wir antworten innerhalb von 24 Stunden — oder rufen Sie uns direkt an</p>
+    <p class="form-sub" data-lang="es">Respondemos en 24 horas — o llámenos directamente</p>
+
+    <div id="contact-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label" for="c-prenom">
+            <span data-lang="fr">Prénom <span>*</span></span>
+            <span data-lang="en">First name <span>*</span></span>
+            <span data-lang="de">Vorname <span>*</span></span>
+            <span data-lang="es">Nombre <span>*</span></span>
+          </label>
+          <input type="text" class="form-input" id="c-prenom" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="c-nom">
+            <span data-lang="fr">Nom <span>*</span></span>
+            <span data-lang="en">Last name <span>*</span></span>
+            <span data-lang="de">Nachname <span>*</span></span>
+            <span data-lang="es">Apellido <span>*</span></span>
+          </label>
+          <input type="text" class="form-input" id="c-nom" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="c-email">
+            <span data-lang="fr">Email <span>*</span></span>
+            <span data-lang="en">Email <span>*</span></span>
+            <span data-lang="de">E-Mail <span>*</span></span>
+            <span data-lang="es">Correo <span>*</span></span>
+          </label>
+          <input type="email" class="form-input" id="c-email" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="c-tel">
+            <span data-lang="fr">Téléphone</span>
+            <span data-lang="en">Phone</span>
+            <span data-lang="de">Telefon</span>
+            <span data-lang="es">Teléfono</span>
+          </label>
+          <input type="tel" class="form-input" id="c-tel">
+        </div>
+      </div>
+      <div class="form-grid full">
+        <div class="form-group">
+          <label class="form-label" for="c-sujet">
+            <span data-lang="fr">Sujet <span>*</span></span>
+            <span data-lang="en">Subject <span>*</span></span>
+            <span data-lang="de">Betreff <span>*</span></span>
+            <span data-lang="es">Asunto <span>*</span></span>
+          </label>
+          <select class="form-select" id="c-sujet" required>
+            <option value="">—</option>
+            <option value="info" data-lang="fr">Demande d'information</option>
+            <option value="info" data-lang="en">Information request</option>
+            <option value="info" data-lang="de">Informationsanfrage</option>
+            <option value="info" data-lang="es">Solicitud de información</option>
+            <option value="resa" data-lang="fr">Réservation</option>
+            <option value="resa" data-lang="en">Booking</option>
+            <option value="resa" data-lang="de">Buchung</option>
+            <option value="resa" data-lang="es">Reserva</option>
+            <option value="devis" data-lang="fr">Demande de devis</option>
+            <option value="devis" data-lang="en">Quote request</option>
+            <option value="devis" data-lang="de">Angebotsanfrage</option>
+            <option value="devis" data-lang="es">Solicitud de presupuesto</option>
+            <option value="mariage" data-lang="fr">Mariage / Wedding Planner</option>
+            <option value="mariage" data-lang="en">Wedding / Wedding Planner</option>
+            <option value="mariage" data-lang="de">Hochzeit / Hochzeitsplaner</option>
+            <option value="mariage" data-lang="es">Boda / Wedding Planner</option>
+            <option value="autre" data-lang="fr">Autre</option>
+            <option value="autre" data-lang="en">Other</option>
+            <option value="autre" data-lang="de">Sonstiges</option>
+            <option value="autre" data-lang="es">Otro</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-top:4px;">
+          <label class="form-label" for="c-msg">
+            <span data-lang="fr">Message <span>*</span></span>
+            <span data-lang="en">Message <span>*</span></span>
+            <span data-lang="de">Nachricht <span>*</span></span>
+            <span data-lang="es">Mensaje <span>*</span></span>
+          </label>
+          <textarea class="form-textarea" id="c-msg" required></textarea>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="sendContact()">
+        <span data-lang="fr">Envoyer le message</span>
+        <span data-lang="en">Send message</span>
+        <span data-lang="de">Nachricht senden</span>
+        <span data-lang="es">Enviar mensaje</span>
+        →
+      </button>
+      <div class="success-msg" id="contact-success">
+        <strong data-lang="fr">Message envoyé ! 🌺</strong>
+        <strong data-lang="en">Message sent! 🌺</strong>
+        <strong data-lang="de">Nachricht gesendet! 🌺</strong>
+        <strong data-lang="es">¡Mensaje enviado! 🌺</strong>
+        <br>
+        <span data-lang="fr">Nous vous répondrons dans les 24 heures.</span>
+        <span data-lang="en">We'll reply within 24 hours.</span>
+        <span data-lang="de">Wir antworten Ihnen innerhalb von 24 Stunden.</span>
+        <span data-lang="es">Le responderemos en 24 horas.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="map-section" role="img" aria-label="Localisation Moorea, Polynésie française">
+  <div class="map-placeholder">
+    <div class="map-pin">📍</div>
+    <div class="map-placeholder-title" data-lang="fr">Moorea, Polynésie française</div>
+    <div class="map-placeholder-title" data-lang="en">Moorea, French Polynesia</div>
+    <div class="map-placeholder-title" data-lang="de">Moorea, Französisch-Polynesien</div>
+    <div class="map-placeholder-title" data-lang="es">Moorea, Polinesia Francesa</div>
+    <div class="map-placeholder-sub" data-lang="fr">Île de Moorea — À 17 km au nord-ouest de Tahiti</div>
+    <div class="map-placeholder-sub" data-lang="en">Island of Moorea — 17 km northwest of Tahiti</div>
+    <div class="map-placeholder-sub" data-lang="de">Insel Moorea — 17 km nordwestlich von Tahiti</div>
+    <div class="map-placeholder-sub" data-lang="es">Isla de Moorea — a 17 km al noroeste de Tahití</div>
+    <a href="https://maps.google.com/?q=Moorea,French+Polynesia" target="_blank" rel="noopener" class="map-open-btn">
+      <span data-lang="fr">Ouvrir dans Google Maps</span>
+      <span data-lang="en">Open in Google Maps</span>
+      <span data-lang="de">In Google Maps öffnen</span>
+      <span data-lang="es">Abrir en Google Maps</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Moorea Maire Beach — Polynésie française &nbsp;|&nbsp; <a href="tel:+68987707858">87 70 78 58</a> &nbsp;|&nbsp; <a href="index.html" data-lang="fr">Accueil</a><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="de">Startseite</a><a href="index.html" data-lang="es">Inicio</a></p>
+</footer>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(el=>{el.style.display=el.getAttribute('data-lang')===lang?'':'none'});
+  document.querySelectorAll('.lang-btn').forEach(btn=>{btn.classList.toggle('active',btn.textContent===lang.toUpperCase())});
+  document.documentElement.lang=lang;
+}
+function sendContact(){
+  const req=['c-prenom','c-nom','c-email','c-msg'];
+  let ok=true;
+  req.forEach(id=>{const el=document.getElementById(id);if(!el.value.trim()){el.style.borderColor='#e24b4a';ok=false;}else el.style.borderColor='';});
+  if(!ok)return;
+  document.getElementById('contact-success').style.display='block';
+  document.querySelectorAll('#contact-form .form-input,#contact-form .form-select,#contact-form .form-textarea').forEach(el=>el.disabled=true);
+  document.querySelector('#contact-form .btn-primary').style.display='none';
+}
+document.addEventListener('DOMContentLoaded',()=>setLang('fr'));
+</script>
+</body>
+</html>

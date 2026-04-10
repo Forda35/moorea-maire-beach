@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Galerie photos Moorea Maire Beach — Excursions lagunaires, mariages traditionnels, prestations romantiques à Moorea, Polynésie française.">
+<title>Galerie — Moorea Maire Beach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal-deep:#0a3d35;--teal-mid:#1a6b5a;--teal-light:#2d9e82;--teal-pale:#a8d8cc;--teal-mist:#e8f5f2;--gold:#c4a265;--gold-light:#e2c998;--gold-pale:#f7f0e4;--sand:#f9f6f0;--white:#ffffff;--dark:#0d1f1c;--text-body:#2e4a44;--text-muted:#7a9e98;--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Jost',sans-serif;--radius-sm:4px;--radius-md:12px;--radius-lg:24px;--transition:all 0.35s cubic-bezier(0.4,0,0.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);color:var(--text-body);background:var(--white);line-height:1.7;overflow-x:hidden}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,162,101,.15);padding:0 40px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.nav-logo-main{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--teal-deep);letter-spacing:.02em}
+.nav-logo-sub{font-size:10px;font-weight:400;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-switcher{display:flex;gap:4px}
+.lang-btn{background:none;border:1px solid transparent;font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--text-muted);cursor:pointer;padding:4px 8px;border-radius:4px;transition:var(--transition)}
+.lang-btn:hover,.lang-btn.active{color:var(--teal-mid);border-color:var(--teal-pale);background:var(--teal-mist)}
+.btn-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:8px 16px;border-radius:100px;border:1px solid var(--teal-pale);transition:var(--transition)}
+.btn-back:hover{color:var(--teal-mid);background:var(--teal-mist)}
+/* HERO */
+.page-hero{background:var(--teal-deep);padding:80px 80px 60px;position:relative;overflow:hidden}
+.page-hero::before{content:'GALERIE';position:absolute;right:-20px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:var(--font-display);font-size:120px;font-weight:300;color:rgba(196,162,101,.06);pointer-events:none;white-space:nowrap;letter-spacing:.2em}
+.page-hero-label{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.page-hero-title{font-family:var(--font-display);font-size:clamp(42px,5vw,64px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:16px}
+.page-hero-title em{font-style:italic;color:var(--gold-light)}
+.page-hero-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.65);max-width:560px;line-height:1.8}
+/* FILTER BAR */
+.filter-bar{background:var(--sand);border-bottom:1px solid rgba(168,216,204,.3);padding:24px 80px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.filter-btn{background:transparent;border:1px solid var(--teal-pale);color:var(--text-muted);font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:9px 20px;border-radius:100px;cursor:pointer;transition:var(--transition)}
+.filter-btn.active,.filter-btn:hover{background:var(--teal-deep);border-color:var(--teal-deep);color:var(--white)}
+/* GALLERY */
+.gallery-main{padding:60px 40px;max-width:1400px;margin:0 auto}
+.gallery-masonry{columns:3;column-gap:20px}
+.gallery-item{break-inside:avoid;margin-bottom:20px;position:relative;border-radius:var(--radius-md);overflow:hidden;cursor:pointer;transition:var(--transition)}
+.gallery-item:hover{transform:scale(1.02)}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-ph{width:100%;display:block;background:linear-gradient(135deg,var(--teal-mist),var(--teal-pale));display:flex;align-items:center;justify-content:center;font-size:40px;border-radius:var(--radius-md)}
+.gallery-ph.tall{height:380px}
+.gallery-ph.medium{height:260px}
+.gallery-ph.short{height:200px}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,61,53,.8) 0%,transparent 60%);opacity:0;transition:var(--transition);display:flex;align-items:flex-end;padding:20px}
+.gallery-caption{color:var(--white);font-family:var(--font-display);font-size:16px;font-style:italic;font-weight:400}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(10,20,18,.95);z-index:1000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+.lightbox.open{display:flex}
+.lightbox-content{position:relative;max-width:90vw;max-height:90vh;border-radius:var(--radius-lg);overflow:hidden;background:var(--teal-deep)}
+.lightbox-ph{width:min(700px,85vw);height:min(500px,70vh);display:flex;align-items:center;justify-content:center;font-size:80px;background:linear-gradient(135deg,var(--teal-deep),var(--teal-mid))}
+.lightbox-info{background:var(--teal-deep);padding:20px 28px;border-top:1px solid rgba(168,216,204,.2)}
+.lightbox-title{font-family:var(--font-display);font-size:22px;font-weight:400;color:var(--white);margin-bottom:4px}
+.lightbox-cat{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.lightbox-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);border:none;cursor:pointer;font-size:18px;color:var(--white);display:flex;align-items:center;justify-content:center;transition:var(--transition);z-index:2}
+.lightbox-close:hover{background:rgba(255,255,255,.3)}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);border:none;cursor:pointer;font-size:20px;color:var(--white);display:flex;align-items:center;justify-content:center;transition:var(--transition);z-index:2}
+.lightbox-nav:hover{background:rgba(255,255,255,.25)}
+.lightbox-prev{left:16px}
+.lightbox-next{right:16px}
+/* CTA */
+.gallery-cta{background:var(--sand);padding:80px 80px;text-align:center}
+.gallery-cta-title{font-family:var(--font-display);font-size:42px;font-weight:300;color:var(--teal-deep);margin-bottom:16px}
+.gallery-cta-title em{font-style:italic;color:var(--gold)}
+.gallery-cta-sub{font-size:15px;font-weight:300;color:var(--text-muted);max-width:500px;margin:0 auto 36px;line-height:1.8}
+.btn-primary{background:var(--teal-deep);color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:16px 40px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-primary:hover{background:var(--teal-mid);transform:translateY(-2px)}
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:40px 80px;text-align:center;font-size:12px}
+footer a{color:var(--gold);text-decoration:none}
+@media(max-width:900px){.gallery-masonry{columns:2}.page-hero,.filter-bar,.gallery-cta{padding-left:20px;padding-right:20px}.navbar{padding:0 20px}}
+@media(max-width:560px){.gallery-masonry{columns:1}}
+[data-lang]:not([data-lang="fr"]){display:none}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-main">Moorea Maire Beach</span>
+    <span class="nav-logo-sub">Polynésie Française</span>
+  </a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="index.html" class="btn-back">← <span data-lang="fr">Accueil</span><span data-lang="en">Home</span><span data-lang="de">Startseite</span><span data-lang="es">Inicio</span></a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-label" data-lang="fr">Nos plus beaux moments</div>
+  <div class="page-hero-label" data-lang="en">Our most beautiful moments</div>
+  <div class="page-hero-label" data-lang="de">Unsere schönsten Momente</div>
+  <div class="page-hero-label" data-lang="es">Nuestros más bellos momentos</div>
+  <h1 class="page-hero-title">
+    <span data-lang="fr">Galerie <em>photos</em></span>
+    <span data-lang="en">Photo <em>gallery</em></span>
+    <span data-lang="de">Foto<em>galerie</em></span>
+    <span data-lang="es">Galería de <em>fotos</em></span>
+  </h1>
+  <p class="page-hero-sub" data-lang="fr">Découvrez nos excursions, mariages et prestations à travers nos plus belles images depuis le lagon de Moorea.</p>
+  <p class="page-hero-sub" data-lang="en">Discover our excursions, weddings and services through our most beautiful images from the lagoon of Moorea.</p>
+  <p class="page-hero-sub" data-lang="de">Entdecken Sie unsere Ausflüge, Hochzeiten und Leistungen durch unsere schönsten Bilder von der Lagune Mooreas.</p>
+  <p class="page-hero-sub" data-lang="es">Descubra nuestras excursiones, bodas y servicios a través de nuestras más bellas imágenes desde la laguna de Moorea.</p>
+</div>
+
+<div class="filter-bar" role="toolbar">
+  <button class="filter-btn active" onclick="filterGallery('all',this)">
+    <span data-lang="fr">Tout voir</span><span data-lang="en">All</span><span data-lang="de">Alle</span><span data-lang="es">Todo</span>
+  </button>
+  <button class="filter-btn" onclick="filterGallery('lagon',this)">
+    <span data-lang="fr">Lagon</span><span data-lang="en">Lagoon</span><span data-lang="de">Lagune</span><span data-lang="es">Laguna</span>
+  </button>
+  <button class="filter-btn" onclick="filterGallery('mariage',this)">
+    <span data-lang="fr">Mariage</span><span data-lang="en">Wedding</span><span data-lang="de">Hochzeit</span><span data-lang="es">Boda</span>
+  </button>
+  <button class="filter-btn" onclick="filterGallery('romantique',this)">
+    <span data-lang="fr">Romantique</span><span data-lang="en">Romantic</span><span data-lang="de">Romantisch</span><span data-lang="es">Romántico</span>
+  </button>
+  <button class="filter-btn" onclick="filterGallery('eco',this)">
+    <span data-lang="fr">Éco-Citoyen</span><span data-lang="en">Eco</span><span data-lang="de">Öko</span><span data-lang="es">Eco</span>
+  </button>
+  <button class="filter-btn" onclick="filterGallery('prive',this)">
+    <span data-lang="fr">Privé</span><span data-lang="en">Private</span><span data-lang="de">Privat</span><span data-lang="es">Privado</span>
+  </button>
+</div>
+
+<div class="gallery-main">
+  <div class="gallery-masonry" id="gallery-grid">
+
+    <div class="gallery-item" data-cat="lagon" onclick="openLightbox(0)">
+      <div class="gallery-ph tall">🌊</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Lagon de Moorea</span>
+        <span class="gallery-caption" data-lang="en">Moorea Lagoon</span>
+        <span class="gallery-caption" data-lang="de">Lagune Mooreas</span>
+        <span class="gallery-caption" data-lang="es">Laguna de Moorea</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="mariage" onclick="openLightbox(1)">
+      <div class="gallery-ph medium">💍</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Mariage traditionnel polynésien</span>
+        <span class="gallery-caption" data-lang="en">Traditional Polynesian wedding</span>
+        <span class="gallery-caption" data-lang="de">Traditionelle polynesische Hochzeit</span>
+        <span class="gallery-caption" data-lang="es">Boda tradicional polinesia</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="romantique" onclick="openLightbox(2)">
+      <div class="gallery-ph short">🌅</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Coucher de soleil sur le Motu</span>
+        <span class="gallery-caption" data-lang="en">Sunset over the Motu</span>
+        <span class="gallery-caption" data-lang="de">Sonnenuntergang über dem Motu</span>
+        <span class="gallery-caption" data-lang="es">Atardecer sobre el Motu</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="lagon" onclick="openLightbox(3)">
+      <div class="gallery-ph medium">🦈</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Requins du lagon</span>
+        <span class="gallery-caption" data-lang="en">Lagoon sharks</span>
+        <span class="gallery-caption" data-lang="de">Haie in der Lagune</span>
+        <span class="gallery-caption" data-lang="es">Tiburones de la laguna</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="eco" onclick="openLightbox(4)">
+      <div class="gallery-ph tall">🌿</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Bouturage de corail</span>
+        <span class="gallery-caption" data-lang="en">Coral restoration</span>
+        <span class="gallery-caption" data-lang="de">Korallenrestaurierung</span>
+        <span class="gallery-caption" data-lang="es">Restauración de corales</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="mariage" onclick="openLightbox(5)">
+      <div class="gallery-ph short">🌺</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Décoration florale de mariage</span>
+        <span class="gallery-caption" data-lang="en">Wedding floral decoration</span>
+        <span class="gallery-caption" data-lang="de">Blumendekoration Hochzeit</span>
+        <span class="gallery-caption" data-lang="es">Decoración floral de boda</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="lagon" onclick="openLightbox(6)">
+      <div class="gallery-ph medium">⛵</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Catamaran Vahine Etene</span>
+        <span class="gallery-caption" data-lang="en">Catamaran Vahine Etene</span>
+        <span class="gallery-caption" data-lang="de">Katamaran Vahine Etene</span>
+        <span class="gallery-caption" data-lang="es">Catamarán Vahine Etene</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="romantique" onclick="openLightbox(7)">
+      <div class="gallery-ph tall">🍽️</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Dîner romantique sur l'îlot</span>
+        <span class="gallery-caption" data-lang="en">Romantic dinner on the islet</span>
+        <span class="gallery-caption" data-lang="de">Romantisches Abendessen auf dem Inselchen</span>
+        <span class="gallery-caption" data-lang="es">Cena romántica en el islote</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="prive" onclick="openLightbox(8)">
+      <div class="gallery-ph medium">✨</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Fête privée sur le Motu</span>
+        <span class="gallery-caption" data-lang="en">Private party on the Motu</span>
+        <span class="gallery-caption" data-lang="de">Privatfete auf dem Motu</span>
+        <span class="gallery-caption" data-lang="es">Fiesta privada en el Motu</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="lagon" onclick="openLightbox(9)">
+      <div class="gallery-ph short">🐢</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Tortues marines</span>
+        <span class="gallery-caption" data-lang="en">Sea turtles</span>
+        <span class="gallery-caption" data-lang="de">Meeresschildkröten</span>
+        <span class="gallery-caption" data-lang="es">Tortugas marinas</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="mariage" onclick="openLightbox(10)">
+      <div class="gallery-ph medium">🎊</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Cérémonie sur le Motu Moea</span>
+        <span class="gallery-caption" data-lang="en">Ceremony on Motu Moea</span>
+        <span class="gallery-caption" data-lang="de">Zeremonie auf Motu Moea</span>
+        <span class="gallery-caption" data-lang="es">Ceremonia en Motu Moea</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-cat="lagon" onclick="openLightbox(11)">
+      <div class="gallery-ph tall">🌴</div>
+      <div class="gallery-overlay">
+        <span class="gallery-caption" data-lang="fr">Motu Moea au coucher du soleil</span>
+        <span class="gallery-caption" data-lang="en">Motu Moea at sunset</span>
+        <span class="gallery-caption" data-lang="de">Motu Moea bei Sonnenuntergang</span>
+        <span class="gallery-caption" data-lang="es">Motu Moea al atardecer</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)" aria-label="Précédent">‹</button>
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)" aria-label="Suivant">›</button>
+  <div class="lightbox-content">
+    <div class="lightbox-ph" id="lb-img">🌊</div>
+    <div class="lightbox-info">
+      <div class="lightbox-title" id="lb-title">Lagon de Moorea</div>
+      <div class="lightbox-cat" id="lb-cat">Lagon</div>
+    </div>
+  </div>
+</div>
+
+<div class="gallery-cta">
+  <h2 class="gallery-cta-title">
+    <span data-lang="fr">Envie de vivre ces <em>moments</em> ?</span>
+    <span data-lang="en">Want to live these <em>moments</em>?</span>
+    <span data-lang="de">Möchten Sie diese <em>Momente</em> erleben?</span>
+    <span data-lang="es">¿Quiere vivir estos <em>momentos</em>?</span>
+  </h2>
+  <p class="gallery-cta-sub" data-lang="fr">Réservez votre prestation dès maintenant et créez vos propres souvenirs inoubliables sur l'île de Moorea.</p>
+  <p class="gallery-cta-sub" data-lang="en">Book your service now and create your own unforgettable memories on the island of Moorea.</p>
+  <p class="gallery-cta-sub" data-lang="de">Buchen Sie Ihre Leistung jetzt und schaffen Sie Ihre eigenen unvergesslichen Erinnerungen auf der Insel Moorea.</p>
+  <p class="gallery-cta-sub" data-lang="es">Reserve su servicio ahora y cree sus propios recuerdos inolvidables en la isla de Moorea.</p>
+  <a href="reservation.html" class="btn-primary">
+    <span data-lang="fr">Réserver maintenant</span>
+    <span data-lang="en">Book now</span>
+    <span data-lang="de">Jetzt buchen</span>
+    <span data-lang="es">Reservar ahora</span>
+    →
+  </a>
+</div>
+
+<footer>
+  <p>© 2026 Moorea Maire Beach — Polynésie française &nbsp;|&nbsp; <a href="tel:+68987707858">87 70 78 58</a> &nbsp;|&nbsp; <a href="index.html" data-lang="fr">Accueil</a><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="de">Startseite</a><a href="index.html" data-lang="es">Inicio</a></p>
+</footer>
+
+<script>
+const items=document.querySelectorAll('.gallery-item');
+const lbData=[
+  {icon:'🌊',title:{fr:'Lagon de Moorea',en:'Moorea Lagoon',de:'Lagune Mooreas',es:'Laguna de Moorea'},cat:{fr:'Lagon',en:'Lagoon',de:'Lagune',es:'Laguna'}},
+  {icon:'💍',title:{fr:'Mariage traditionnel polynésien',en:'Traditional Polynesian Wedding',de:'Traditionelle polynesische Hochzeit',es:'Boda tradicional polinesia'},cat:{fr:'Mariage',en:'Wedding',de:'Hochzeit',es:'Boda'}},
+  {icon:'🌅',title:{fr:'Coucher de soleil sur le Motu',en:'Sunset over the Motu',de:'Sonnenuntergang über dem Motu',es:'Atardecer sobre el Motu'},cat:{fr:'Romantique',en:'Romantic',de:'Romantisch',es:'Romántico'}},
+  {icon:'🦈',title:{fr:'Requins du lagon',en:'Lagoon Sharks',de:'Haie in der Lagune',es:'Tiburones de la laguna'},cat:{fr:'Lagon',en:'Lagoon',de:'Lagune',es:'Laguna'}},
+  {icon:'🌿',title:{fr:'Bouturage de corail',en:'Coral Restoration',de:'Korallenrestaurierung',es:'Restauración de corales'},cat:{fr:'Éco-Citoyen',en:'Eco-Citizen',de:'Öko-Bürger',es:'Eco-Ciudadano'}},
+  {icon:'🌺',title:{fr:'Décoration florale de mariage',en:'Wedding Floral Decoration',de:'Blumendekoration Hochzeit',es:'Decoración floral de boda'},cat:{fr:'Mariage',en:'Wedding',de:'Hochzeit',es:'Boda'}},
+  {icon:'⛵',title:{fr:'Catamaran Vahine Etene',en:'Catamaran Vahine Etene',de:'Katamaran Vahine Etene',es:'Catamarán Vahine Etene'},cat:{fr:'Lagon',en:'Lagoon',de:'Lagune',es:'Laguna'}},
+  {icon:'🍽️',title:{fr:'Dîner romantique sur l\'îlot',en:'Romantic Dinner on the Islet',de:'Romantisches Abendessen',es:'Cena romántica en el islote'},cat:{fr:'Romantique',en:'Romantic',de:'Romantisch',es:'Romántico'}},
+  {icon:'✨',title:{fr:'Fête privée sur le Motu',en:'Private Party on the Motu',de:'Privatfete auf dem Motu',es:'Fiesta privada en el Motu'},cat:{fr:'Privé',en:'Private',de:'Privat',es:'Privado'}},
+  {icon:'🐢',title:{fr:'Tortues marines',en:'Sea Turtles',de:'Meeresschildkröten',es:'Tortugas marinas'},cat:{fr:'Lagon',en:'Lagoon',de:'Lagune',es:'Laguna'}},
+  {icon:'🎊',title:{fr:'Cérémonie sur le Motu Moea',en:'Ceremony on Motu Moea',de:'Zeremonie auf Motu Moea',es:'Ceremonia en Motu Moea'},cat:{fr:'Mariage',en:'Wedding',de:'Hochzeit',es:'Boda'}},
+  {icon:'🌴',title:{fr:'Motu Moea au coucher du soleil',en:'Motu Moea at Sunset',de:'Motu Moea bei Sonnenuntergang',es:'Motu Moea al atardecer'},cat:{fr:'Lagon',en:'Lagoon',de:'Lagune',es:'Laguna'}}
+];
+let currentIdx=0, currentLang='fr';
+let visibleItems=Array.from(items);
+
+function setLang(lang){
+  currentLang=lang;
+  document.querySelectorAll('[data-lang]').forEach(el=>{el.style.display=el.getAttribute('data-lang')===lang?'':'none'});
+  document.querySelectorAll('.lang-btn').forEach(btn=>{btn.classList.toggle('active',btn.textContent===lang.toUpperCase())});
+  document.documentElement.lang=lang;
+}
+function filterGallery(cat,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  items.forEach(item=>{
+    item.style.display=(cat==='all'||item.getAttribute('data-cat')===cat)?'':'none';
+  });
+  visibleItems=Array.from(items).filter(i=>i.style.display!=='none');
+}
+function openLightbox(idx){
+  currentIdx=idx;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+function navLightbox(dir){
+  currentIdx=(currentIdx+dir+lbData.length)%lbData.length;
+  updateLightbox();
+}
+function updateLightbox(){
+  const d=lbData[currentIdx];
+  document.getElementById('lb-img').textContent=d.icon;
+  document.getElementById('lb-title').textContent=d.title[currentLang];
+  document.getElementById('lb-cat').textContent=d.cat[currentLang];
+}
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLightbox()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')navLightbox(-1);if(e.key==='ArrowRight')navLightbox(1)});
+document.addEventListener('DOMContentLoaded',()=>setLang('fr'));
+</script>
+</body>
+</html>

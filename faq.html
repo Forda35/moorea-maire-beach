@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FAQ Moorea Maire Beach — Réponses à toutes vos questions sur nos excursions, mariages et prestations à Moorea, Polynésie française.">
+<title>FAQ — Moorea Maire Beach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal-deep:#0a3d35;--teal-mid:#1a6b5a;--teal-light:#2d9e82;--teal-pale:#a8d8cc;--teal-mist:#e8f5f2;--gold:#c4a265;--gold-light:#e2c998;--gold-pale:#f7f0e4;--sand:#f9f6f0;--white:#ffffff;--dark:#0d1f1c;--text-body:#2e4a44;--text-muted:#7a9e98;--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Jost',sans-serif;--radius-sm:4px;--radius-md:12px;--radius-lg:24px;--transition:all 0.35s cubic-bezier(0.4,0,0.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);color:var(--text-body);background:var(--white);line-height:1.7;overflow-x:hidden}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,162,101,.15);padding:0 40px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.nav-logo-main{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--teal-deep);letter-spacing:.02em}
+.nav-logo-sub{font-size:10px;font-weight:400;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-switcher{display:flex;gap:4px}
+.lang-btn{background:none;border:1px solid transparent;font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--text-muted);cursor:pointer;padding:4px 8px;border-radius:4px;transition:var(--transition)}
+.lang-btn:hover,.lang-btn.active{color:var(--teal-mid);border-color:var(--teal-pale);background:var(--teal-mist)}
+.btn-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:8px 16px;border-radius:100px;border:1px solid var(--teal-pale);transition:var(--transition)}
+.btn-back:hover{color:var(--teal-mid);background:var(--teal-mist)}
+.page-hero{background:var(--teal-deep);padding:80px 80px 60px;position:relative;overflow:hidden}
+.page-hero::before{content:'FAQ';position:absolute;right:-20px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:var(--font-display);font-size:160px;font-weight:300;color:rgba(196,162,101,.06);pointer-events:none;white-space:nowrap;letter-spacing:.2em}
+.page-hero-label{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.page-hero-title{font-family:var(--font-display);font-size:clamp(42px,5vw,64px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:16px}
+.page-hero-title em{font-style:italic;color:var(--gold-light)}
+.page-hero-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.65);max-width:560px;line-height:1.8}
+/* FAQ MAIN */
+.faq-main{max-width:820px;margin:0 auto;padding:80px 40px}
+.faq-category{margin-bottom:64px}
+.faq-cat-label{display:flex;align-items:center;gap:14px;margin-bottom:32px}
+.faq-cat-label span{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.faq-cat-label::before{content:'';width:30px;height:1px;background:var(--gold);opacity:.5}
+.faq-cat-title{font-family:var(--font-display);font-size:32px;font-weight:400;color:var(--teal-deep);margin-bottom:28px}
+.faq-item{border-bottom:1px solid rgba(168,216,204,.35);padding:0}
+.faq-question{display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:24px;padding:22px 0}
+.faq-q-text{font-family:var(--font-display);font-size:20px;font-weight:500;color:var(--teal-deep);line-height:1.3}
+.faq-toggle{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--teal-pale);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--teal-mid);flex-shrink:0;transition:var(--transition);font-weight:300}
+.faq-item.open .faq-toggle{background:var(--teal-deep);color:var(--white);border-color:var(--teal-deep);transform:rotate(45deg)}
+.faq-answer{font-size:15px;font-weight:300;color:var(--text-muted);max-height:0;overflow:hidden;transition:max-height .45s ease,padding .3s ease;line-height:1.85}
+.faq-item.open .faq-answer{max-height:400px;padding-bottom:22px}
+/* CTA */
+.faq-cta{background:var(--teal-deep);padding:80px;text-align:center;position:relative;overflow:hidden}
+.faq-cta::before{content:'QUESTIONS';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--font-display);font-size:100px;font-weight:300;color:rgba(196,162,101,.04);pointer-events:none;white-space:nowrap}
+.faq-cta-title{font-family:var(--font-display);font-size:42px;font-weight:300;color:var(--white);margin-bottom:16px}
+.faq-cta-title em{font-style:italic;color:var(--gold-light)}
+.faq-cta-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.65);max-width:480px;margin:0 auto 40px;line-height:1.8}
+.btn-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--teal-deep);font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:16px 36px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:16px 36px;border-radius:100px;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.1)}
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:40px 80px;text-align:center;font-size:12px}
+footer a{color:var(--gold);text-decoration:none}
+@media(max-width:768px){.page-hero,.faq-cta{padding-left:24px;padding-right:24px}.faq-main{padding:40px 20px}.navbar{padding:0 20px}}
+[data-lang]:not([data-lang="fr"]){display:none}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-main">Moorea Maire Beach</span>
+    <span class="nav-logo-sub">Polynésie Française</span>
+  </a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="index.html" class="btn-back">← <span data-lang="fr">Accueil</span><span data-lang="en">Home</span><span data-lang="de">Startseite</span><span data-lang="es">Inicio</span></a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-label" data-lang="fr">Questions fréquentes</div>
+  <div class="page-hero-label" data-lang="en">Frequently asked questions</div>
+  <div class="page-hero-label" data-lang="de">Häufig gestellte Fragen</div>
+  <div class="page-hero-label" data-lang="es">Preguntas frecuentes</div>
+  <h1 class="page-hero-title">
+    <span data-lang="fr">Vos <em>questions</em>,<br>nos réponses</span>
+    <span data-lang="en">Your <em>questions</em>,<br>our answers</span>
+    <span data-lang="de">Ihre <em>Fragen</em>,<br>unsere Antworten</span>
+    <span data-lang="es">Sus <em>preguntas</em>,<br>nuestras respuestas</span>
+  </h1>
+  <p class="page-hero-sub" data-lang="fr">Retrouvez ici toutes les réponses à vos questions sur nos prestations. Vous ne trouvez pas votre réponse ? Contactez-nous directement.</p>
+  <p class="page-hero-sub" data-lang="en">Find all answers to your questions about our services here. Can't find your answer? Contact us directly.</p>
+  <p class="page-hero-sub" data-lang="de">Hier finden Sie alle Antworten auf Ihre Fragen zu unseren Leistungen. Keine Antwort gefunden? Kontaktieren Sie uns direkt.</p>
+  <p class="page-hero-sub" data-lang="es">Aquí encontrará todas las respuestas a sus preguntas sobre nuestros servicios. ¿No encuentra su respuesta? Contáctenos directamente.</p>
+</div>
+
+<main class="faq-main">
+
+  <!-- RÉSERVATION -->
+  <div class="faq-category">
+    <div class="faq-cat-label"><span data-lang="fr">Réservation</span><span data-lang="en">Booking</span><span data-lang="de">Buchung</span><span data-lang="es">Reserva</span></div>
+    <h2 class="faq-cat-title" data-lang="fr">Réservation & Paiement</h2>
+    <h2 class="faq-cat-title" data-lang="en">Booking & Payment</h2>
+    <h2 class="faq-cat-title" data-lang="de">Buchung & Zahlung</h2>
+    <h2 class="faq-cat-title" data-lang="es">Reserva & Pago</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggle(this)" aria-expanded="false">
+        <span class="faq-q-text" data-lang="fr">Comment réserver une prestation ?</span>
+        <span class="faq-q-text" data-lang="en">How do I book a service?</span>
+        <span class="faq-q-text" data-lang="de">Wie buche ich eine Leistung?</span>
+        <span class="faq-q-text" data-lang="es">¿Cómo reservar un servicio?</span>
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-answer">
+        <span data-lang="fr">Remplissez notre formulaire de réservation en ligne sur la page Réservation. Choisissez votre prestation, renseignez vos dates et vos coordonnées. Nous vous confirmons par email ou WhatsApp dans les 24h. Aucun paiement immédiat n'est requis.</span>
+        <span data-lang="en">Fill in our online booking form on the Reservation page. Choose your service, enter your dates and contact details. We confirm by email or WhatsApp within 24 hours. No immediate payment is required.</span>
+        <span data-lang="de">Füllen Sie unser Online-Buchungsformular auf der Buchungsseite aus. Wählen Sie Ihre Leistung, geben Sie Ihre Daten ein. Wir bestätigen per E-Mail oder WhatsApp innerhalb von 24 Stunden. Keine sofortige Zahlung erforderlich.</span>
+        <span data-lang="es">Rellene nuestro formulario de reserva en línea en la página de Reserva. Elija su servicio, introduzca sus fechas y datos de contacto. Le confirmamos por correo o WhatsApp en 24 horas. No se requiere pago inmediato.</span>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggle(this)" aria-expanded="false">
+        <span class="faq-q-text" data-lang="fr">Quel est le délai minimum pour réserver ?</span>
+        <span class="faq-q-text" data-lang="en">What is the minimum booking lead time?</span>
+        <span class="faq-q-text" data-lang="de">Wie viel Vorlaufzeit benötige ich für eine Buchung?</span>
+        <span class="faq-q-text" data-lang="es">¿Cuál es el tiempo mínimo de antelación para reservar?</span>
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-answer">
+        <span data-lang="fr">Nous recommandons de réserver au moins 48 à 72h à l'avance pour les excursions, et plusieurs semaines à l'avance pour les mariages et événements privés. Pour les demandes urgentes, contactez-nous directement par téléphone ou WhatsApp.</span>
+        <span data-lang="en">We recommend booking at least 48 to 72 hours in advance for excursions, and several weeks in advance for weddings and private events. For urgent requests, contact us directly by phone or WhatsApp.</span>
+        <span data-lang="de">Wir empfehlen, mindestens 48 bis 72 Stunden im Voraus für Ausflüge zu buchen, und mehrere Wochen im Voraus für Hochzeiten und private Veranstaltungen. Für dringende Anfragen kontaktieren Sie uns direkt per Telefon oder WhatsApp.</span>
+        <span data-lang="es">Recomendamos reservar con al menos 48 a 72 horas de antelación para excursiones, y varias semanas para bodas y eventos privados. Para solicitudes urgentes, contáctenos directamente por teléfono o WhatsApp.</span>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggle(this)" aria-expanded="false">
+        <span class="faq-q-text" data-lang="fr">Quelle est la politique d'annulation ?</span>
+        <span class="faq-q-text" data-lang="en">What is the cancellation policy?</span>
+        <span class="faq-q-text" data-lang="de">Was ist die Stornierungsrichtlinie?</span>
+        <span class="faq-q-text" data-lang="es">¿Cuál es la política de cancelación?</span>
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-answer">
+        <span data-lang="fr">Les annulations effectuées plus de 48h avant la prestation sont remboursées en totalité. Entre 24 et 48h, un avoir est proposé. En dessous de 24h, sauf conditions météo, la prestation est due. En cas de mauvais temps, nous reportons ou remboursons systématiquement.</span>
+        <span data-lang="en">Cancellations made more than 48 hours before the service are fully refunded. Between 24 and 48 hours, a credit is offered. Under 24 hours, except weather conditions, the service is due. In case of bad weather, we always reschedule or refund.</span>
+        <span data-lang="de">Stornierungen mehr als 48 Stunden vor der Leistung werden vollständig erstattet. Zwischen 24 und 48 Stunden wird ein Guthaben angeboten. Unter 24 Stunden, außer Wetterbedingungen, ist die Leistung fällig. Bei schlechtem Wetter verschieben oder erstatten wir immer.</span>
+        <span data-lang="es">Las cancelaciones realizadas con más de 48 horas de antelación se reembolsan en su totalidad. Entre 24 y 48 horas, se ofrece un crédito. Con menos de 24 horas, salvo condiciones climáticas, el servicio es exigible. En caso de mal tiempo, siempre reprogramamos o reembolsamos.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRESTATIONS -->
+  <div class="faq-category">
+    <div class="faq-cat-label"><span data-lang="fr">Prestations</span><span data-lang="en">Services</span><span data-lang="de">Leistungen</span><span data-lang="es">Servicios</span></div>
+    <h2 class="faq-cat-title" data-lang="fr">Nos Prestations</h2>
+    <h2 class="faq-cat-title" data-lang="en">Our Services</h2>
+    <h2 class="faq-cat-title" data-lang="de">Unsere Leistungen</h2>
+    <h2 class="faq-cat-title" data-lang="es">Nuestros Servicios</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggle(this)" aria-expanded="false">
+        <span class="faq-q-text" data-lang="fr">Qu'est-ce que le Tour Lagunaire ?</span>
+        <span class="faq-q-text" data-lang="en">What is the Lagoon Tour?</span>
+        <span class="faq-q-text" data-lang="de">Was ist die Lagunenrundfahrt?</span>
+        <span class="faq-q-text" data-lang="es">¿Qué es el Tour Lagunar?</span>
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-answer">
+        <span data-lang="fr">Le tour lagunaire à bord du Tamaeva'a vous emmène à la découverte des raies, des requins pointes noires et des Tiki immergés du lagon de Moorea. Maximum 12 personnes pour un tour intime et privilégié. Nouvelle offre de la saison : whale seating watching (observation des baleines depuis le bateau sans baignade).</span>
+        <span data-lang="en">The lagoon tour aboard the Tamaeva'a takes you to discover stingrays, blacktip sharks and the submerged Tiki of Moorea's lagoon. Maximum 12 people for an intimate and exclusive tour. New this season: whale seating watching (whale observation from the boat without swimming).</span>
+        <span data-lang="de">Die Lagunenrundfahrt an Bord des Tamaeva'a nimmt Sie mit zur Entdeckung von Stachelrochen, Schwarzspitzen-Haien und den versunkenen Tiki der Lagune von Moorea. Maximal 12 Personen für einen intimen und exklusiven Ausflug. Neu in dieser Saison: Walbeobachtung vom Boot aus (ohne Schwimmen).</span>
+        <span data-lang="es">El tour lagunar a bordo del Tamaeva'a le lleva a descubrir rayas, tiburones de punta negra y los Tiki sumergidos de la laguna de Moorea. Máximo 12 personas para un tour íntimo y exclusivo. Novedad de la temporada: avistamiento de ballenas desde el barco (sin nadar).</span>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggle(this)" aria-expanded="false">
+        <span class="faq-q-text" data-lang="fr">Qu'est-ce que le Tour Bout éco-citoyen ?</span>
+        <span class="faq-q-text" data-lang="en">What is the Eco-Citizen Tour Bout?</span>
+        <span class="faq-q-text" data-lang="de">Was ist der Öko-Tour Bout?</span>
+        <span class="faq-q-text" data-lang="es">¿Qué es el Tour Bout eco-ciudadano?</span>
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-answer">
+        <span data-lang="fr">Le Tour Bout est une prestation éco-citoyenne unique qui consiste à participer au bouturage de corail sur le Motu Moea. Des boutures sont réalisées à partir de morceaux brisés récupérés dans les bassins, fixées sur un support avec une pâte de résine, puis placées sur la table de bouturage. Un geste concret pour la préservation du récif corallien. Minimum 25 à 50 personnes.</span>
+        <span data-lang="en">Tour Bout is a unique eco-citizen service involving participation in coral reef restoration on Motu Moea. Cuttings are made from broken pieces recovered from the basins, fixed on a support with resin paste, then placed on the restoration table. A concrete gesture for coral reef preservation. Minimum 25 to 50 people.</span>
+        <span data-lang="de">Tour Bout ist ein einzigartiger Öko-Dienst, der die Teilnahme an der Korallenrestaurierung auf Motu Moea beinhaltet. Ableger werden aus zerbrochenen Stücken aus den Becken hergestellt, auf einem Träger mit Harzpaste befestigt und dann auf den Restaurierungstisch gelegt. Eine konkrete Geste zur Erhaltung des Korallenriffs. Mindestens 25 bis 50 Personen.</span>
+        <span data-lang="es">Tour Bout es un servicio eco-ciudadano único que consiste en participar en la restauración de arrecifes de coral en Motu Moea. Se realizan esquejes a partir de fragmentos rotos recuperados de los estanques, fijados en un soporte con pasta de resina y colocados en la mesa de restauración. Un gesto concreto para la preservación del arrecife de coral. Mínimo 25 a 50 personas.</span>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggle(this)" aria-expanded="false">
+        <span class="faq-q-text" data-lang="fr">Combien de passagers peut accueillir le catamaran ?</span>
+        <span class="faq-q-text" data-lang="en">How many passengers can the catamaran accommodate?</span>
+        <span class="faq-q-text" data-lang="de">Wie viele Passagiere kann der Katamaran aufnehmen?</span>
+        <span class="faq-q-text" data-lang="es">¿Cuántos pasajeros puede acomodar el catamarán?</span>
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-answer">
+        <span data-lang="fr">Notre catamaran Vahine Etene peut accueillir jusqu'à 60 passagers avec son équipage complet (capitaine et matelots). Il est disponible pour les transferts maritimes, les excursions privées et les événements de groupe. Contactez-nous pour un devis personnalisé.</span>
+        <span data-lang="en">Our catamaran Vahine Etene can accommodate up to 60 passengers with its full crew (captain and sailors). It is available for maritime transfers, private excursions and group events. Contact us for a personalized quote.</span>
+        <span data-lang="de">Unser Katamaran Vahine Etene kann bis zu 60 Passagiere mit seiner vollständigen Besatzung (Kapitän und Matrosen) aufnehmen. Er ist für Seetransfers, private Ausflüge und Gruppenveranstaltungen verfügbar. Kontaktieren Sie uns für ein persönliches Angebot.</span>
+        <span data-lang="es">Nuestro catamarán Vahine Etene puede acomodar hasta 60 pasajeros con su tripulación completa (capitán y marineros). Está disponible para transferencias marítimas, excursiones privadas y eventos grupales. Contáctenos para un presupuesto personalizado.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRATIQUE -->
+  <div class="faq-category">
+    <div class="faq-cat-label"><span data-lang="fr">Pratique</span><span data-lang="en">Practical</span><span data-lang="de">Praktisch</span><span data-lang="es">Práctico</span></div>
+    <h2 class="faq-cat-title" data-lang="fr">Informations pratiques</h2>
+    <h2 class="faq-cat-title" data-lang="en">Practical information</h2>
+    <h2 class="faq-cat-title" data-lang="de">Praktische Informationen</h2>
+    <h2 class="faq-cat-title" data-lang="es">Información práctica</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggle(this)" aria-expanded="false">
+        <span class="faq-q-text" data-lang="fr">Quelle est la meilleure saison pour visiter Moorea ?</span>
+        <span class="faq-q-text" data-lang="en">What is the best season to visit Moorea?</span>
+        <span class="faq-q-text" data-lang="de">Was ist die beste Jahreszeit, um Moorea zu besuchen?</span>
+        <span class="faq-q-text" data-lang="es">¿Cuál es la mejor época para visitar Moorea?</span>
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-answer">
+        <span data-lang="fr">Moorea est magnifique toute l'année ! La saison sèche (mai à octobre) est idéale pour les activités nautiques avec des eaux calmes et un ciel dégagé. La saison des baleines jubarte (juillet à novembre) est parfaite pour observer ces géants des mers depuis notre catamaran. La saison des pluies (novembre à avril) offre une végétation luxuriante et des paysages encore plus verts.</span>
+        <span data-lang="en">Moorea is beautiful all year round! The dry season (May to October) is ideal for water activities with calm seas and clear skies. The humpback whale season (July to November) is perfect for observing these sea giants from our catamaran. The rainy season (November to April) offers lush vegetation and even greener landscapes.</span>
+        <span data-lang="de">Moorea ist das ganze Jahr über wunderschön! Die Trockenzeit (Mai bis Oktober) ist ideal für Wassersportaktivitäten mit ruhigen Meeren und klarem Himmel. Die Buckelwalsaison (Juli bis November) ist perfekt, um diese Meeresgiganten von unserem Katamaran aus zu beobachten. Die Regenzeit (November bis April) bietet üppige Vegetation und noch grünere Landschaften.</span>
+        <span data-lang="es">¡Moorea es hermosa durante todo el año! La estación seca (mayo a octubre) es ideal para actividades acuáticas con mares en calma y cielos despejados. La temporada de ballenas jorobadas (julio a noviembre) es perfecta para observar estos gigantes del mar desde nuestro catamarán. La estación lluviosa (noviembre a abril) ofrece una vegetación exuberante y paisajes aún más verdes.</span>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggle(this)" aria-expanded="false">
+        <span class="faq-q-text" data-lang="fr">Comment se rendre à Moorea depuis Tahiti ?</span>
+        <span class="faq-q-text" data-lang="en">How to get to Moorea from Tahiti?</span>
+        <span class="faq-q-text" data-lang="de">Wie kommt man von Tahiti nach Moorea?</span>
+        <span class="faq-q-text" data-lang="es">¿Cómo llegar a Moorea desde Tahití?</span>
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-answer">
+        <span data-lang="fr">Moorea se trouve à seulement 17 km au nord-ouest de Tahiti. Vous pouvez y accéder en ferry (Aremiti ou Moorea Ferry) depuis le port de Papeete en environ 30 minutes, ou en avion ATR depuis l'aéroport de Faa'a en 7 minutes. Le ferry est la solution la plus économique et pratique.</span>
+        <span data-lang="en">Moorea is only 17 km northwest of Tahiti. You can access it by ferry (Aremiti or Moorea Ferry) from Papeete harbor in about 30 minutes, or by ATR plane from Faa'a airport in 7 minutes. The ferry is the most economical and practical option.</span>
+        <span data-lang="de">Moorea liegt nur 17 km nordwestlich von Tahiti. Sie können es mit der Fähre (Aremiti oder Moorea Ferry) vom Hafen Papeete in etwa 30 Minuten erreichen, oder mit dem ATR-Flugzeug vom Flughafen Faa'a in 7 Minuten. Die Fähre ist die wirtschaftlichste und praktischste Option.</span>
+        <span data-lang="es">Moorea está a solo 17 km al noroeste de Tahití. Se puede acceder en ferry (Aremiti o Moorea Ferry) desde el puerto de Papeete en unos 30 minutos, o en avión ATR desde el aeropuerto de Faa'a en 7 minutos. El ferry es la opción más económica y práctica.</span>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggle(this)" aria-expanded="false">
+        <span class="faq-q-text" data-lang="fr">Les prestations sont-elles adaptées aux enfants ?</span>
+        <span class="faq-q-text" data-lang="en">Are the services suitable for children?</span>
+        <span class="faq-q-text" data-lang="de">Sind die Leistungen für Kinder geeignet?</span>
+        <span class="faq-q-text" data-lang="es">¿Son los servicios adecuados para niños?</span>
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-answer">
+        <span data-lang="fr">La plupart de nos prestations sont ouvertes aux familles avec enfants. Les excursions lagunaires sont particulièrement appréciées des enfants dès 5 ans. Pour les prestations romantiques et les mariages, certaines activités sont réservées aux adultes. Indiquez la présence et l'âge des enfants lors de votre réservation pour que nous puissions adapter l'expérience.</span>
+        <span data-lang="en">Most of our services are open to families with children. Lagoon excursions are particularly enjoyed by children from age 5. For romantic services and weddings, some activities are reserved for adults. Indicate the presence and age of children when booking so we can adapt the experience.</span>
+        <span data-lang="de">Die meisten unserer Leistungen sind für Familien mit Kindern geöffnet. Lagunenausflüge werden besonders von Kindern ab 5 Jahren geschätzt. Für romantische Leistungen und Hochzeiten sind einige Aktivitäten Erwachsenen vorbehalten. Geben Sie bei der Buchung die Anwesenheit und das Alter der Kinder an, damit wir das Erlebnis anpassen können.</span>
+        <span data-lang="es">La mayoría de nuestros servicios están abiertos a familias con niños. Las excursiones lagunares son especialmente apreciadas por niños a partir de 5 años. Para servicios románticos y bodas, algunas actividades están reservadas para adultos. Indique la presencia y edad de los niños al reservar para que podamos adaptar la experiencia.</span>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggle(this)" aria-expanded="false">
+        <span class="faq-q-text" data-lang="fr">Quelles langues parlez-vous ?</span>
+        <span class="faq-q-text" data-lang="en">What languages do you speak?</span>
+        <span class="faq-q-text" data-lang="de">Welche Sprachen sprechen Sie?</span>
+        <span class="faq-q-text" data-lang="es">¿Qué idiomas hablan?</span>
+        <span class="faq-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="faq-answer">
+        <span data-lang="fr">Nous accueillons nos clients en français, en anglais, en espagnol et en allemand. Notre équipe est plurilingue pour vous offrir la meilleure expérience possible, quelle que soit votre langue.</span>
+        <span data-lang="en">We welcome our clients in French, English, Spanish and German. Our team is multilingual to offer you the best possible experience, whatever your language.</span>
+        <span data-lang="de">Wir begrüßen unsere Kunden auf Französisch, Englisch, Spanisch und Deutsch. Unser Team ist mehrsprachig, um Ihnen das bestmögliche Erlebnis zu bieten, egal welche Sprache Sie sprechen.</span>
+        <span data-lang="es">Atendemos a nuestros clientes en francés, inglés, español y alemán. Nuestro equipo es multilingüe para ofrecerle la mejor experiencia posible, sea cual sea su idioma.</span>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div class="faq-cta">
+  <h2 class="faq-cta-title">
+    <span data-lang="fr">Pas trouvé votre <em>réponse</em> ?</span>
+    <span data-lang="en">Didn't find your <em>answer</em>?</span>
+    <span data-lang="de">Antwort nicht <em>gefunden</em>?</span>
+    <span data-lang="es">¿No encontró su <em>respuesta</em>?</span>
+  </h2>
+  <p class="faq-cta-sub" data-lang="fr">Contactez-nous directement par téléphone, WhatsApp ou via le formulaire de contact. Nous répondons dans les 24 heures.</p>
+  <p class="faq-cta-sub" data-lang="en">Contact us directly by phone, WhatsApp or via the contact form. We respond within 24 hours.</p>
+  <p class="faq-cta-sub" data-lang="de">Kontaktieren Sie uns direkt per Telefon, WhatsApp oder über das Kontaktformular. Wir antworten innerhalb von 24 Stunden.</p>
+  <p class="faq-cta-sub" data-lang="es">Contáctenos directamente por teléfono, WhatsApp o a través del formulario de contacto. Respondemos en 24 horas.</p>
+  <div class="btn-row">
+    <a href="contact.html" class="btn-primary">
+      <span data-lang="fr">Nous contacter</span><span data-lang="en">Contact us</span><span data-lang="de">Kontaktieren Sie uns</span><span data-lang="es">Contáctenos</span> →
+    </a>
+    <a href="https://wa.me/68987707858" target="_blank" rel="noopener" class="btn-ghost">WhatsApp</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Moorea Maire Beach — Polynésie française &nbsp;|&nbsp; <a href="tel:+68987707858">87 70 78 58</a> &nbsp;|&nbsp; <a href="index.html" data-lang="fr">Accueil</a><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="de">Startseite</a><a href="index.html" data-lang="es">Inicio</a></p>
+</footer>
+
+<script>
+function toggle(el){
+  const item=el.closest('.faq-item');
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(q=>q.setAttribute('aria-expanded','false'));
+  if(!isOpen){item.classList.add('open');el.setAttribute('aria-expanded','true')}
+}
+function setLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(el=>{el.style.display=el.getAttribute('data-lang')===lang?'':'none'});
+  document.querySelectorAll('.lang-btn').forEach(btn=>{btn.classList.toggle('active',btn.textContent===lang.toUpperCase())});
+  document.documentElement.lang=lang;
+}
+document.addEventListener('DOMContentLoaded',()=>setLang('fr'));
+</script>
+</body>
+</html>

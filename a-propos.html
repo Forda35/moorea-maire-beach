@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Qui sommes-nous — Moorea Maire Beach, organisatrice d'événements sur mesure à Moorea, Polynésie française. Notre histoire, nos valeurs, notre équipe.">
+<title>À Propos — Moorea Maire Beach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal-deep:#0a3d35;--teal-mid:#1a6b5a;--teal-light:#2d9e82;--teal-pale:#a8d8cc;--teal-mist:#e8f5f2;--gold:#c4a265;--gold-light:#e2c998;--gold-pale:#f7f0e4;--sand:#f9f6f0;--white:#ffffff;--dark:#0d1f1c;--text-body:#2e4a44;--text-muted:#7a9e98;--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Jost',sans-serif;--radius-sm:4px;--radius-md:12px;--radius-lg:24px;--transition:all 0.35s cubic-bezier(0.4,0,0.2,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);color:var(--text-body);background:var(--white);line-height:1.7;overflow-x:hidden}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,162,101,.15);padding:0 40px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.nav-logo-main{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--teal-deep);letter-spacing:.02em}
+.nav-logo-sub{font-size:10px;font-weight:400;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-top:2px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-switcher{display:flex;gap:4px}
+.lang-btn{background:none;border:1px solid transparent;font-family:var(--font-body);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--text-muted);cursor:pointer;padding:4px 8px;border-radius:4px;transition:var(--transition)}
+.lang-btn:hover,.lang-btn.active{color:var(--teal-mid);border-color:var(--teal-pale);background:var(--teal-mist)}
+.btn-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:8px 16px;border-radius:100px;border:1px solid var(--teal-pale);transition:var(--transition)}
+.btn-back:hover{color:var(--teal-mid);background:var(--teal-mist)}
+/* HERO */
+.page-hero{background:var(--teal-deep);padding:80px 80px 60px;position:relative;overflow:hidden}
+.page-hero::before{content:'MOOREA';position:absolute;right:-40px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:var(--font-display);font-size:120px;font-weight:300;color:rgba(196,162,101,.05);pointer-events:none;white-space:nowrap;letter-spacing:.2em}
+.page-hero-label{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.page-hero-title{font-family:var(--font-display);font-size:clamp(42px,5vw,64px);font-weight:300;color:var(--white);line-height:1.1;margin-bottom:16px}
+.page-hero-title em{font-style:italic;color:var(--gold-light)}
+.page-hero-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.65);max-width:560px;line-height:1.8}
+/* STORY */
+.story-section{display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:100px 80px;align-items:center;background:var(--white)}
+.story-label{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.story-label span{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.story-label::before{content:'';width:30px;height:1px;background:var(--gold);opacity:.5}
+.story-title{font-family:var(--font-display);font-size:clamp(38px,4vw,54px);font-weight:300;color:var(--teal-deep);line-height:1.1;margin-bottom:28px}
+.story-title em{font-style:italic;color:var(--gold)}
+.story-body{font-size:15px;font-weight:300;color:var(--text-body);line-height:1.9;margin-bottom:18px}
+.story-signature{font-family:var(--font-display);font-size:22px;font-style:italic;color:var(--teal-mid);margin-top:32px}
+.story-visual{border-radius:var(--radius-lg);overflow:hidden;height:520px;background:linear-gradient(135deg,var(--teal-mist),var(--teal-pale));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;position:relative}
+.story-visual-emoji{font-size:80px}
+.story-visual-label{font-family:var(--font-display);font-size:18px;font-style:italic;color:var(--teal-mid);text-align:center;padding:0 30px}
+/* VALUES */
+.values-section{background:var(--sand);padding:100px 80px}
+.values-header{text-align:center;margin-bottom:64px}
+.values-title{font-family:var(--font-display);font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--teal-deep);margin-bottom:12px}
+.values-title em{font-style:italic;color:var(--gold)}
+.values-sub{font-size:15px;font-weight:300;color:var(--text-muted);max-width:500px;margin:0 auto;line-height:1.8}
+.values-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px}
+.value-card{background:var(--white);border:1px solid rgba(168,216,204,.35);border-radius:var(--radius-lg);padding:36px 28px;transition:var(--transition)}
+.value-card:hover{border-color:var(--teal-mid);box-shadow:0 12px 40px rgba(10,61,53,.08);transform:translateY(-4px)}
+.value-icon{font-size:36px;margin-bottom:20px}
+.value-title{font-family:var(--font-display);font-size:24px;font-weight:500;color:var(--teal-deep);margin-bottom:12px}
+.value-body{font-size:14px;font-weight:300;color:var(--text-muted);line-height:1.8}
+/* STATS */
+.stats-section{background:var(--teal-deep);padding:80px;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
+.stat-num{font-family:var(--font-display);font-size:64px;font-weight:300;color:var(--gold-light);line-height:1;margin-bottom:8px}
+.stat-label{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+/* MOOREA */
+.moorea-section{padding:100px 80px;background:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.moorea-visual{border-radius:var(--radius-lg);background:linear-gradient(160deg,var(--teal-deep),var(--teal-mid));height:440px;display:flex;align-items:center;justify-content:center;font-size:80px;position:relative;overflow:hidden}
+.moorea-visual::before{content:'MOOREA';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);font-family:var(--font-display);font-size:80px;font-weight:300;color:rgba(255,255,255,.06);white-space:nowrap;letter-spacing:.2em}
+/* CTA */
+.about-cta{background:var(--gold-pale);border-top:1px solid rgba(196,162,101,.2);padding:80px;text-align:center}
+.about-cta-title{font-family:var(--font-display);font-size:42px;font-weight:300;color:var(--teal-deep);margin-bottom:12px}
+.about-cta-title em{font-style:italic;color:var(--gold)}
+.about-cta-sub{font-size:15px;font-weight:300;color:var(--text-muted);max-width:480px;margin:0 auto 40px;line-height:1.8}
+.btn-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--teal-deep);color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:16px 36px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-primary:hover{background:var(--teal-mid);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--teal-deep);font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:16px 36px;border-radius:100px;text-decoration:none;border:1.5px solid var(--teal-pale);cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:10px}
+.btn-outline:hover{background:var(--teal-mist);border-color:var(--teal-mid)}
+footer{background:var(--dark);color:rgba(255,255,255,.5);padding:40px 80px;text-align:center;font-size:12px}
+footer a{color:var(--gold);text-decoration:none}
+@media(max-width:900px){.story-section,.moorea-section{grid-template-columns:1fr}.stats-section{grid-template-columns:repeat(2,1fr)}.page-hero,.values-section,.about-cta,.story-section,.moorea-section,.stats-section{padding-left:24px;padding-right:24px}.navbar{padding:0 20px}}
+[data-lang]:not([data-lang="fr"]){display:none}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-main">Moorea Maire Beach</span>
+    <span class="nav-logo-sub">Polynésie Française</span>
+  </a>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="index.html" class="btn-back">← <span data-lang="fr">Accueil</span><span data-lang="en">Home</span><span data-lang="de">Startseite</span><span data-lang="es">Inicio</span></a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-label" data-lang="fr">Qui sommes-nous</div>
+  <div class="page-hero-label" data-lang="en">Who we are</div>
+  <div class="page-hero-label" data-lang="de">Wer wir sind</div>
+  <div class="page-hero-label" data-lang="es">Quiénes somos</div>
+  <h1 class="page-hero-title">
+    <span data-lang="fr">L'âme de <em>Moorea Maire Beach</em></span>
+    <span data-lang="en">The soul of <em>Moorea Maire Beach</em></span>
+    <span data-lang="de">Die Seele von <em>Moorea Maire Beach</em></span>
+    <span data-lang="es">El alma de <em>Moorea Maire Beach</em></span>
+  </h1>
+  <p class="page-hero-sub" data-lang="fr">Une entreprise née de l'amour de Moorea, portée par la passion de partager la magie de cette île exceptionnelle avec le monde entier.</p>
+  <p class="page-hero-sub" data-lang="en">A company born from the love of Moorea, driven by the passion of sharing the magic of this exceptional island with the whole world.</p>
+  <p class="page-hero-sub" data-lang="de">Ein Unternehmen, das aus der Liebe zu Moorea entstanden ist, getragen von der Leidenschaft, die Magie dieser außergewöhnlichen Insel mit der ganzen Welt zu teilen.</p>
+  <p class="page-hero-sub" data-lang="es">Una empresa nacida del amor por Moorea, impulsada por la pasión de compartir la magia de esta excepcional isla con todo el mundo.</p>
+</div>
+
+<section class="story-section">
+  <div>
+    <div class="story-label"><span data-lang="fr">Notre histoire</span><span data-lang="en">Our story</span><span data-lang="de">Unsere Geschichte</span><span data-lang="es">Nuestra historia</span></div>
+    <h2 class="story-title">
+      <span data-lang="fr">Moorea Maire Beach,<br><em>née du lagon</em></span>
+      <span data-lang="en">Moorea Maire Beach,<br><em>born from the lagoon</em></span>
+      <span data-lang="de">Moorea Maire Beach,<br><em>aus der Lagune geboren</em></span>
+      <span data-lang="es">Moorea Maire Beach,<br><em>nacida de la laguna</em></span>
+    </h2>
+    <p class="story-body" data-lang="fr">Moorea Maire Beach est née d'une passion profonde pour cette île unique au monde qu'est Moorea, et du désir sincère de faire découvrir ses trésors naturels et culturels à des visiteurs venus des quatre coins du globe.</p>
+    <p class="story-body" data-lang="en">Moorea Maire Beach was born from a deep passion for the unique island of Moorea, and the sincere desire to share its natural and cultural treasures with visitors from the four corners of the globe.</p>
+    <p class="story-body" data-lang="de">Moorea Maire Beach entstand aus einer tiefen Leidenschaft für die einzigartige Insel Moorea und dem aufrichtigen Wunsch, ihre natürlichen und kulturellen Schätze mit Besuchern aus aller Welt zu teilen.</p>
+    <p class="story-body" data-lang="es">Moorea Maire Beach nació de una profunda pasión por la isla única de Moorea y el sincero deseo de compartir sus tesoros naturales y culturales con visitantes de los cuatro rincones del mundo.</p>
+    <p class="story-body" data-lang="fr">Organisatrice d'événements sur mesure, nous proposons des prestations magiques : excursions lagunaires, mariages traditionnels polynésiens, dîners romantiques sur des îlots, et bien plus encore — toujours dans le respect de la nature et de la culture polynésienne.</p>
+    <p class="story-body" data-lang="en">As a custom event organizer, we offer magical services: lagoon excursions, traditional Polynesian weddings, romantic dinners on islets, and much more — always respecting nature and Polynesian culture.</p>
+    <p class="story-body" data-lang="de">Als individuelle Veranstaltungsorganisatorin bieten wir magische Leistungen an: Lagunenausflüge, traditionelle polynesische Hochzeiten, romantische Abendessen auf Inselchen und vieles mehr — immer im Einklang mit der Natur und der polynesischen Kultur.</p>
+    <p class="story-body" data-lang="es">Como organizadora de eventos a medida, ofrecemos servicios mágicos: excursiones lagunares, bodas tradicionales polinesicas, cenas románticas en islotes y mucho más — siempre respetando la naturaleza y la cultura polinesia.</p>
+    <p class="story-body" data-lang="fr">Nous vous invitons à cueillir et à graver ces minutes fugitives avant qu'elles ne s'envolent. <em>Moorea Maire Beach</em> vous offre des moments uniques, privilégiés, privés et sur mesure.</p>
+    <p class="story-body" data-lang="en">We invite you to capture and cherish these fleeting moments before they fade away. <em>Moorea Maire Beach</em> offers you unique, privileged, private and tailor-made moments.</p>
+    <p class="story-body" data-lang="de">Wir laden Sie ein, diese flüchtigen Augenblicke einzufangen und zu bewahren. <em>Moorea Maire Beach</em> bietet Ihnen einzigartige, exklusive, private und maßgeschneiderte Momente.</p>
+    <p class="story-body" data-lang="es">Le invitamos a capturar y atesorar estos momentos fugaces. <em>Moorea Maire Beach</em> le ofrece momentos únicos, privilegiados, privados y a medida.</p>
+    <p class="story-signature" data-lang="fr">— Ia Ora Na, bienvenue à Moorea</p>
+    <p class="story-signature" data-lang="en">— Ia Ora Na, welcome to Moorea</p>
+    <p class="story-signature" data-lang="de">— Ia Ora Na, willkommen auf Moorea</p>
+    <p class="story-signature" data-lang="es">— Ia Ora Na, bienvenido a Moorea</p>
+  </div>
+  <div class="story-visual" role="img" aria-label="Vue de Moorea, Polynésie française">
+    <div class="story-visual-emoji">🌴</div>
+    <div class="story-visual-label" data-lang="fr">Île de Moorea<br>Polynésie française</div>
+    <div class="story-visual-label" data-lang="en">Island of Moorea<br>French Polynesia</div>
+    <div class="story-visual-label" data-lang="de">Insel Moorea<br>Französisch-Polynesien</div>
+    <div class="story-visual-label" data-lang="es">Isla de Moorea<br>Polinesia Francesa</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section" role="list" aria-label="Chiffres clés">
+  <div role="listitem">
+    <div class="stat-num">9+</div>
+    <div class="stat-label" data-lang="fr">Prestations disponibles</div>
+    <div class="stat-label" data-lang="en">Services available</div>
+    <div class="stat-label" data-lang="de">Verfügbare Leistungen</div>
+    <div class="stat-label" data-lang="es">Servicios disponibles</div>
+  </div>
+  <div role="listitem">
+    <div class="stat-num">4</div>
+    <div class="stat-label" data-lang="fr">Langues parlées</div>
+    <div class="stat-label" data-lang="en">Languages spoken</div>
+    <div class="stat-label" data-lang="de">Gesprochene Sprachen</div>
+    <div class="stat-label" data-lang="es">Idiomas hablados</div>
+  </div>
+  <div role="listitem">
+    <div class="stat-num">60</div>
+    <div class="stat-label" data-lang="fr">Passagers max. catamaran</div>
+    <div class="stat-label" data-lang="en">Max catamaran passengers</div>
+    <div class="stat-label" data-lang="de">Max. Katamaran-Passagiere</div>
+    <div class="stat-label" data-lang="es">Máx. pasajeros catamarán</div>
+  </div>
+  <div role="listitem">
+    <div class="stat-num">24h</div>
+    <div class="stat-label" data-lang="fr">Délai de réponse garanti</div>
+    <div class="stat-label" data-lang="en">Guaranteed response time</div>
+    <div class="stat-label" data-lang="de">Garantierte Reaktionszeit</div>
+    <div class="stat-label" data-lang="es">Tiempo de respuesta garantizado</div>
+  </div>
+</div>
+
+<!-- VALEURS -->
+<section class="values-section">
+  <div class="values-header">
+    <h2 class="values-title" data-lang="fr">Nos <em>valeurs</em></h2>
+    <h2 class="values-title" data-lang="en">Our <em>values</em></h2>
+    <h2 class="values-title" data-lang="de">Unsere <em>Werte</em></h2>
+    <h2 class="values-title" data-lang="es">Nuestros <em>valores</em></h2>
+    <p class="values-sub" data-lang="fr">Ce qui nous guide dans chacune de nos prestations</p>
+    <p class="values-sub" data-lang="en">What guides us in each of our services</p>
+    <p class="values-sub" data-lang="de">Was uns bei jeder unserer Leistungen leitet</p>
+    <p class="values-sub" data-lang="es">Lo que nos guía en cada uno de nuestros servicios</p>
+  </div>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">🌿</div>
+      <div class="value-title" data-lang="fr">Respect de la nature</div>
+      <div class="value-title" data-lang="en">Respect for nature</div>
+      <div class="value-title" data-lang="de">Respekt vor der Natur</div>
+      <div class="value-title" data-lang="es">Respeto por la naturaleza</div>
+      <p class="value-body" data-lang="fr">Nos prestations éco-citoyennes comme le Tour Bout contribuent directement à la préservation du récif corallien de Moorea.</p>
+      <p class="value-body" data-lang="en">Our eco-citizen services like Tour Bout directly contribute to the preservation of Moorea's coral reef.</p>
+      <p class="value-body" data-lang="de">Unsere Öko-Leistungen wie Tour Bout tragen direkt zur Erhaltung des Korallenriffs von Moorea bei.</p>
+      <p class="value-body" data-lang="es">Nuestros servicios eco-ciudadanos como Tour Bout contribuyen directamente a la preservación del arrecife de coral de Moorea.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">✨</div>
+      <div class="value-title" data-lang="fr">Excellence & sur mesure</div>
+      <div class="value-title" data-lang="en">Excellence & customization</div>
+      <div class="value-title" data-lang="de">Exzellenz & Maßanfertigung</div>
+      <div class="value-title" data-lang="es">Excelencia & personalización</div>
+      <p class="value-body" data-lang="fr">Chaque prestation est pensée et conçue spécifiquement pour vous. Rien n'est standardisé — tout est unique, comme l'île de Moorea.</p>
+      <p class="value-body" data-lang="en">Every service is specifically designed and conceived for you. Nothing is standardized — everything is unique, like the island of Moorea.</p>
+      <p class="value-body" data-lang="de">Jede Leistung ist speziell für Sie konzipiert. Nichts ist standardisiert — alles ist einzigartig, wie die Insel Moorea.</p>
+      <p class="value-body" data-lang="es">Cada servicio es diseñado específicamente para usted. Nada está estandarizado — todo es único, como la isla de Moorea.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🌺</div>
+      <div class="value-title" data-lang="fr">Culture polynésienne</div>
+      <div class="value-title" data-lang="en">Polynesian culture</div>
+      <div class="value-title" data-lang="de">Polynesische Kultur</div>
+      <div class="value-title" data-lang="es">Cultura polinesia</div>
+      <p class="value-body" data-lang="fr">Nous sommes fiers de transmettre la richesse de la culture polynésienne — ses traditions, son mana, sa spiritualité — à travers chacune de nos prestations.</p>
+      <p class="value-body" data-lang="en">We are proud to transmit the richness of Polynesian culture — its traditions, its mana, its spirituality — through each of our services.</p>
+      <p class="value-body" data-lang="de">Wir sind stolz darauf, den Reichtum der polynesischen Kultur — ihre Traditionen, ihr Mana, ihre Spiritualität — durch jede unserer Leistungen zu vermitteln.</p>
+      <p class="value-body" data-lang="es">Estamos orgullosos de transmitir la riqueza de la cultura polinesia — sus tradiciones, su mana, su espiritualidad — a través de cada uno de nuestros servicios.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🤝</div>
+      <div class="value-title" data-lang="fr">Proximité & disponibilité</div>
+      <div class="value-title" data-lang="en">Closeness & availability</div>
+      <div class="value-title" data-lang="de">Nähe & Verfügbarkeit</div>
+      <div class="value-title" data-lang="es">Proximidad & disponibilidad</div>
+      <p class="value-body" data-lang="fr">Nous répondons à chaque demande dans les 24 heures. Par téléphone, WhatsApp ou email — nous sommes toujours disponibles pour vous accompagner dans votre projet.</p>
+      <p class="value-body" data-lang="en">We respond to every request within 24 hours. By phone, WhatsApp or email — we are always available to accompany you in your project.</p>
+      <p class="value-body" data-lang="de">Wir antworten auf jede Anfrage innerhalb von 24 Stunden. Per Telefon, WhatsApp oder E-Mail — wir sind immer verfügbar, um Sie bei Ihrem Projekt zu begleiten.</p>
+      <p class="value-body" data-lang="es">Respondemos a cada solicitud en 24 horas. Por teléfono, WhatsApp o correo — siempre estamos disponibles para acompañarle en su proyecto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MOOREA INFO -->
+<section class="moorea-section">
+  <div class="moorea-visual" role="img" aria-label="Île de Moorea vue du ciel">🏝️</div>
+  <div>
+    <div class="story-label"><span data-lang="fr">L'île de Moorea</span><span data-lang="en">The island of Moorea</span><span data-lang="de">Die Insel Moorea</span><span data-lang="es">La isla de Moorea</span></div>
+    <h2 class="story-title">
+      <span data-lang="fr">La perle <em>du Pacifique</em></span>
+      <span data-lang="en">The pearl <em>of the Pacific</em></span>
+      <span data-lang="de">Die Perle <em>des Pazifiks</em></span>
+      <span data-lang="es">La perla <em>del Pacífico</em></span>
+    </h2>
+    <p class="story-body" data-lang="fr">Moorea est souvent surnommée l'île cœur en raison de sa forme caractéristique vue du ciel. Située à seulement 17 km au nord-ouest de Tahiti, cette île volcanique abrite l'un des plus beaux lagons du monde, avec ses eaux cristallines aux reflets turquoise et émeraude.</p>
+    <p class="story-body" data-lang="en">Moorea is often nicknamed the heart island due to its distinctive heart shape seen from the sky. Located just 17 km northwest of Tahiti, this volcanic island is home to one of the most beautiful lagoons in the world, with its crystal clear turquoise and emerald waters.</p>
+    <p class="story-body" data-lang="de">Moorea wird oft als Herzinsel bezeichnet, aufgrund seiner charakteristischen Herzform aus der Vogelperspektive. Nur 17 km nordwestlich von Tahiti gelegen, beherbergt diese Vulkaninsel eine der schönsten Lagunen der Welt, mit kristallklarem türkis- und smaragdgrünem Wasser.</p>
+    <p class="story-body" data-lang="es">Moorea es a menudo apodada la isla corazón debido a su característica forma de corazón vista desde el cielo. Situada a solo 17 km al noroeste de Tahití, esta isla volcánica alberga una de las lagunas más bellas del mundo, con sus aguas cristalinas de reflejos turquesa y esmeralda.</p>
+    <p class="story-body" data-lang="fr">Le Motu Moea, au cœur de notre activité, est un petit îlot emblématique du lagon de Moorea où se déroulent la plupart de nos prestations : mariages, dîners romantiques, repas traditionnels et bouturage de corail.</p>
+    <p class="story-body" data-lang="en">Motu Moea, at the heart of our activity, is a small iconic islet in Moorea's lagoon where most of our services take place: weddings, romantic dinners, traditional meals and coral restoration.</p>
+    <p class="story-body" data-lang="de">Motu Moea, im Herzen unserer Aktivität, ist ein kleines ikonisches Inselchen in der Lagune von Moorea, wo die meisten unserer Leistungen stattfinden: Hochzeiten, romantische Abendessen, traditionelle Mahlzeiten und Korallenrestaurierung.</p>
+    <p class="story-body" data-lang="es">Motu Moea, en el corazón de nuestra actividad, es un pequeño islote icónico de la laguna de Moorea donde se desarrollan la mayoría de nuestros servicios: bodas, cenas románticas, comidas tradicionales y restauración de corales.</p>
+  </div>
+</section>
+
+<div class="about-cta">
+  <h2 class="about-cta-title">
+    <span data-lang="fr">Prêt à vivre <em>l'aventure</em> ?</span>
+    <span data-lang="en">Ready to live the <em>adventure</em>?</span>
+    <span data-lang="de">Bereit für das <em>Abenteuer</em>?</span>
+    <span data-lang="es">¿Listo para vivir la <em>aventura</em>?</span>
+  </h2>
+  <p class="about-cta-sub" data-lang="fr">Découvrez toutes nos prestations et réservez votre expérience polynésienne inoubliable dès aujourd'hui.</p>
+  <p class="about-cta-sub" data-lang="en">Discover all our services and book your unforgettable Polynesian experience today.</p>
+  <p class="about-cta-sub" data-lang="de">Entdecken Sie alle unsere Leistungen und buchen Sie noch heute Ihr unvergessliches polynesisches Erlebnis.</p>
+  <p class="about-cta-sub" data-lang="es">Descubra todos nuestros servicios y reserve hoy su experiencia polinesia inolvidable.</p>
+  <div class="btn-row">
+    <a href="reservation.html" class="btn-primary">
+      <span data-lang="fr">Réserver maintenant</span><span data-lang="en">Book now</span><span data-lang="de">Jetzt buchen</span><span data-lang="es">Reservar ahora</span> →
+    </a>
+    <a href="contact.html" class="btn-outline">
+      <span data-lang="fr">Nous contacter</span><span data-lang="en">Contact us</span><span data-lang="de">Kontakt</span><span data-lang="es">Contacto</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Moorea Maire Beach — Polynésie française &nbsp;|&nbsp; <a href="tel:+68987707858">87 70 78 58</a> &nbsp;|&nbsp; <a href="index.html" data-lang="fr">Accueil</a><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="de">Startseite</a><a href="index.html" data-lang="es">Inicio</a></p>
+</footer>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(el=>{el.style.display=el.getAttribute('data-lang')===lang?'':'none'});
+  document.querySelectorAll('.lang-btn').forEach(btn=>{btn.classList.toggle('active',btn.textContent===lang.toUpperCase())});
+  document.documentElement.lang=lang;
+}
+document.addEventListener('DOMContentLoaded',()=>setLang('fr'));
+</script>
+</body>
+</html>
